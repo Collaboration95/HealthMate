@@ -14,10 +14,10 @@
 >>> - A moving list of recent additions to the category 
 >>> - If possible a camera option to add every via ML
 >> 3. Running Page ( Activity)
->>>A Scrollable List of past runs 
->>> Floating + button to start new run 
->>> Current Run has a few informational attribute + optional gps on feature
->>> if GPS on , shows a crude map of your run 
+>>> - A Scrollable List of past runs 
+>>> - Floating + button to start new run 
+>>> - Current Run has a few informational attribute + optional gps on feature
+>>> - if GPS on , shows a crude map of your run 
 >>4. Trends 
 >>> Shows a list of data points 
 >>5. Socials Page 
@@ -29,9 +29,6 @@
 - Integrating google maps api to track runs / display past runs on app 
 - Store Information on users ?
 - Having central storage of info for Socials Page 
-
-hi
-hdsisdihsdhsdhds hdj
 
 
 
