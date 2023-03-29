@@ -10,6 +10,7 @@ color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id button1
+id textView
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round
