@@ -3437,10 +3437,6 @@ int layout design_navigation_menu 0x7f0b0029
 int layout design_navigation_menu_item 0x7f0b002a
 int layout design_text_input_end_icon 0x7f0b002b
 int layout design_text_input_start_icon 0x7f0b002c
-int layout fragment_calorie 0x7f0b002d
-int layout fragment_run 0x7f0b002e
-int layout fragment_social 0x7f0b002f
-int layout fragment_trend 0x7f0b0030
 int layout m3_alert_dialog 0x7f0b0031
 int layout m3_alert_dialog_actions 0x7f0b0032
 int layout m3_alert_dialog_title 0x7f0b0033

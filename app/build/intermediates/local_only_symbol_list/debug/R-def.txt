@@ -25,16 +25,11 @@ drawable ic_launcher_trends
 id bottom_navigation
 id button1
 id calorie
-id container
 id run
 id social
 id textView
 id trends
 layout activity_main
-layout fragment_calorie
-layout fragment_run
-layout fragment_social
-layout fragment_trend
 menu bottom_nav_menu
 mipmap _1
 mipmap ic_launcher

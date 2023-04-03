@@ -7,43 +7,42 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
     private Button button;
     BottomNavigationView bottomNavigationView;
-    calorie calorieFragment = new calorie();
-    run runFragment = new run();
-    social socialFragment = new social();
-    trend trendFragment = new trend();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,calorieFragment).commit();
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean   onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.calorie:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,calorieFragment).commit();
+                        Toast.makeText(MainActivity.this,"Calorie",Toast.LENGTH_SHORT).show();
                         return true;
 
                     case R.id.run:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,runFragment).commit();
+                        Toast.makeText(MainActivity.this,"Run",Toast.LENGTH_SHORT).show();
                         return true;
 
                     case R.id.social:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,socialFragment).commit();
+                        Toast.makeText(MainActivity.this,"Social",Toast.LENGTH_SHORT).show();
                         return true;
 
                     case R.id.trends:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,trendFragment).commit();
+                        Toast.makeText(MainActivity.this,"Trends",Toast.LENGTH_SHORT).show();
                         return true;
 
                 }
