@@ -3,6 +3,7 @@ package com.example.healthmate;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.trends:
                         Toast.makeText(MainActivity.this,"Trends",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent( MainActivity.this, trend.class);
+                        startActivity(intent);
                         return true;
 
                 }

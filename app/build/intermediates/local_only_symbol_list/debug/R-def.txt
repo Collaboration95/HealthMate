@@ -28,8 +28,10 @@ id calorie
 id run
 id social
 id textView
+id textView2
 id trends
 layout activity_main
+layout activity_trend
 menu bottom_nav_menu
 mipmap _1
 mipmap ic_launcher
