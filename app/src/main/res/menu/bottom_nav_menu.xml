@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:id="@+id/calorie"
+    android:title="@string/calorie"
+    android:icon="@drawable/ic_launcher_calories"
+    />
+    <item android:id="@+id/run"
+        android:title="Run"
+        android:icon="@drawable/ic_launcher_running"
+        android:
+        />
+    <item android:id="@+id/trends"
+        android:title="trends"
+        android:icon="@drawable/ic_launcher_trends"
+
+        />
+    <item android:id="@+id/social"
+        android:title="social"
+        android:icon="@drawable/ic_launcher_message"
+        />
+
+</menu>

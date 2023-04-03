@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HealthMate</string>
+    <string name="calorie">calorie</string>
 </resources>

@@ -4,7 +4,7 @@
             "outputFile": "com.example.healthmate.app-mergeDebugResources-27:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/Users/hongjing/.gradle/caches/transforms-3/dfe455107600617cfcbe36a5c8cee19f/transformed/material-1.8.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "/Users/speedpowermac/.gradle/caches/transforms-3/dfe455107600617cfcbe36a5c8cee19f/transformed/material-1.8.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

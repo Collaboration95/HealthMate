@@ -2719,8 +2719,21 @@ drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
+drawable ic_launcher_add
+drawable ic_launcher_addfriend
 drawable ic_launcher_background
+drawable ic_launcher_calories
+drawable ic_launcher_chatbubble
+drawable ic_launcher_food
 drawable ic_launcher_foreground
+drawable ic_launcher_gps
+drawable ic_launcher_message
+drawable ic_launcher_rightsymbol
+drawable ic_launcher_running
+drawable ic_launcher_search
+drawable ic_launcher_thumbsup
+drawable ic_launcher_timer
+drawable ic_launcher_trends
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -2897,6 +2910,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottom_navigation
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2905,6 +2919,7 @@ id button1
 id buttonPanel
 id cache_measures
 id callMeasure
+id calorie
 id cancel_button
 id carryVelocity
 id center
@@ -3152,6 +3167,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id run
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3203,6 +3219,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id social
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3273,6 +3290,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id trends
 id triangle
 id unchecked
 id uniform
@@ -3420,6 +3438,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_calorie
+layout fragment_run
+layout fragment_social
+layout fragment_trend
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3481,7 +3503,10 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu bottom_nav_menu
+mipmap _1
 mipmap ic_launcher
+mipmap ic_launcher_1
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
@@ -3520,6 +3545,7 @@ string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string calorie
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern

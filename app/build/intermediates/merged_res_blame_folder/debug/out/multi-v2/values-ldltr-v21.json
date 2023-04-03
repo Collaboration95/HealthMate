@@ -4,7 +4,7 @@
             "outputFile": "com.example.healthmate.app-mergeDebugResources-27:/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/Users/hongjing/.gradle/caches/transforms-3/901bd1e79ca3a5e2188025eed5ecc80d/transformed/appcompat-1.6.1/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "/Users/speedpowermac/.gradle/caches/transforms-3/901bd1e79ca3a5e2188025eed5ecc80d/transformed/appcompat-1.6.1/res/values-ldltr-v21/values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
