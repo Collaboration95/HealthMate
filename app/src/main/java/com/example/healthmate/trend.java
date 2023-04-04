@@ -7,16 +7,36 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import java.util.ArrayList;
+
 public class trend extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Intent intent;
+    ArrayList<trend_class> data = new ArrayList<>();
+    private void setUpData(){
+        String[] activityName = {"Move","Exercise","Move","Distance","RunningPace","Walking Pace"};
+        String[] activityNumber = {"1268","1284","1284","1284","1284","1284"};
+        String[] activityUnit= {"Kcal/day","Kcal/day","Kcal/day","Kcal/day","Kcal/day","Kcal/day"};
+        for(int i=0;i<activityUnit.length;i++){
+            data.add(new trend_class(activityName[i],activityNumber[i],activityUnit[i],R.drawable.ic_launcher_add));
+        }
+    }
+
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trend);
+        RecyclerView recycle = findViewById(R.id.trend_recyler);
+        setUpData();
+        trend_Adapter adapter = new trend_Adapter(this,data);
+        recycle.setAdapter(adapter);
+        recycle.setLayoutManager(new LinearLayoutManager(this));
+
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 

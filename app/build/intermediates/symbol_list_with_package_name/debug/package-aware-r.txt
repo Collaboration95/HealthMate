@@ -3291,6 +3291,11 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id trend_activity
+id trend_icon
+id trend_number
+id trend_recyler
+id trend_unit
 id trends
 id triangle
 id unchecked
@@ -3501,6 +3506,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout trend_layout
 menu bottom_nav_menu
 mipmap _1
 mipmap ic_launcher
