@@ -1,7 +1,9 @@
 package com.example.healthmate;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 public class trend extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Intent intent;
+    Context context=trend.this ;
     ArrayList<trend_class> data = new ArrayList<>();
     private void setUpData(){
         String[] activityName = {"Move","Exercise","Move","Distance","RunningPace","Walking Pace"};
@@ -39,35 +42,36 @@ public class trend extends AppCompatActivity {
 
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-
+        bottomNavigationView.setSelectedItemId(R.id.trends);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean   onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.calorie:
-                        Toast.makeText(trend.this,"Calorie",Toast.LENGTH_SHORT).show();
-                        intent = new Intent( trend.this, MainActivity.class  );
-                        startActivity(intent);
+                        Toast.makeText(context,"Calorie",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent( context, MainActivity.class));
                         return true;
 
                     case R.id.run:
-                        Toast.makeText(trend.this,"Run",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Run",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent( context, run.class));
+
                         return true;
 
                     case R.id.social:
-                        Toast.makeText(trend.this,"Social",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Social",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent( context, social.class));
                         return true;
 
                     case R.id.trends:
-                        Toast.makeText(trend.this,"Trends",Toast.LENGTH_SHORT).show();
-                        intent= new Intent( trend.this, trend.class);
-                        startActivity(intent);
+                        Toast.makeText(context,"Trends",Toast.LENGTH_SHORT).show();
                         return true;
 
                 }
-
                 return false;
             }
         });
     }
+
 }
+

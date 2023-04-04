@@ -37,7 +37,15 @@
         </activity>
         <activity
             android:name="com.example.healthmate.trend"
-            android:label="See Trends"
+            android:label="Trends"
+            android:parentActivityName="com.example.healthmate.MainActivity" />
+        <activity
+            android:name="com.example.healthmate.run"
+            android:label="Running"
+            android:parentActivityName="com.example.healthmate.MainActivity" />
+        <activity
+            android:name="com.example.healthmate.social"
+            android:label="Socials"
             android:parentActivityName="com.example.healthmate.MainActivity" />
 
         <provider

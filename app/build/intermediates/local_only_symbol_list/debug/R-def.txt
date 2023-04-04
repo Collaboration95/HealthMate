@@ -37,6 +37,8 @@ id trend_recyler
 id trend_unit
 id trends
 layout activity_main
+layout activity_run
+layout activity_social
 layout activity_trend
 layout trend_layout
 menu bottom_nav_menu

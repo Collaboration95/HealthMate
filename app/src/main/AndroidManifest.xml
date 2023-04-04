@@ -23,7 +23,15 @@
         <activity
             android:name=".trend"
             android:parentActivityName=".MainActivity"
-            android:label="See Trends" />
+            android:label="Trends" />
+        <activity
+            android:name=".run"
+            android:parentActivityName=".MainActivity"
+            android:label="Running" />
+        <activity
+            android:name=".social"
+            android:parentActivityName=".MainActivity"
+            android:label="Socials" />
     </application>
 
 </manifest>

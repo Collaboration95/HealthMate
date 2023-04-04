@@ -3,6 +3,7 @@ package com.example.healthmate;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -18,6 +19,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
+    Context context = MainActivity.this;
     BottomNavigationView bottomNavigationView;
 
     @Override
@@ -31,25 +33,23 @@ public class MainActivity extends AppCompatActivity {
             public boolean   onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.calorie:
-                        Toast.makeText(MainActivity.this,"Calorie",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Calorie",Toast.LENGTH_SHORT).show();
                         return true;
 
                     case R.id.run:
-                        Toast.makeText(MainActivity.this,"Run",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Run",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(context, run.class));
                         return true;
 
                     case R.id.social:
-                        Toast.makeText(MainActivity.this,"Social",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Social",Toast.LENGTH_SHORT).show();
                         return true;
 
                     case R.id.trends:
-                        Toast.makeText(MainActivity.this,"Trends",Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent( MainActivity.this, trend.class);
-                        startActivity(intent);
+                        Toast.makeText(context,"Trends",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(context, trend.class));
                         return true;
-
                 }
-
                 return false;
             }
         });
@@ -58,5 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
 
 }
