@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.social:
                         Toast.makeText(context,"Social",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(context, social.class));
                         return true;
 
                     case R.id.trends:

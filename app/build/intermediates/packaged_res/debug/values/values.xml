@@ -4,11 +4,20 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="tab_highlighted_text_color">#1C54B2</color>
+    <color name="tab_non_highlighted_text_color">#A7C1FD</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">HealthMate</string>
     <string name="calorie">calorie</string>
+    <string name="following">Following</string>
+    <string name="following_fragment">Following Fragment</string>
+    <string name="for_you">For You</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <style name="TabItemAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp  </item>
+    </style>
     <style name="Theme.HealthMate" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

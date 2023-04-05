@@ -13,4 +13,7 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="TabItemAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp  </item>
+    </style>
 </resources>

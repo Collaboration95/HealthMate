@@ -1910,6 +1910,9 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color tab_highlighted_text_color
+color tab_non_highlighted_text_color
+color tab_text_color_selector
 color teal_200
 color teal_700
 color tooltip_background_dark
@@ -3012,10 +3015,12 @@ id fitXY
 id fixed
 id flip
 id floating
+id following
 id forever
 id fragment_container_view_tag
 id frost
 id fullscreen_header
+id fyp
 id ghost_view
 id ghost_view_holder
 id gone
@@ -3158,6 +3163,7 @@ id pressed
 id progress_circular
 id progress_horizontal
 id radio
+id random
 id ratio
 id rectangles
 id reverseSawtooth
@@ -3245,6 +3251,7 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id tabMode
+id tab_layout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3310,6 +3317,7 @@ id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id viewpager
 id visible
 id visible_removing_fragment_view_tag
 id west
@@ -3447,6 +3455,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_following
+layout fragment_for_you
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3561,6 +3571,10 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string following
+string following_fragment
+string for_you
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -4059,6 +4073,7 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen
 style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
+style TabItemAppearance
 style TextAppearance_AppCompat
 style TextAppearance_AppCompat_Body1
 style TextAppearance_AppCompat_Body2
