@@ -19,6 +19,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
+    //    Variable to store context
     Context context = MainActivity.this;
     BottomNavigationView bottomNavigationView;
 
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+//       Following Code block to be included in every activity to take care of bottom navigation view functionality
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

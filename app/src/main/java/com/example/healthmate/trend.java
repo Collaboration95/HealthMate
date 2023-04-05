@@ -21,6 +21,7 @@ public class trend extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Intent intent;
     Context context=trend.this ;
+//    Variable to store context
     ArrayList<trend_class> data = new ArrayList<>();
     private void setUpData(){
         String[] activityName = {"Move","Exercise","Move","Distance","RunningPace","Walking Pace"};
@@ -41,7 +42,9 @@ public class trend extends AppCompatActivity {
         recycle.setLayoutManager(new LinearLayoutManager(this));
 
 
+//       Following Code block to be included in every activity to take care of bottom navigation view functionality
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+//        Code to set current selected icon in bottomnavigation view
         bottomNavigationView.setSelectedItemId(R.id.trends);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override

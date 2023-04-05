@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class social extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    Intent intent;
+    //    Variable to store context
     Context context = social.this;
 
     protected void onCreate(Bundle savedInstanceState){
@@ -25,7 +25,9 @@ public class social extends AppCompatActivity {
         setContentView(R.layout.activity_social);
 
 
+//       Following Code block to be included in every activity to take care of bottom navigation view functionality
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+//        Code to set current selected icon in bottomnavigation view
         bottomNavigationView.setSelectedItemId(R.id.social);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

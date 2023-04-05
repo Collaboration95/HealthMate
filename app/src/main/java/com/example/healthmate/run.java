@@ -18,12 +18,16 @@ import java.util.ArrayList;
 
 public class run extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    //    Variable to store context
     Context context = run.this;
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_run);
 
+
+//       Following Code block to be included in every activity to take care of bottom navigation view functionality
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+//        Code to set current selected icon in bottomnavigation view
         bottomNavigationView.setSelectedItemId(R.id.run);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
