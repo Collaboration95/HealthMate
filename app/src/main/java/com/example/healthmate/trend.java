@@ -48,7 +48,7 @@ public class trend extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.trends);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
-            public boolean   onNavigationItemSelected(@NonNull MenuItem item) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.calorie:
                         Toast.makeText(context,"Calorie",Toast.LENGTH_SHORT).show();

@@ -23,12 +23,15 @@
 >>5. Socials Page 
 >>> Has a 2 feeds  , Friends Posts / Our Posts with ability to add friends 
 
-## Things to tackle 
+## Road Map
 
-- Training / Integrating ML model to recognize food + possibly count calories 
-- Integrating google maps api to track runs / display past runs on app 
-- Store Information on users ?
-- Having central storage of info for Socials Page 
-
-
-
+- Finish Social Page ( Make adapter and stuff )
+- Code Plus Button 
+- running page --> assume user has already ran, manually key in run metrics, implement google maps api 
+- Implement Calendar For HomePage ( Come up with datastructure to store 1days inputs + come up with other class to store each day as objects)
+- first page should be the google sign in page (main activity is shifted)
+- Oauth Implementation for google
+- First Page Typing Intro
+- Strava Api Implementation 
+- implement threading 
+- 
