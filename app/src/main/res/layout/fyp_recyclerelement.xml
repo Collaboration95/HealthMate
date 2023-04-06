@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="317dp"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/addFriend"
+                android:layout_width="30dp"
+                android:layout_height="32dp"
+                app:layout_constraintBottom_toTopOf="@+id/MainImage"
+                app:layout_constraintStart_toStartOf="@+id/MainImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.758"
+                app:srcCompat="@drawable/ic_launcher_addfriend"
+                app:tint="@color/primaryColor" />
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Name"
+                app:layout_constraintBottom_toBottomOf="@+id/addFriend"
+                app:layout_constraintStart_toEndOf="@+id/addFriend"
+                app:layout_constraintTop_toTopOf="@+id/addFriend"
+                app:layout_constraintVertical_bias="0.461" />
+
+            <TextView
+                android:id="@+id/activityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Morning Jog"
+                app:layout_constraintBottom_toBottomOf="@+id/iconArrow"
+                app:layout_constraintEnd_toEndOf="@+id/MainImage"
+                app:layout_constraintTop_toTopOf="@+id/iconArrow" />
+
+            <TextView
+                android:id="@+id/Distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="2.8 Km"
+                app:layout_constraintBottom_toBottomOf="@+id/iconDistance"
+                app:layout_constraintEnd_toStartOf="@+id/iconTime"
+                app:layout_constraintTop_toTopOf="@+id/iconDistance" />
+
+            <TextView
+                android:id="@+id/Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10m"
+                app:layout_constraintBottom_toBottomOf="@+id/iconLike"
+                app:layout_constraintEnd_toEndOf="@+id/MainImage"
+                app:layout_constraintTop_toTopOf="@+id/iconLike" />
+
+            <ImageView
+
+                android:id="@+id/MainImage"
+                android:layout_width="296dp"
+                android:layout_height="200dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:id="@+id/iconArrow"
+                android:layout_width="29dp"
+                android:layout_height="33dp"
+                android:layout_marginEnd="56dp"
+                app:layout_constraintBottom_toBottomOf="@+id/addFriend"
+                app:layout_constraintEnd_toStartOf="@+id/activityName"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/Name"
+                app:layout_constraintTop_toTopOf="@+id/addFriend"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_launcher_rightsymbol"
+                app:tint="@color/primaryColor" />
+
+            <ImageView
+                android:id="@+id/iconLike"
+                android:layout_width="32dp"
+                android:layout_height="36dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/MainImage"
+                app:layout_constraintTop_toBottomOf="@+id/MainImage"
+                app:srcCompat="@drawable/ic_launcher_thumbsup"
+                app:tint="@color/primaryColor" />
+
+            <ImageView
+                android:id="@+id/iconTime"
+                android:layout_width="31dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iconLike"
+                app:layout_constraintEnd_toStartOf="@+id/Time"
+                app:layout_constraintTop_toTopOf="@+id/iconLike"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_launcher_timer"
+                app:tint="@color/primaryColor" />
+
+            <TextView
+                android:id="@+id/Likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="4"
+                app:layout_constraintBottom_toBottomOf="@+id/iconLike"
+                app:layout_constraintStart_toEndOf="@+id/iconLike"
+                app:layout_constraintTop_toTopOf="@+id/iconLike"
+                app:layout_constraintVertical_bias="0.47" />
+
+            <ImageView
+                android:id="@+id/iconDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iconLike"
+                app:layout_constraintEnd_toStartOf="@+id/Distance"
+                app:layout_constraintTop_toTopOf="@+id/iconLike"
+                app:layout_constraintVertical_bias="0.666"
+                app:srcCompat="@drawable/ic_launcher_distance"
+                app:tint="@color/primaryColor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

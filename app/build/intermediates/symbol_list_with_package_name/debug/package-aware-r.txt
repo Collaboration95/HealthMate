@@ -1887,6 +1887,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color primaryColor
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1900,6 +1901,8 @@ color purple_500
 color purple_700
 color ripple_material_dark
 color ripple_material_light
+color secondaryColor
+color secondaryColorTint
 color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
@@ -2727,6 +2730,7 @@ drawable ic_launcher_addfriend
 drawable ic_launcher_background
 drawable ic_launcher_calories
 drawable ic_launcher_chatbubble
+drawable ic_launcher_distance
 drawable ic_launcher_food
 drawable ic_launcher_foreground
 drawable ic_launcher_gps
@@ -2823,9 +2827,13 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Distance
 id FUNCTION
+id Likes
 id META
+id MainImage
 id NO_DEBUG
+id Name
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2833,6 +2841,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id Time
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2888,8 +2897,10 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_text
 id actions
+id activityName
 id activity_chooser_view_content
 id add
+id addFriend
 id alertTitle
 id aligned
 id all
@@ -3021,6 +3032,7 @@ id fragment_container_view_tag
 id frost
 id fullscreen_header
 id fyp
+id fyp_RecyclerView
 id ghost_view
 id ghost_view_holder
 id gone
@@ -3036,6 +3048,10 @@ id homeAsUp
 id honorRequest
 id horizontal_only
 id icon
+id iconArrow
+id iconDistance
+id iconLike
+id iconTime
 id icon_group
 id ifRoom
 id ignore
@@ -3163,7 +3179,6 @@ id pressed
 id progress_circular
 id progress_horizontal
 id radio
-id random
 id ratio
 id rectangles
 id reverseSawtooth
@@ -3457,6 +3472,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_following
 layout fragment_for_you
+layout fyp_recyclerelement
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

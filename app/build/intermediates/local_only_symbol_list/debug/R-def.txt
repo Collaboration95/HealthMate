@@ -1,9 +1,12 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color primaryColor
 color purple_200
 color purple_500
 color purple_700
+color secondaryColor
+color secondaryColorTint
 color tab_highlighted_text_color
 color tab_non_highlighted_text_color
 color tab_text_color_selector
@@ -15,6 +18,7 @@ drawable ic_launcher_addfriend
 drawable ic_launcher_background
 drawable ic_launcher_calories
 drawable ic_launcher_chatbubble
+drawable ic_launcher_distance
 drawable ic_launcher_food
 drawable ic_launcher_foreground
 drawable ic_launcher_gps
@@ -25,13 +29,24 @@ drawable ic_launcher_search
 drawable ic_launcher_thumbsup
 drawable ic_launcher_timer
 drawable ic_launcher_trends
+id Distance
+id Likes
+id MainImage
+id Name
+id Time
+id activityName
+id addFriend
 id bottom_navigation
 id button1
 id calorie
 id following
 id fyp
+id fyp_RecyclerView
+id iconArrow
+id iconDistance
+id iconLike
+id iconTime
 id layout
-id random
 id run
 id social
 id tab_layout
@@ -50,6 +65,7 @@ layout activity_social
 layout activity_trend
 layout fragment_following
 layout fragment_for_you
+layout fyp_recyclerelement
 layout trend_layout
 menu bottom_nav_menu
 mipmap _1

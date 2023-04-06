@@ -6,22 +6,10 @@
     tools:context=".social_fragments.fragment_forYou">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fyp_RecyclerView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="For You"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        />
-
-    <Button
-        android:id="@+id/random"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="For You "
-        android:layout_margin="100dp"
-        android:layout_centerHorizontal="true"
-        />
-
-
+        android:layout_height="660dp"
+        android:layout_centerInParent="true" />
 </RelativeLayout>

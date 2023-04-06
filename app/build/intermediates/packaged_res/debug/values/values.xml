@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="primaryColor">#1C54B2</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="secondaryColor">#A7C1FD</color>
+    <color name="secondaryColorTint"> #70A7C1FD</color>
     <color name="tab_highlighted_text_color">#1C54B2</color>
     <color name="tab_non_highlighted_text_color">#A7C1FD</color>
     <color name="teal_200">#FF03DAC5</color>

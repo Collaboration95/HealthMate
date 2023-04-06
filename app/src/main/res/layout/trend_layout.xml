@@ -67,23 +67,30 @@
             <TextView
                 android:id="@+id/trend_activity"
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_height="31dp"
                 android:layout_marginStart="16dp"
 
                 android:text="Move"
                 android:textColor="#1C54B2"
                 android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/trend_icon"
-                tools:layout_editor_absoluteY="0dp" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.093" />
 
             <ImageView
                 android:id="@+id/trend_icon"
                 android:layout_width="67dp"
                 android:layout_height="74dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.027"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/ic_launcher_add"
-                tools:layout_editor_absoluteX="5dp"
-                tools:layout_editor_absoluteY="0dp" />
+                app:tint="@color/primaryColor" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
