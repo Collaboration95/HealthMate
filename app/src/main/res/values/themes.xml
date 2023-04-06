@@ -12,6 +12,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
         <!-- Customize your theme here. -->
     </style>
     <style name="TabItemAppearance" parent="TextAppearance.Design.Tab">
@@ -19,6 +20,10 @@
     </style>
     <style name="MyBottomNavTheme" parent="Theme.MaterialComponents.Light">
         <item name="colorControlHighlight">@color/primaryColor</item>
+    </style>
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@drawable/popupmenu</item>
+<!--        <item name="android:popupBackground">@color/secondaryColor</item>-->
     </style>
 
 

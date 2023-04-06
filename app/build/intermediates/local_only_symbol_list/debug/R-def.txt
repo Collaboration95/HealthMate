@@ -33,6 +33,7 @@ drawable ic_launcher_search
 drawable ic_launcher_thumbsup
 drawable ic_launcher_timer
 drawable ic_launcher_trends
+drawable popupmenu
 id Distance
 id Likes
 id MainImage
@@ -111,6 +112,7 @@ string following_fragment
 string for_you
 string hello_blank_fragment
 style MyBottomNavTheme
+style PopupMenu
 style TabItemAppearance
 style Theme.HealthMate
 xml backup_rules
