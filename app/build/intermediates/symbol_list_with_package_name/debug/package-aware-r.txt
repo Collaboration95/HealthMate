@@ -2735,6 +2735,8 @@ drawable ic_launcher_food
 drawable ic_launcher_foreground
 drawable ic_launcher_gps
 drawable ic_launcher_message
+drawable ic_launcher_person
+drawable ic_launcher_plus
 drawable ic_launcher_rightsymbol
 drawable ic_launcher_running
 drawable ic_launcher_search
@@ -2924,12 +2926,12 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottomCard
 id bottom_navigation
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button1
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3103,6 +3105,9 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id menu_item_1
+id menu_item_2
+id menu_item_3
 id message
 id middle
 id mini
@@ -3173,6 +3178,8 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id plus
+id plusCard
 id position
 id postLayout
 id pressed
@@ -3287,7 +3294,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textView2
 id text_input_end_icon
 id text_input_error_icon
@@ -3473,6 +3479,7 @@ layout design_text_input_start_icon
 layout fragment_following
 layout fragment_for_you
 layout fyp_recyclerelement
+layout icon_plus
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3536,6 +3543,7 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout trend_layout
 menu bottom_nav_menu
+menu popup_menu
 mipmap _1
 mipmap ic_launcher
 mipmap ic_launcher_1

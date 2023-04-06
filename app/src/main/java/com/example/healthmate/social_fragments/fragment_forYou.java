@@ -50,13 +50,13 @@ public class fragment_forYou extends Fragment {
             String[] Time = {"10m", "12m", "30m", "25m", "50m", "42m", "55m"};
 
         int Image = R.drawable.ic_launcher_background;
-            int AddFriendicon =R.drawable.ic_launcher_addfriend;
+            int profileIcon =R.drawable.ic_launcher_addfriend;
             int activityIcon=R.drawable.ic_launcher_rightsymbol;
             int likeIcon=R.drawable.ic_launcher_addfriend;
             int timeIcon=R.drawable.ic_launcher_timer;
             int distanceIcon=R.drawable.ic_launcher_distance;
             for (int i =0;i<Name.length;i++){
-                fyp_data.add(new social_postModel(Name[i],activityName[i],Distance[i],Time[i],Likes[i],AddFriendicon,activityIcon,likeIcon,timeIcon,distanceIcon,Image));
+                fyp_data.add(new social_postModel(Name[i],activityName[i],Distance[i],Time[i],Likes[i],profileIcon,activityIcon,likeIcon,timeIcon,distanceIcon,Image));
             }
     }
 }

@@ -23,6 +23,8 @@ drawable ic_launcher_food
 drawable ic_launcher_foreground
 drawable ic_launcher_gps
 drawable ic_launcher_message
+drawable ic_launcher_person
+drawable ic_launcher_plus
 drawable ic_launcher_rightsymbol
 drawable ic_launcher_running
 drawable ic_launcher_search
@@ -36,8 +38,8 @@ id Name
 id Time
 id activityName
 id addFriend
+id bottomCard
 id bottom_navigation
-id button1
 id calorie
 id following
 id fyp
@@ -47,10 +49,14 @@ id iconDistance
 id iconLike
 id iconTime
 id layout
+id menu_item_1
+id menu_item_2
+id menu_item_3
+id plus
+id plusCard
 id run
 id social
 id tab_layout
-id textView
 id textView2
 id trend_activity
 id trend_icon
@@ -66,8 +72,10 @@ layout activity_trend
 layout fragment_following
 layout fragment_for_you
 layout fyp_recyclerelement
+layout icon_plus
 layout trend_layout
 menu bottom_nav_menu
+menu popup_menu
 mipmap _1
 mipmap ic_launcher
 mipmap ic_launcher_1

@@ -2,13 +2,17 @@ package com.example.healthmate;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +31,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        CardView cardView = findViewById(R.id.plusCard); // Replace "my_button_id" with your actual button ID
+        cardView.bringToFront();
+        cardView = findViewById(R.id.plusCard);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                        PopupMenu popupMenu = new PopupMenu(MainActivity.this, view);
+                        popupMenu.inflate(R.menu.popup_menu);
+                        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem item) {
+                                Toast.makeText(MainActivity.this, "Selected: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                                return true;
+                            }
+                        });
+                        popupMenu.show();
+                    }
+                });
+
+
 
 
 //       Following Code block to be included in every activity to take care of bottom navigation view functionality

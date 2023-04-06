@@ -48,12 +48,12 @@
         "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/drawable/ic_launcher_search.xml"
     },
     {
-        "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/mipmap-anydpi-v33_ic_launcher_1.xml.flat",
-        "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/mipmap-anydpi-v33/ic_launcher_1.xml"
-    },
-    {
         "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/drawable_ic_launcher_addfriend.xml.flat",
         "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/drawable/ic_launcher_addfriend.xml"
+    },
+    {
+        "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/mipmap-anydpi-v33_ic_launcher_1.xml.flat",
+        "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/mipmap-anydpi-v33/ic_launcher_1.xml"
     },
     {
         "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/menu_bottom_nav_menu.xml.flat",
@@ -120,6 +120,10 @@
         "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/mipmap-xhdpi/_1.webp"
     },
     {
+        "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/layout_icon_plus.xml.flat",
+        "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/layout/icon_plus.xml"
+    },
+    {
         "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/mipmap-xxhdpi__1.webp.flat",
         "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/mipmap-xxhdpi/_1.webp"
     },
@@ -138,6 +142,10 @@
     {
         "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/layout-v28_trend_layout.xml.flat",
         "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/layout-v28/trend_layout.xml"
+    },
+    {
+        "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/menu_popup_menu.xml.flat",
+        "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/menu/popup_menu.xml"
     },
     {
         "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/mipmap-xxxhdpi_ic_launcher_1.webp.flat",
@@ -168,6 +176,14 @@
         "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/drawable/ic_launcher_timer.xml"
     },
     {
+        "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/drawable_ic_launcher_person.xml.flat",
+        "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/drawable/ic_launcher_person.xml"
+    },
+    {
+        "merged": "com.example.healthmate.app-merged_res-29:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.healthmate.app-main-31:/menu/bottom_nav_menu.xml"
+    },
+    {
         "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/drawable_ic_launcher_add.xml.flat",
         "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/drawable/ic_launcher_add.xml"
     },
@@ -182,6 +198,10 @@
     {
         "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/drawable_ic_launcher_distance.xml.flat",
         "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/drawable/ic_launcher_distance.xml"
+    },
+    {
+        "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/drawable_ic_launcher_plus.xml.flat",
+        "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/drawable/ic_launcher_plus.xml"
     },
     {
         "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/mipmap-hdpi_ic_launcher.png.flat",
@@ -200,15 +220,11 @@
         "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/mipmap-hdpi/_1.webp"
     },
     {
-        "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/layout_trend_layout.xml.flat",
-        "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/layout/trend_layout.xml"
-    },
-    {
         "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/layout_activity_run.xml.flat",
         "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/layout/activity_run.xml"
     },
     {
-        "merged": "com.example.healthmate.app-merged_res-29:/layout_fragment_for_you.xml.flat",
-        "source": "com.example.healthmate.app-main-31:/layout/fragment_for_you.xml"
+        "merged": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-29:/layout_trend_layout.xml.flat",
+        "source": "/Users/speedpowermac/.gradle/daemon/7.5/com.example.healthmate.app-main-31:/layout/trend_layout.xml"
     }
 ]

@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <item android:id="@+id/calorie"
-    android:title="@string/calorie"
+    android:title="Calorie"
     android:icon="@drawable/ic_launcher_calories"
     />
     <item android:id="@+id/run"
@@ -10,13 +10,15 @@
         android:icon="@drawable/ic_launcher_running"
 
         />
+
     <item android:id="@+id/trends"
-        android:title="trends"
+        android:title="Trends"
         android:icon="@drawable/ic_launcher_trends"
 
         />
+
     <item android:id="@+id/social"
-        android:title="social"
+        android:title="Social"
         android:icon="@drawable/ic_launcher_message"
         />
 

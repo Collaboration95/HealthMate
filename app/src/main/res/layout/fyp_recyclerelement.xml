@@ -48,9 +48,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:text="Morning Jog"
-                app:layout_constraintBottom_toBottomOf="@+id/iconArrow"
+                app:layout_constraintBottom_toBottomOf="@+id/addFriend"
                 app:layout_constraintEnd_toEndOf="@+id/MainImage"
-                app:layout_constraintTop_toTopOf="@+id/iconArrow" />
+                app:layout_constraintTop_toTopOf="@+id/addFriend" />
 
             <TextView
                 android:id="@+id/Distance"
@@ -86,13 +86,10 @@
                 android:id="@+id/iconArrow"
                 android:layout_width="29dp"
                 android:layout_height="33dp"
-                android:layout_marginEnd="56dp"
                 app:layout_constraintBottom_toBottomOf="@+id/addFriend"
-                app:layout_constraintEnd_toStartOf="@+id/activityName"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/addFriend"
-                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/ic_launcher_rightsymbol"
                 app:tint="@color/primaryColor" />
 
