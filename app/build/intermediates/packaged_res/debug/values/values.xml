@@ -12,6 +12,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
+    <dimen name="_10sdp">10dp</dimen>
     <string name="app_name">HealthMate</string>
     <string name="calorie">calorie</string>
     <string name="following">Following</string>

@@ -32,6 +32,10 @@
             android:name=".social"
             android:parentActivityName=".MainActivity"
             android:label="Socials" />
+        <activity
+            android:name=".NewMeal"
+            android:parentActivityName=".MainActivity"
+            android:label="Add a meal" />
     </application>
 
 </manifest>

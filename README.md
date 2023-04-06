@@ -26,7 +26,7 @@
 ## Road Map
 
 - Finish Social Page ( Make adapter and stuff )
-- Code Plus Button 
+
 - running page --> assume user has already ran, manually key in run metrics, implement google maps api 
 - Implement Calendar For HomePage ( Come up with datastructure to store 1days inputs + come up with other class to store each day as objects)
 - first page should be the google sign in page (main activity is shifted)
@@ -34,4 +34,6 @@
 - First Page Typing Intro
 - Strava Api Implementation 
 - implement threading 
-- 
+- implement Recycler View for calories 
+- Implement Running Page
+- Implement plus button on all pages

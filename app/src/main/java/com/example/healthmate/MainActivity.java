@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public boolean onMenuItemClick(MenuItem item) {
                                 Toast.makeText(MainActivity.this, "Selected: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                                if(item.getItemId()==R.id.newMeal){
+                                    startActivity(new Intent(context,NewMeal.class));
+                                }
+
                                 return true;
                             }
                         });

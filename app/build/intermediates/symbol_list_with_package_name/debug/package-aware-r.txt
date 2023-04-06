@@ -1921,6 +1921,7 @@ color teal_700
 color tooltip_background_dark
 color tooltip_background_light
 color white
+dimen _10sdp
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -2903,6 +2904,7 @@ id activityName
 id activity_chooser_view_content
 id add
 id addFriend
+id add_meal
 id alertTitle
 id aligned
 id all
@@ -3005,6 +3007,12 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editMealName
+id editTextNumber
+id editTextNumber2
+id editTextNumber3
+id editTextNumber6
+id editTextTime
 id edit_query
 id elastic
 id embed
@@ -3043,6 +3051,7 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id guideline
 id header_title
 id hideable
 id home
@@ -3084,6 +3093,8 @@ id marquee
 id masked
 id match_constraint
 id match_parent
+id materialCardView
+id materialCardView2
 id material_clock_display
 id material_clock_display_and_toggle
 id material_clock_face
@@ -3105,9 +3116,6 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
-id menu_item_1
-id menu_item_2
-id menu_item_3
 id message
 id middle
 id mini
@@ -3152,6 +3160,9 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id newMeal
+id newPost
+id newRun
 id noScroll
 id noState
 id none
@@ -3289,11 +3300,18 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id text
 id text2
+id textCarbs
 id textEnd
+id textFat
+id textMealName
+id textProtein
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textTime
+id textTitle
 id textTop
+id textTotalCalories
 id textView2
 id text_input_end_icon
 id text_input_error_icon
@@ -3457,6 +3475,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_newmeal
 layout activity_run
 layout activity_social
 layout activity_trend
@@ -3541,6 +3560,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout test
 layout trend_layout
 menu bottom_nav_menu
 menu popup_menu

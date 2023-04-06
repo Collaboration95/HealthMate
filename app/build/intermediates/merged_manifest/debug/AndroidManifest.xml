@@ -47,6 +47,10 @@
             android:name="com.example.healthmate.social"
             android:label="Socials"
             android:parentActivityName="com.example.healthmate.MainActivity" />
+        <activity
+            android:name="com.example.healthmate.NewMeal"
+            android:label="Add a meal"
+            android:parentActivityName="com.example.healthmate.MainActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
