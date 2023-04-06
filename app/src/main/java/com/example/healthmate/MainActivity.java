@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,10 +32,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        CardView cardView = findViewById(R.id.plusCard); // Replace "my_button_id" with your actual button ID
+        CardView cardView = findViewById(R.id.bringtoFront);
         cardView.bringToFront();
-        cardView = findViewById(R.id.plusCard);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,12 +54,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-
-
-
+//
+        CardView cardView2 = findViewById(R.id.plusCard); // Replace "my_button_id" with your actual button ID
+        cardView2.bringToFront();
 //       Following Code block to be included in every activity to take care of bottom navigation view functionality
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean   onNavigationItemSelected(@NonNull MenuItem item) {

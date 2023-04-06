@@ -60,9 +60,8 @@ public class run extends AppCompatActivity {
                 return false;
             }
         });
-        CardView cardView = findViewById(R.id.plusCard); // Replace "my_button_id" with your actual button ID
+        CardView cardView = findViewById(R.id.bringtoFront);
         cardView.bringToFront();
-        cardView = findViewById(R.id.plusCard);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

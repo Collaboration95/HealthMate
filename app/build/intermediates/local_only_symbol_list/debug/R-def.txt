@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color custom_ripple_color
 color primaryColor
 color purple_200
 color purple_500
@@ -42,6 +43,7 @@ id addFriend
 id add_meal
 id bottomCard
 id bottom_navigation
+id bringtoFront
 id calorie
 id cancel_button
 id editMealName
@@ -93,6 +95,7 @@ layout fragment_following
 layout fragment_for_you
 layout fyp_recyclerelement
 layout icon_plus
+layout reusable_plus
 layout test
 layout trend_layout
 menu bottom_nav_menu
@@ -107,6 +110,7 @@ string following
 string following_fragment
 string for_you
 string hello_blank_fragment
+style MyBottomNavTheme
 style TabItemAppearance
 style Theme.HealthMate
 xml backup_rules

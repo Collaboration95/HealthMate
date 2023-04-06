@@ -19,12 +19,16 @@
     <string name="following_fragment">Following Fragment</string>
     <string name="for_you">For You</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <style name="MyBottomNavTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorControlHighlight">@color/primaryColor</item>
+    </style>
     <style name="TabItemAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">16sp  </item>
     </style>
     <style name="Theme.HealthMate" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorControlHighlight">@color/primaryColor</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         
