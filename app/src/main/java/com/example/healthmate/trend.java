@@ -5,10 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -72,6 +75,30 @@ public class trend extends AppCompatActivity {
 
                 }
                 return false;
+            }
+        });
+
+
+        CardView cardView = findViewById(R.id.plusCard); // Replace "my_button_id" with your actual button ID
+        cardView.bringToFront();
+        cardView = findViewById(R.id.plusCard);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popupMenu = new PopupMenu(context, view);
+                popupMenu.inflate(R.menu.popup_menu);
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        Toast.makeText(context, "Selected: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                        if(item.getItemId()==R.id.newMeal){
+                            startActivity(new Intent(context,NewMeal.class));
+                        }
+
+                        return true;
+                    }
+                });
+                popupMenu.show();
             }
         });
     }
