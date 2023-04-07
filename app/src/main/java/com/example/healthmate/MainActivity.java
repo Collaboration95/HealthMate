@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         CardView cardView = findViewById(R.id.bringtoFront);
         cardView.bringToFront();
         cardView.setOnClickListener(new View.OnClickListener() {

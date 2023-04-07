@@ -1318,6 +1318,9 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color custom_ripple_color
+color cyan_50
+color deep_purple_300
+color deep_purple_50
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1366,6 +1369,8 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_blue_100
+color light_blue_a400
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -1888,6 +1893,8 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color pink_300
+color pink_50
 color primaryColor
 color primary_dark_material_dark
 color primary_dark_material_light
@@ -1919,6 +1926,7 @@ color tab_non_highlighted_text_color
 color tab_text_color_selector
 color teal_200
 color teal_700
+color teal_a200
 color tooltip_background_dark
 color tooltip_background_light
 color white
@@ -2710,6 +2718,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable box_rounded
+drawable box_rounded_16
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2955,6 +2965,7 @@ id checkbox
 id checked
 id chronometer
 id circle_center
+id circularProgressIndicator
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -3042,6 +3053,7 @@ id floating
 id following
 id forever
 id fragment_container_view_tag
+id fri
 id frost
 id fullscreen_header
 id fyp
@@ -3089,6 +3101,11 @@ id legacy
 id line1
 id line3
 id linear
+id linearLayout
+id linearLayout2
+id linearProgressIndicator
+id linearProgressIndicator2
+id linearProgressIndicator3
 id listMode
 id list_item
 id m3_side_sheet
@@ -3122,6 +3139,7 @@ id matrix
 id message
 id middle
 id mini
+id mon
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3210,6 +3228,7 @@ id right_side
 id rounded
 id row_index_key
 id run
+id sat
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3285,6 +3304,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id sun
 id supportScrollUp
 id tabMode
 id tab_layout
@@ -3315,7 +3335,18 @@ id textTime
 id textTitle
 id textTop
 id textTotalCalories
+id textView
+id textView10
+id textView11
+id textView12
 id textView2
+id textView3
+id textView4
+id textView5
+id textView6
+id textView7
+id textView8
+id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3325,6 +3356,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id thu
 id time
 id title
 id titleDividerNoCustom
@@ -3347,6 +3379,7 @@ id trend_recyler
 id trend_unit
 id trends
 id triangle
+id tue
 id unchecked
 id uniform
 id unlabeled
@@ -3362,6 +3395,8 @@ id view_tree_view_model_store_owner
 id viewpager
 id visible
 id visible_removing_fragment_view_tag
+id wed
+id weeklyCalendar
 id west
 id withText
 id with_icon
@@ -3482,6 +3517,9 @@ layout activity_newmeal
 layout activity_run
 layout activity_social
 layout activity_trend
+layout calendar_widget
+layout calorie_counter
+layout cheese
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3559,6 +3597,8 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout oatmilk
+layout orangejuice
 layout reusable_plus
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

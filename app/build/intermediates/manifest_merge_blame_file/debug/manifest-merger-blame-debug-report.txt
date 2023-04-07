@@ -6,112 +6,112 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml
+8-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml
+9-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 10
 11    <permission
-11-->[androidx.core:core:1.9.0] /Users/speedpowermac/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+11-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
 12        android:name="com.example.healthmate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.9.0] /Users/speedpowermac/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+12-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
 13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.9.0] /Users/speedpowermac/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+13-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
 14
 15    <uses-permission android:name="com.example.healthmate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.9.0] /Users/speedpowermac/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.9.0] /Users/speedpowermac/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+15-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 16
 17    <application
-17-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:5:5-41:19
+17-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:5:5-41:19
 18        android:allowBackup="true"
-18-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:6:9-35
+18-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.9.0] /Users/speedpowermac/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+19-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:7:9-65
+20-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:7:9-65
 21        android:debuggable="true"
 22        android:extractNativeLibs="false"
 23        android:fullBackupContent="@xml/backup_rules"
-23-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:8:9-54
+23-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:8:9-54
 24        android:icon="@mipmap/ic_launcher_1"
-24-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:9:9-45
+24-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:9:9-45
 25        android:label="@string/app_name"
-25-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:10:9-41
+25-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:10:9-41
 26        android:supportsRtl="true"
-26-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:11:9-35
+26-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:11:9-35
 27        android:testOnly="true"
 28        android:theme="@style/Theme.HealthMate" >
-28-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:12:9-48
+28-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:12:9-48
 29        <activity
-29-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:15:9-23:20
+29-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:15:9-23:20
 30            android:name="com.example.healthmate.MainActivity"
-30-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:16:13-41
+30-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:16:13-41
 31            android:exported="true" >
-31-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:17:13-36
+31-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:17:13-36
 32            <intent-filter>
-32-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:18:13-22:29
+32-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:18:13-22:29
 33                <action android:name="android.intent.action.MAIN" />
-33-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:19:17-69
-33-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:19:25-66
+33-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:19:17-69
+33-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:19:25-66
 34
 35                <category android:name="android.intent.category.LAUNCHER" />
-35-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:21:17-77
-35-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:21:27-74
+35-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:21:17-77
+35-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:21:27-74
 36            </intent-filter>
 37        </activity>
 38        <activity
-38-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:24:9-27:38
+38-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:24:9-27:38
 39            android:name="com.example.healthmate.trend"
-39-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:25:13-34
+39-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:25:13-34
 40            android:label="Trends"
-40-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:27:13-35
+40-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:27:13-35
 41            android:parentActivityName="com.example.healthmate.MainActivity" />
-41-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:26:13-55
+41-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:26:13-55
 42        <activity
-42-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:28:9-31:39
+42-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:28:9-31:39
 43            android:name="com.example.healthmate.run"
-43-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:29:13-32
+43-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:29:13-32
 44            android:label="Running"
-44-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:31:13-36
+44-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:31:13-36
 45            android:parentActivityName="com.example.healthmate.MainActivity" />
-45-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:30:13-55
+45-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:30:13-55
 46        <activity
-46-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:32:9-35:39
+46-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:32:9-35:39
 47            android:name="com.example.healthmate.social"
-47-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:33:13-35
+47-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:33:13-35
 48            android:label="Socials"
-48-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:35:13-36
+48-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:35:13-36
 49            android:parentActivityName="com.example.healthmate.MainActivity" />
-49-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:34:13-55
+49-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:34:13-55
 50        <activity
-50-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:36:9-39:42
+50-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:36:9-39:42
 51            android:name="com.example.healthmate.NewMeal"
-51-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:37:13-36
+51-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:37:13-36
 52            android:label="Add a meal"
-52-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:39:13-39
+52-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:39:13-39
 53            android:parentActivityName="com.example.healthmate.MainActivity" />
-53-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:38:13-55
+53-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:38:13-55
 54
 55        <provider
-55-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+55-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
 56            android:name="androidx.startup.InitializationProvider"
-56-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+56-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
 57            android:authorities="com.example.healthmate.androidx-startup"
-57-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+57-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
 58            android:exported="false" >
-58-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+58-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
 59            <meta-data
-59-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+59-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
 60                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-60-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+60-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
 61                android:value="androidx.startup" />
-61-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+61-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
 62            <meta-data
-62-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/speedpowermac/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+62-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
 63                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-63-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/speedpowermac/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+63-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
 64                android:value="androidx.startup" />
-64-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/speedpowermac/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+64-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
 65        </provider>
 66    </application>
 67
