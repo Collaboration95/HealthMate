@@ -1,234 +1,295 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-43:12
-MERGED from [com.google.android.material:material:1.8.0] /Users/hongjing/.gradle/caches/transforms-3/dfe455107600617cfcbe36a5c8cee19f/transformed/material-1.8.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hongjing/.gradle/caches/transforms-3/ddf83f750e2b46d45c980e431ca0a682/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/f9cbea646069e80afa4058702cbf29bd/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/901bd1e79ca3a5e2188025eed5ecc80d/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/d79342ee9818b768bd3b596a7b57b752/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment:1.3.6] /Users/hongjing/.gradle/caches/transforms-3/e662a78d598a403fc10bb2550268231c/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.6.0] /Users/hongjing/.gradle/caches/transforms-3/a767196ac7dee22e27f85827d6433d9a/transformed/activity-1.6.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/6f3a0090af60fda4ed7dae7881f0c443/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/a3a03d46ae5442b50598cd9d2958ec7b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/a2e230625f9cadea5eed95dc3ca61391/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ee3ae8f1d764d3914a415879637879bb/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/3c95aa9aa58eb5547a0a9586ce3ea2fe/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/dcab2ccd2afeb68d5dbad6d576d2d43c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/85fd1d3c9f702ad2a1060334e8ba52fe/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/dc97d6ce0b4fe9761cb7382a11c15f82/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/85f86d78fcd14a3f534bf898212a06d9/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/1957eeb80797743bfa11d4d3c2231d0d/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/f0ee4a260759686922cb4bed25f4bc7c/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core-ktx:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/d61a8eaef648181f3a08d99931e80a3f/transformed/core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ffa6ff59be780381963989a9f5cf67d3/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/bbb54ae256d8f6b016ef7e8ffeda0f37/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/a319f67dd8962771fc5fdd9f7eaa0f06/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/92dbb525ace016fe3f791d4316ca6187/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:17:1-37:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/b27e62dc621b1294b7f65008fe732148/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/d38e461d20efd20af56e8e34655cfb01/transformed/savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ee0027bc9d5788a8013686284e27f76a/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/9b7de33db6878c842f3a569e4f99463f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/666783bae71031cb449f42748cc82aaf/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/2588dbebb914a4847c23b9e2e9390de9/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/hongjing/.gradle/caches/transforms-3/bfacf2ee5ac7cac2e44ce4e891127432/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/f7e72aec555385520472fe5b01b108b9/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hongjing/.gradle/caches/transforms-3/65503080a3128e0eb6820fb4620289f6/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/e6feb0a9bf1c6632f275ad2bd5042b74/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/768ce08253bf00b423db5e4145f1008b/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ba26b032571efe3047e393aed466c638/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/8d866ddde2cdf8a7053c54c56694d22e/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/hongjing/.gradle/caches/transforms-3/728ab5a088fb13b3bd2d361b8ab1f5a8/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-43:12
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-55:12
+MERGED from [com.google.android.material:material:1.8.0] /Users/hongjing/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hongjing/.gradle/caches/transforms-3/43341abde141a903890b3b877d0cb134/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/aaa772381b6c33132288976ab9c5c585/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/e996fb6acbc9f67b000eae78132828cb/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:17:1-44:12
+MERGED from [com.android.volley:volley:1.2.1] /Users/hongjing/.gradle/caches/transforms-3/48bb251da20acb49085aa9b10a8a7a32/transformed/volley-1.2.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/hongjing/.gradle/caches/transforms-3/7b549dbf47a9c2669f3a12e1f086c574/transformed/play-services-location-21.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7a92f0389f27297045a55b2ce7948200/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/hongjing/.gradle/caches/transforms-3/ee3ae0389d94fef76d8a1a7e7a41fcc0/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/b215599a1ff75aa4b38b84b805169a81/transformed/play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/hongjing/.gradle/caches/transforms-3/28928faa2c9343f50f6fcdc59d14b180/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] /Users/hongjing/.gradle/caches/transforms-3/eb176abe221e202482e9c2d2212df951/transformed/activity-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/82bb62fd5e2bb88fe73740b3eb224540/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/e3a7c22f9930f2acc9d8227af337f217/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/3b2fc090777006a31f45ce0267f9e064/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/de206502d576fa13cf42b6444d4d20a4/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/d6eed192ddc39672dc9476c29342a5ca/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/c6b2fd539153d8e87dc72580590e96c2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/6b6f639fd7cd2a9b53ec7d4f424c4bf4/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/44858675846b00f78e0c98205427e513/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/bca15d585b2d6034e95950e546b5a02b/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/7309026a40fa04ded6707ac27e50c830/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/40217ad64de853673ad89e15ad79f82a/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/9f774dc62596a38104b7b904a90b09d4/transformed/core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/3c906b9488e7ca0a9eeb228e0e3ab792/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/866ea38681caeb16a0eb704b48abbf4b/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/4ae5037cfbc14cfd654d8712e73f2e14/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/e2dfa769dec43a00f78a4252d2a99c8c/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/6827f7a7a2c0241cbf8246aebfa2d5c7/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/1b1c9a8c8969d12354bd56f61d76d6e3/transformed/savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/a044de2c98b9d8345e8dd1b83fa07cd7/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/cc3e792903f98d5058a84d728243dd37/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/b06d91d1f560fa5a0106bc02853dee95/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/c2d43571c23cb7f0a0e3ba5447d8da39/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/hongjing/.gradle/caches/transforms-3/9951fcc5a1244760ef92321890191174/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/197413502ad182529e4228161e442c7e/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hongjing/.gradle/caches/transforms-3/96d6c7cee629d847ef8012aad3cffab6/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7d4f0134b27994a6d0d8a1f82068b7b1/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7bd12d8b2bb4d98ba87259da016974ef/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/158d640c272dcbb64d7aefaa1c6a33a5/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7b9cb8d14cbe6b2dac1c137f6ae299ba/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/hongjing/.gradle/caches/transforms-3/76fbf5c4908dd6b9897dcfd3f501ed43/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-55:12
 	package
 		INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-43:12
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-55:12
 		INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-43:12
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-55:12
 		INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-43:12
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:1-55:12
 		INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:5:5-6:68
+	android:name
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:6:9-65
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:8:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:9:22-64
 application
-ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:5:5-41:19
-MERGED from [com.google.android.material:material:1.8.0] /Users/hongjing/.gradle/caches/transforms-3/dfe455107600617cfcbe36a5c8cee19f/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
-MERGED from [com.google.android.material:material:1.8.0] /Users/hongjing/.gradle/caches/transforms-3/dfe455107600617cfcbe36a5c8cee19f/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hongjing/.gradle/caches/transforms-3/ddf83f750e2b46d45c980e431ca0a682/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hongjing/.gradle/caches/transforms-3/ddf83f750e2b46d45c980e431ca0a682/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/9b7de33db6878c842f3a569e4f99463f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/9b7de33db6878c842f3a569e4f99463f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/2588dbebb914a4847c23b9e2e9390de9/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/2588dbebb914a4847c23b9e2e9390de9/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:11:5-53:19
+MERGED from [com.google.android.material:material:1.8.0] /Users/hongjing/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.8.0] /Users/hongjing/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hongjing/.gradle/caches/transforms-3/43341abde141a903890b3b877d0cb134/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hongjing/.gradle/caches/transforms-3/43341abde141a903890b3b877d0cb134/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:9:5-13:19
+MERGED from [com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:9:5-13:19
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/hongjing/.gradle/caches/transforms-3/7b549dbf47a9c2669f3a12e1f086c574/transformed/play-services-location-21.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/hongjing/.gradle/caches/transforms-3/7b549dbf47a9c2669f3a12e1f086c574/transformed/play-services-location-21.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/hongjing/.gradle/caches/transforms-3/ee3ae0389d94fef76d8a1a7e7a41fcc0/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/hongjing/.gradle/caches/transforms-3/ee3ae0389d94fef76d8a1a7e7a41fcc0/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/b215599a1ff75aa4b38b84b805169a81/transformed/play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/b215599a1ff75aa4b38b84b805169a81/transformed/play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/cc3e792903f98d5058a84d728243dd37/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/cc3e792903f98d5058a84d728243dd37/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/c2d43571c23cb7f0a0e3ba5447d8da39/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/c2d43571c23cb7f0a0e3ba5447d8da39/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:16:9-41
 	android:fullBackupContent
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:8:9-54
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:14:9-54
 	tools:targetApi
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:14:9-29
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:19:9-29
 	android:icon
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:9:9-45
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:15:9-45
 	android:allowBackup
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:12:9-48
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:18:9-48
 	android:dataExtractionRules
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:7:9-65
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:13:9-65
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:21:9-23:71
+	android:value
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:23:13-68
+	android:name
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:22:13-58
 activity#com.example.healthmate.MainActivity
-ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:15:9-23:20
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:25:9-32:20
 	android:exported
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:17:13-36
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:27:13-36
 	android:name
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:16:13-41
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:26:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:18:13-22:29
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:28:13-31:29
 action#android.intent.action.MAIN
-ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:19:17-69
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:19:25-66
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:21:27-74
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:30:27-74
 activity#com.example.healthmate.trend
-ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:24:9-27:38
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:34:9-37:38
 	android:parentActivityName
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:26:13-55
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:36:13-55
 	android:label
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:27:13-35
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:37:13-35
 	android:name
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:25:13-34
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:35:13-34
 activity#com.example.healthmate.run
-ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:28:9-31:39
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:38:9-41:39
 	android:parentActivityName
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:30:13-55
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:40:13-55
 	android:label
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:31:13-36
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:41:13-36
 	android:name
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:29:13-32
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:39:13-32
 activity#com.example.healthmate.social
-ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:32:9-35:39
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:42:9-45:39
 	android:parentActivityName
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:34:13-55
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:44:13-55
 	android:label
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:35:13-36
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:45:13-36
 	android:name
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:33:13-35
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:43:13-35
 activity#com.example.healthmate.NewMeal
-ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:36:9-39:42
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:46:9-49:42
 	android:parentActivityName
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:38:13-55
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:48:13-55
 	android:label
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:39:13-39
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:49:13-39
 	android:name
-		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:37:13-36
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:47:13-36
+activity#com.example.healthmate.MapsActivity
+ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:51:9-50
+	android:name
+		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:51:19-47
 uses-sdk
 INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.8.0] /Users/hongjing/.gradle/caches/transforms-3/dfe455107600617cfcbe36a5c8cee19f/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.material:material:1.8.0] /Users/hongjing/.gradle/caches/transforms-3/dfe455107600617cfcbe36a5c8cee19f/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hongjing/.gradle/caches/transforms-3/ddf83f750e2b46d45c980e431ca0a682/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hongjing/.gradle/caches/transforms-3/ddf83f750e2b46d45c980e431ca0a682/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/f9cbea646069e80afa4058702cbf29bd/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/f9cbea646069e80afa4058702cbf29bd/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/901bd1e79ca3a5e2188025eed5ecc80d/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/901bd1e79ca3a5e2188025eed5ecc80d/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/d79342ee9818b768bd3b596a7b57b752/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/d79342ee9818b768bd3b596a7b57b752/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] /Users/hongjing/.gradle/caches/transforms-3/e662a78d598a403fc10bb2550268231c/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] /Users/hongjing/.gradle/caches/transforms-3/e662a78d598a403fc10bb2550268231c/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.6.0] /Users/hongjing/.gradle/caches/transforms-3/a767196ac7dee22e27f85827d6433d9a/transformed/activity-1.6.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.6.0] /Users/hongjing/.gradle/caches/transforms-3/a767196ac7dee22e27f85827d6433d9a/transformed/activity-1.6.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/6f3a0090af60fda4ed7dae7881f0c443/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/6f3a0090af60fda4ed7dae7881f0c443/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/a3a03d46ae5442b50598cd9d2958ec7b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/a3a03d46ae5442b50598cd9d2958ec7b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/a2e230625f9cadea5eed95dc3ca61391/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/a2e230625f9cadea5eed95dc3ca61391/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ee3ae8f1d764d3914a415879637879bb/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ee3ae8f1d764d3914a415879637879bb/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/3c95aa9aa58eb5547a0a9586ce3ea2fe/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/3c95aa9aa58eb5547a0a9586ce3ea2fe/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/dcab2ccd2afeb68d5dbad6d576d2d43c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/dcab2ccd2afeb68d5dbad6d576d2d43c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/85fd1d3c9f702ad2a1060334e8ba52fe/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/85fd1d3c9f702ad2a1060334e8ba52fe/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/dc97d6ce0b4fe9761cb7382a11c15f82/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/dc97d6ce0b4fe9761cb7382a11c15f82/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/85f86d78fcd14a3f534bf898212a06d9/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/85f86d78fcd14a3f534bf898212a06d9/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/1957eeb80797743bfa11d4d3c2231d0d/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/1957eeb80797743bfa11d4d3c2231d0d/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/f0ee4a260759686922cb4bed25f4bc7c/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/f0ee4a260759686922cb4bed25f4bc7c/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core-ktx:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/d61a8eaef648181f3a08d99931e80a3f/transformed/core-ktx-1.9.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/d61a8eaef648181f3a08d99931e80a3f/transformed/core-ktx-1.9.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ffa6ff59be780381963989a9f5cf67d3/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ffa6ff59be780381963989a9f5cf67d3/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/bbb54ae256d8f6b016ef7e8ffeda0f37/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/bbb54ae256d8f6b016ef7e8ffeda0f37/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/a319f67dd8962771fc5fdd9f7eaa0f06/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/a319f67dd8962771fc5fdd9f7eaa0f06/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/92dbb525ace016fe3f791d4316ca6187/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/92dbb525ace016fe3f791d4316ca6187/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/b27e62dc621b1294b7f65008fe732148/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/b27e62dc621b1294b7f65008fe732148/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/d38e461d20efd20af56e8e34655cfb01/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/d38e461d20efd20af56e8e34655cfb01/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ee0027bc9d5788a8013686284e27f76a/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ee0027bc9d5788a8013686284e27f76a/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/9b7de33db6878c842f3a569e4f99463f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/9b7de33db6878c842f3a569e4f99463f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/666783bae71031cb449f42748cc82aaf/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/666783bae71031cb449f42748cc82aaf/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/2588dbebb914a4847c23b9e2e9390de9/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/2588dbebb914a4847c23b9e2e9390de9/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/hongjing/.gradle/caches/transforms-3/bfacf2ee5ac7cac2e44ce4e891127432/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/hongjing/.gradle/caches/transforms-3/bfacf2ee5ac7cac2e44ce4e891127432/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/f7e72aec555385520472fe5b01b108b9/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/f7e72aec555385520472fe5b01b108b9/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hongjing/.gradle/caches/transforms-3/65503080a3128e0eb6820fb4620289f6/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hongjing/.gradle/caches/transforms-3/65503080a3128e0eb6820fb4620289f6/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/e6feb0a9bf1c6632f275ad2bd5042b74/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/e6feb0a9bf1c6632f275ad2bd5042b74/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/768ce08253bf00b423db5e4145f1008b/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/768ce08253bf00b423db5e4145f1008b/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ba26b032571efe3047e393aed466c638/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/ba26b032571efe3047e393aed466c638/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/8d866ddde2cdf8a7053c54c56694d22e/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/8d866ddde2cdf8a7053c54c56694d22e/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/hongjing/.gradle/caches/transforms-3/728ab5a088fb13b3bd2d361b8ab1f5a8/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/hongjing/.gradle/caches/transforms-3/728ab5a088fb13b3bd2d361b8ab1f5a8/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.8.0] /Users/hongjing/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.8.0] /Users/hongjing/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hongjing/.gradle/caches/transforms-3/43341abde141a903890b3b877d0cb134/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hongjing/.gradle/caches/transforms-3/43341abde141a903890b3b877d0cb134/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/aaa772381b6c33132288976ab9c5c585/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/aaa772381b6c33132288976ab9c5c585/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/e996fb6acbc9f67b000eae78132828cb/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/hongjing/.gradle/caches/transforms-3/e996fb6acbc9f67b000eae78132828cb/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.2.1] /Users/hongjing/.gradle/caches/transforms-3/48bb251da20acb49085aa9b10a8a7a32/transformed/volley-1.2.1/AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.2.1] /Users/hongjing/.gradle/caches/transforms-3/48bb251da20acb49085aa9b10a8a7a32/transformed/volley-1.2.1/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/hongjing/.gradle/caches/transforms-3/7b549dbf47a9c2669f3a12e1f086c574/transformed/play-services-location-21.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/hongjing/.gradle/caches/transforms-3/7b549dbf47a9c2669f3a12e1f086c574/transformed/play-services-location-21.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7a92f0389f27297045a55b2ce7948200/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7a92f0389f27297045a55b2ce7948200/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/hongjing/.gradle/caches/transforms-3/ee3ae0389d94fef76d8a1a7e7a41fcc0/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/hongjing/.gradle/caches/transforms-3/ee3ae0389d94fef76d8a1a7e7a41fcc0/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/b215599a1ff75aa4b38b84b805169a81/transformed/play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/b215599a1ff75aa4b38b84b805169a81/transformed/play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/hongjing/.gradle/caches/transforms-3/28928faa2c9343f50f6fcdc59d14b180/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/hongjing/.gradle/caches/transforms-3/28928faa2c9343f50f6fcdc59d14b180/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] /Users/hongjing/.gradle/caches/transforms-3/eb176abe221e202482e9c2d2212df951/transformed/activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] /Users/hongjing/.gradle/caches/transforms-3/eb176abe221e202482e9c2d2212df951/transformed/activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/82bb62fd5e2bb88fe73740b3eb224540/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/82bb62fd5e2bb88fe73740b3eb224540/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/e3a7c22f9930f2acc9d8227af337f217/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/e3a7c22f9930f2acc9d8227af337f217/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/3b2fc090777006a31f45ce0267f9e064/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/3b2fc090777006a31f45ce0267f9e064/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/de206502d576fa13cf42b6444d4d20a4/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/de206502d576fa13cf42b6444d4d20a4/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/d6eed192ddc39672dc9476c29342a5ca/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/d6eed192ddc39672dc9476c29342a5ca/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/c6b2fd539153d8e87dc72580590e96c2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/c6b2fd539153d8e87dc72580590e96c2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/6b6f639fd7cd2a9b53ec7d4f424c4bf4/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/6b6f639fd7cd2a9b53ec7d4f424c4bf4/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/44858675846b00f78e0c98205427e513/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/44858675846b00f78e0c98205427e513/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/bca15d585b2d6034e95950e546b5a02b/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/bca15d585b2d6034e95950e546b5a02b/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/7309026a40fa04ded6707ac27e50c830/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/7309026a40fa04ded6707ac27e50c830/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/40217ad64de853673ad89e15ad79f82a/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/40217ad64de853673ad89e15ad79f82a/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/9f774dc62596a38104b7b904a90b09d4/transformed/core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/9f774dc62596a38104b7b904a90b09d4/transformed/core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/3c906b9488e7ca0a9eeb228e0e3ab792/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/3c906b9488e7ca0a9eeb228e0e3ab792/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/866ea38681caeb16a0eb704b48abbf4b/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/866ea38681caeb16a0eb704b48abbf4b/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/4ae5037cfbc14cfd654d8712e73f2e14/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/hongjing/.gradle/caches/transforms-3/4ae5037cfbc14cfd654d8712e73f2e14/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/e2dfa769dec43a00f78a4252d2a99c8c/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/e2dfa769dec43a00f78a4252d2a99c8c/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/6827f7a7a2c0241cbf8246aebfa2d5c7/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/6827f7a7a2c0241cbf8246aebfa2d5c7/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/1b1c9a8c8969d12354bd56f61d76d6e3/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/1b1c9a8c8969d12354bd56f61d76d6e3/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/a044de2c98b9d8345e8dd1b83fa07cd7/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/a044de2c98b9d8345e8dd1b83fa07cd7/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/cc3e792903f98d5058a84d728243dd37/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/cc3e792903f98d5058a84d728243dd37/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/b06d91d1f560fa5a0106bc02853dee95/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/b06d91d1f560fa5a0106bc02853dee95/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/c2d43571c23cb7f0a0e3ba5447d8da39/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/c2d43571c23cb7f0a0e3ba5447d8da39/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/hongjing/.gradle/caches/transforms-3/9951fcc5a1244760ef92321890191174/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/hongjing/.gradle/caches/transforms-3/9951fcc5a1244760ef92321890191174/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/197413502ad182529e4228161e442c7e/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/hongjing/.gradle/caches/transforms-3/197413502ad182529e4228161e442c7e/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hongjing/.gradle/caches/transforms-3/96d6c7cee629d847ef8012aad3cffab6/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/hongjing/.gradle/caches/transforms-3/96d6c7cee629d847ef8012aad3cffab6/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7d4f0134b27994a6d0d8a1f82068b7b1/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7d4f0134b27994a6d0d8a1f82068b7b1/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7bd12d8b2bb4d98ba87259da016974ef/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7bd12d8b2bb4d98ba87259da016974ef/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/158d640c272dcbb64d7aefaa1c6a33a5/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/158d640c272dcbb64d7aefaa1c6a33a5/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7b9cb8d14cbe6b2dac1c137f6ae299ba/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/hongjing/.gradle/caches/transforms-3/7b9cb8d14cbe6b2dac1c137f6ae299ba/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/hongjing/.gradle/caches/transforms-3/76fbf5c4908dd6b9897dcfd3f501ed43/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/hongjing/.gradle/caches/transforms-3/76fbf5c4908dd6b9897dcfd3f501ed43/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
 INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
@@ -239,49 +300,87 @@ INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xm
 		INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 		ADDED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
-provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/9b7de33db6878c842f3a569e4f99463f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/9b7de33db6878c842f3a569e4f99463f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
-	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
-	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:23:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:28:9-32
+queries
+ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:30:5-34:15
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:33:9-64
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:33:18-61
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
+meta-data#com.google.android.gms.version
+ADDED from [com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:10:9-12:69
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/b215599a1ff75aa4b38b84b805169a81/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/b215599a1ff75aa4b38b84b805169a81/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:12:13-66
+	android:name
+		ADDED from [com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:11:13-58
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/cc3e792903f98d5058a84d728243dd37/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/hongjing/.gradle/caches/transforms-3/cc3e792903f98d5058a84d728243dd37/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
 permission#com.example.healthmate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
 uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 uses-permission#com.example.healthmate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
 	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78

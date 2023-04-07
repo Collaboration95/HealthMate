@@ -10,109 +10,177 @@
 9        android:targetSdkVersion="33" />
 9-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml
 10
-11    <permission
-11-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-12        android:name="com.example.healthmate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
-14
-15    <uses-permission android:name="com.example.healthmate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:5:5-41:19
-18        android:allowBackup="true"
-18-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:6:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/48da4d468f697fb0fb5d56e4c7c822b9/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:7:9-65
-21        android:debuggable="true"
-22        android:extractNativeLibs="false"
-23        android:fullBackupContent="@xml/backup_rules"
-23-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:8:9-54
-24        android:icon="@mipmap/ic_launcher_1"
-24-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:9:9-45
-25        android:label="@string/app_name"
-25-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:10:9-41
-26        android:supportsRtl="true"
-26-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:11:9-35
-27        android:testOnly="true"
-28        android:theme="@style/Theme.HealthMate" >
-28-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:12:9-48
-29        <activity
-29-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:15:9-23:20
-30            android:name="com.example.healthmate.MainActivity"
-30-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:16:13-41
-31            android:exported="true" >
-31-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:17:13-36
-32            <intent-filter>
-32-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:18:13-22:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:19:17-69
-33-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:19:25-66
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:5:5-6:68
+11-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:6:9-65
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:7:5-79
+12-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:7:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:8:5-81
+13-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:8:22-78
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:9:5-67
+14-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:9:22-64
+15
+16    <!-- Include required permissions for Google Maps API to run. -->
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:23:5-79
+17-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:23:22-76
+18
+19    <uses-feature
+19-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:26:5-28:35
+20        android:glEsVersion="0x00020000"
+20-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:27:9-41
+21        android:required="true" />
+21-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:28:9-32
+22
+23    <queries>
+23-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:30:5-34:15
+24
+25        <!-- Needs to be explicitly declared on Android R+ -->
+26        <package android:name="com.google.android.apps.maps" />
+26-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:33:9-64
+26-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:33:18-61
+27    </queries>
+28
+29    <permission
+29-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+30        android:name="com.example.healthmate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+30-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+31        android:protectionLevel="signature" />
+31-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+32
+33    <uses-permission android:name="com.example.healthmate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+33-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+33-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:21:17-77
-35-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:21:27-74
-36            </intent-filter>
-37        </activity>
-38        <activity
-38-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:24:9-27:38
-39            android:name="com.example.healthmate.trend"
-39-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:25:13-34
-40            android:label="Trends"
-40-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:27:13-35
-41            android:parentActivityName="com.example.healthmate.MainActivity" />
-41-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:26:13-55
-42        <activity
-42-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:28:9-31:39
-43            android:name="com.example.healthmate.run"
-43-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:29:13-32
-44            android:label="Running"
-44-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:31:13-36
-45            android:parentActivityName="com.example.healthmate.MainActivity" />
-45-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:30:13-55
-46        <activity
-46-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:32:9-35:39
-47            android:name="com.example.healthmate.social"
-47-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:33:13-35
-48            android:label="Socials"
-48-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:35:13-36
-49            android:parentActivityName="com.example.healthmate.MainActivity" />
-49-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:34:13-55
-50        <activity
-50-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:36:9-39:42
-51            android:name="com.example.healthmate.NewMeal"
-51-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:37:13-36
-52            android:label="Add a meal"
-52-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:39:13-39
-53            android:parentActivityName="com.example.healthmate.MainActivity" />
-53-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:38:13-55
-54
-55        <provider
-55-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-56            android:name="androidx.startup.InitializationProvider"
-56-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-57            android:authorities="com.example.healthmate.androidx-startup"
-57-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-58            android:exported="false" >
-58-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-59            <meta-data
-59-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-60                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-60-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-61                android:value="androidx.startup" />
-61-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/b534eca45ae0368be30899d5007a440e/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-62            <meta-data
-62-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-63                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-63-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-64                android:value="androidx.startup" />
-64-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/b0761d22b5c86c7f873b7a426ffce717/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-65        </provider>
-66    </application>
-67
-68</manifest>
+35    <application
+35-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:11:5-53:19
+36        android:allowBackup="true"
+36-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:12:9-35
+37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+37-->[androidx.core:core:1.9.0] /Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+38        android:dataExtractionRules="@xml/data_extraction_rules"
+38-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:13:9-65
+39        android:debuggable="true"
+40        android:extractNativeLibs="false"
+41        android:fullBackupContent="@xml/backup_rules"
+41-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:14:9-54
+42        android:icon="@mipmap/ic_launcher_1"
+42-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:15:9-45
+43        android:label="@string/app_name"
+43-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:16:9-41
+44        android:supportsRtl="true"
+44-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:17:9-35
+45        android:testOnly="true"
+46        android:theme="@style/Theme.HealthMate" >
+46-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:18:9-48
+47        <meta-data
+47-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:21:9-23:71
+48            android:name="com.google.android.geo.API_KEY"
+48-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:22:13-58
+49            android:value="AIzaSyBFiJNB3fgiEj5CFTz8Hn5YdV-xRtj_3t4" />
+49-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:23:13-68
+50
+51        <activity
+51-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:25:9-32:20
+52            android:name="com.example.healthmate.MainActivity"
+52-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:26:13-41
+53            android:exported="true" >
+53-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:27:13-36
+54            <intent-filter>
+54-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:28:13-31:29
+55                <action android:name="android.intent.action.MAIN" />
+55-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:29:17-69
+55-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:29:25-66
+56
+57                <category android:name="android.intent.category.LAUNCHER" />
+57-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:30:17-77
+57-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:30:27-74
+58            </intent-filter>
+59        </activity>
+60        <activity
+60-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:34:9-37:38
+61            android:name="com.example.healthmate.trend"
+61-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:35:13-34
+62            android:label="Trends"
+62-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:37:13-35
+63            android:parentActivityName="com.example.healthmate.MainActivity" />
+63-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:36:13-55
+64        <activity
+64-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:38:9-41:39
+65            android:name="com.example.healthmate.run"
+65-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:39:13-32
+66            android:label="Running"
+66-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:41:13-36
+67            android:parentActivityName="com.example.healthmate.MainActivity" />
+67-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:40:13-55
+68        <activity
+68-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:42:9-45:39
+69            android:name="com.example.healthmate.social"
+69-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:43:13-35
+70            android:label="Socials"
+70-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:45:13-36
+71            android:parentActivityName="com.example.healthmate.MainActivity" />
+71-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:44:13-55
+72        <activity
+72-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:46:9-49:42
+73            android:name="com.example.healthmate.NewMeal"
+73-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:47:13-36
+74            android:label="Add a meal"
+74-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:49:13-39
+75            android:parentActivityName="com.example.healthmate.MainActivity" />
+75-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:48:13-55
+76        <activity android:name="com.example.healthmate.MapsActivity" />
+76-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:51:9-50
+76-->/Users/hongjing/Downloads/Filename/app/src/main/AndroidManifest.xml:51:19-47
+77
+78        <!-- Needs to be explicitly declared on P+ -->
+79        <uses-library
+79-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
+80            android:name="org.apache.http.legacy"
+80-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
+81            android:required="false" />
+81-->[com.google.android.gms:play-services-maps:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
+82
+83        <meta-data
+83-->[com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:10:9-12:69
+84            android:name="com.google.android.gms.version"
+84-->[com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:11:13-58
+85            android:value="@integer/google_play_services_version" />
+85-->[com.google.maps.android:android-maps-utils:3.4.0] /Users/hongjing/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:12:13-66
+86
+87        <activity
+87-->[com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+88            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+88-->[com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+89            android:exported="false"
+89-->[com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+90-->[com.google.android.gms:play-services-base:18.1.0] /Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+91
+92        <provider
+92-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+93            android:name="androidx.startup.InitializationProvider"
+93-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+94            android:authorities="com.example.healthmate.androidx-startup"
+94-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+95            android:exported="false" >
+95-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+96            <meta-data
+96-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+97                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+97-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+98                android:value="androidx.startup" />
+98-->[androidx.emoji2:emoji2:1.2.0] /Users/hongjing/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+99            <meta-data
+99-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+100                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+100-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+101                android:value="androidx.startup" />
+101-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/hongjing/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+102        </provider>
+103    </application>
+104
+105</manifest>

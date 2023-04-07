@@ -79,6 +79,7 @@ id linearLayout2
 id linearProgressIndicator
 id linearProgressIndicator2
 id linearProgressIndicator3
+id map
 id materialCardView
 id materialCardView2
 id mon
@@ -123,6 +124,7 @@ id viewpager
 id wed
 id weeklyCalendar
 layout activity_main
+layout activity_maps
 layout activity_newmeal
 layout activity_run
 layout activity_social

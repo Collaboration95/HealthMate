@@ -21,6 +21,7 @@
         android:layout_height="wrap_content">
     <include layout="@layout/reusable_plus"/>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/bottomCard"
         android:layout_width="match_parent"

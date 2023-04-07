@@ -17,12 +17,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import org.w3c.dom.Text;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     private Button button;
     //    Variable to store context
     Context context = MainActivity.this;
@@ -44,10 +46,11 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public boolean onMenuItemClick(MenuItem item) {
                                 Toast.makeText(MainActivity.this, "Selected: " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                                if(item.getItemId()==R.id.newMeal){
+                                if (item.getItemId()==R.id.newMeal){
                                     startActivity(new Intent(context,NewMeal.class));
+                                } else if (item.getItemId()==R.id.newRun) {
+                                    startActivity(new Intent(context, MapsActivity.class));
                                 }
-
                                 return true;
                             }
                         });
@@ -91,8 +94,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
-
 
 }
