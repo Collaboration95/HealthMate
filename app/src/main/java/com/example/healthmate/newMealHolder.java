@@ -52,7 +52,6 @@ public class newMealHolder extends Observable {
     public plus_AddMeal getMeal(int position) {
         return data.get(position);
     }
-
     public int TotalCalories(){
         int totalCalories = 0;
         for (plus_AddMeal meal : data) {
@@ -60,4 +59,28 @@ public class newMealHolder extends Observable {
         }
         return totalCalories;
     }
+    public int TotalProtein() {
+        int totalProtein = 0;
+        for (plus_AddMeal meal : data) {
+            totalProtein += Integer.parseInt(meal.getProtein());
+        }
+        return totalProtein;
+    }
+
+    public int TotalFat() {
+        int totalFat = 0;
+        for (plus_AddMeal meal : data) {
+            totalFat += Integer.parseInt(meal.getFat());
+        }
+        return totalFat;
+    }
+
+    public int TotalCarbs() {
+        int totalCarbs = 0;
+        for (plus_AddMeal meal : data) {
+            totalCarbs += Integer.parseInt(meal.getCarbs());
+        }
+        return totalCarbs;
+    }
+
 }

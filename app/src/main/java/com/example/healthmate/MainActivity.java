@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,15 +46,15 @@ public class MainActivity extends AppCompatActivity implements MyObserver{
             recyclerView.setAdapter(new MealAdapter(this, data));
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         }
-        circularProgressIndicator = findViewById(R.id.circularProgressIndicator);
-        circularProgressIndicator.setProgress(5,true);
-        Intent intent = getIntent();
-        if (intent.getStringExtra("Key")!=null){
-            String circularValue = intent.getStringExtra("Key").trim();
-            Log.d("CircularValue",Integer.parseInt(circularValue)+"");
-            circularProgressIndicator.setProgress(Integer.parseInt(circularValue));
-
-        }
+//        circularProgressIndicator = findViewById(R.id.circularProgressIndicator);
+//        circularProgressIndicator.setProgress(,true);
+//        Intent intent = getIntent();
+//        if (intent.getStringExtra("Key")!=null){
+//            String circularValue = intent.getStringExtra("Key").trim();
+//            Log.d("CircularValue",Integer.parseInt(circularValue)+"");
+//            circularProgressIndicator.setProgress(Integer.parseInt(circularValue));
+//
+//        }
 
         newMealHolder.getInstance().addObserver(this);
 
@@ -125,14 +126,35 @@ public class MainActivity extends AppCompatActivity implements MyObserver{
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                circularProgressIndicator = findViewById(R.id.circularProgressIndicator);
+                // Find and initialize UI elements
+                CircularProgressIndicator circularProgressIndicator = findViewById(R.id.circularProgressIndicator);
                 TextView totalCalorie = findViewById(R.id.textCalorie);
+                ProgressBar progressBarProtein = findViewById(R.id.proteinProgress);
+                ProgressBar progressBarFat = findViewById(R.id.fatProgress);
+                ProgressBar progressBarCarbs = findViewById(R.id.CarbProgress);
+                int totalprotein = newMealHolder.getInstance().TotalProtein()*4;
+                int totalFat = newMealHolder.getInstance().TotalFat()*9;
+                int totalCarbs = newMealHolder.getInstance().TotalCarbs()*4;
+                int totalFood = totalCarbs + totalFat + totalprotein;
+                // Update progress bars with data from newMealHolder
+                if(totalFood!=0) {
+                    if (progressBarProtein != null && progressBarFat != null && progressBarCarbs != null) {
+                        progressBarFat.setProgress((totalFat * 100) / totalFood);
+                        progressBarCarbs.setProgress((totalCarbs * 100) / totalFood);
+                        progressBarProtein.setProgress((totalprotein * 100) / totalFood);
+                    }
+                }
 
+                if(circularProgressIndicator!=null){
+                    circularProgressIndicator.setProgress(newMealHolder.getInstance().TotalCalories(),true);
+                }
+
+
+                // Update total calorie text with data from newMealHolder
                 if (totalCalorie != null) {
                     totalCalorie.setText(newMealHolder.getInstance().TotalCalories() + " ");
                 }
-
-                circularProgressIndicator.setProgress(25); // You might want to update this value based on the data
+                // Update circular progress indicator with a default value (you might want to update this based on the data)
             }
         });
     }

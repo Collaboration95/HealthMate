@@ -23,6 +23,8 @@ color teal_700
 color teal_a200
 color white
 dimen _10sdp
+drawable addmeal
+drawable bottomnavigation
 drawable box_rounded
 drawable box_rounded_16
 drawable ic_launcher_add

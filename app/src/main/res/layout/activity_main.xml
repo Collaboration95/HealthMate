@@ -8,11 +8,15 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.card.MaterialCardView
+
         android:id="@+id/materialCardView"
-        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         app:cardCornerRadius="22dp"
         app:cardElevation="20dp"
+        app:strokeColor="@color/primaryColor"
+        app:strokeWidth="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -85,7 +89,7 @@
                 android:layout_width="100dp"
                 android:layout_height="14dp"
                 android:layout_marginStart="9dp"
-                android:progress="15"
+                android:progress="0"
                 app:indicatorColor="@color/teal_a200"
                 app:layout_constraintBottom_toBottomOf="@+id/protein"
                 app:layout_constraintEnd_toStartOf="@+id/circularProgressIndicator"
@@ -116,7 +120,7 @@
                 android:id="@+id/fatProgress"
                 android:layout_width="108dp"
                 android:layout_height="wrap_content"
-                android:progress="15"
+                android:progress="0"
                 app:indicatorColor="@color/deep_purple_300"
                 app:layout_constraintBottom_toBottomOf="@+id/textView13"
                 app:layout_constraintEnd_toStartOf="@+id/circularProgressIndicator"
@@ -144,7 +148,7 @@
                 android:id="@+id/CarbProgress"
                 android:layout_width="107dp"
                 android:layout_height="wrap_content"
-                android:progress="15"
+                android:progress="0"
                 app:indicatorColor="@color/light_blue_a400"
                 app:layout_constraintBottom_toBottomOf="@+id/textView14"
                 app:layout_constraintEnd_toStartOf="@+id/circularProgressIndicator"
@@ -185,7 +189,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@color/secondaryColor"
+            android:background="@drawable/bottomnavigation"
             android:theme="@style/MyBottomNavTheme"
             app:itemIconSize="40dp"
             app:itemIconTint="@color/primaryColor"

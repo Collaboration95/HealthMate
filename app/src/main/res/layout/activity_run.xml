@@ -25,8 +25,8 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:background="@color/secondaryColor"
             app:itemIconSize="40dp"
+            android:background="@drawable/bottomnavigation"
             app:itemIconTint="@color/primaryColor"
             app:itemTextColor="@color/primaryColor"
             android:id="@+id/bottom_navigation"

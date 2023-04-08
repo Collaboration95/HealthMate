@@ -2758,10 +2758,12 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable addmeal
 drawable amu_bubble_mask
 drawable amu_bubble_shadow
 drawable avd_hide_password
 drawable avd_show_password
+drawable bottomnavigation
 drawable box_rounded
 drawable box_rounded_16
 drawable btn_checkbox_checked_mtrl
