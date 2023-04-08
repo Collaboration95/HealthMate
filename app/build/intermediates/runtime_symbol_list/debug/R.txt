@@ -2906,11 +2906,13 @@ int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
 int id CTRL 0x7f080003
+int id CarbProgress 0x7f080246
 int id Distance 0x7f080004
 int id FUNCTION 0x7f080005
 int id Likes 0x7f080006
 int id META 0x7f080007
 int id MainImage 0x7f080008
+int id Mealrecyclerview 0x7f080247
 int id NO_DEBUG 0x7f080009
 int id Name 0x7f08000a
 int id SHIFT 0x7f08000b
@@ -2918,6 +2920,7 @@ int id SHOW_ALL 0x7f08000c
 int id SHOW_PATH 0x7f08000d
 int id SHOW_PROGRESS 0x7f08000e
 int id SYM 0x7f08000f
+int id Standard 0x7f080248
 int id TOP_END 0x7f080010
 int id TOP_START 0x7f080011
 int id Time 0x7f080012
@@ -3106,6 +3109,7 @@ int id exitUntilCollapsed 0x7f0800c8
 int id expand_activities_button 0x7f0800c9
 int id expanded_menu 0x7f0800ca
 int id fade 0x7f0800cb
+int id fatProgress 0x7f080249
 int id fill 0x7f0800cc
 int id fill_horizontal 0x7f0800cd
 int id fill_vertical 0x7f0800ce
@@ -3208,6 +3212,7 @@ int id material_timepicker_ok_button 0x7f08012e
 int id material_timepicker_view 0x7f08012f
 int id material_value_index 0x7f080130
 int id matrix 0x7f080131
+int id mealtitle 0x7f08024a
 int id message 0x7f080132
 int id middle 0x7f080133
 int id mini 0x7f080134
@@ -3289,6 +3294,8 @@ int id postLayout 0x7f08017f
 int id pressed 0x7f080180
 int id progress_circular 0x7f080181
 int id progress_horizontal 0x7f080182
+int id protein 0x7f08024b
+int id proteinProgress 0x7f08024c
 int id radio 0x7f080183
 int id ratio 0x7f080184
 int id rectangles 0x7f080185
@@ -3397,6 +3404,7 @@ int id tag_window_insets_animation_callback 0x7f0801eb
 int id terrain 0x7f0801ec
 int id text 0x7f0801ed
 int id text2 0x7f0801ee
+int id textCalorie 0x7f08024d
 int id textCarbs 0x7f0801ef
 int id textEnd 0x7f0801f0
 int id textFat 0x7f0801f1
@@ -3413,6 +3421,8 @@ int id textView 0x7f0801fb
 int id textView10 0x7f0801fc
 int id textView11 0x7f0801fd
 int id textView12 0x7f0801fe
+int id textView13 0x7f08024e
+int id textView14 0x7f08024f
 int id textView2 0x7f0801ff
 int id textView3 0x7f080200
 int id textView4 0x7f080201
@@ -3438,6 +3448,7 @@ int id title_template 0x7f080214
 int id toggle 0x7f080215
 int id top 0x7f080216
 int id topPanel 0x7f080217
+int id totalCalorie 0x7f080250
 int id touch_outside 0x7f080218
 int id track_run_button 0x7f080245
 int id transitionToEnd 0x7f080219
@@ -3642,6 +3653,7 @@ int layout material_time_input 0x7f0b004b
 int layout material_timepicker 0x7f0b004c
 int layout material_timepicker_dialog 0x7f0b004d
 int layout material_timepicker_textinput_display 0x7f0b004e
+int layout meallayout 0x7f0b007e
 int layout mtrl_alert_dialog 0x7f0b004f
 int layout mtrl_alert_dialog_actions 0x7f0b0050
 int layout mtrl_alert_dialog_title 0x7f0b0051

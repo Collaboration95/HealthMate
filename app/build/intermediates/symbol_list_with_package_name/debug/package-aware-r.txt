@@ -2907,11 +2907,13 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id CarbProgress
 id Distance
 id FUNCTION
 id Likes
 id META
 id MainImage
+id Mealrecyclerview
 id NO_DEBUG
 id Name
 id SHIFT
@@ -2919,6 +2921,7 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id Standard
 id TOP_END
 id TOP_START
 id Time
@@ -3107,6 +3110,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id fatProgress
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3209,6 +3213,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id mealtitle
 id message
 id middle
 id mini
@@ -3290,6 +3295,8 @@ id postLayout
 id pressed
 id progress_circular
 id progress_horizontal
+id protein
+id proteinProgress
 id radio
 id ratio
 id rectangles
@@ -3398,6 +3405,7 @@ id tag_window_insets_animation_callback
 id terrain
 id text
 id text2
+id textCalorie
 id textCarbs
 id textEnd
 id textFat
@@ -3414,6 +3422,8 @@ id textView
 id textView10
 id textView11
 id textView12
+id textView13
+id textView14
 id textView2
 id textView3
 id textView4
@@ -3439,6 +3449,7 @@ id title_template
 id toggle
 id top
 id topPanel
+id totalCalorie
 id touch_outside
 id track_run_button
 id transitionToEnd
@@ -3643,6 +3654,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout meallayout
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

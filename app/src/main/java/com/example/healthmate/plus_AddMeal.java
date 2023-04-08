@@ -1,5 +1,7 @@
 package com.example.healthmate;
 
+import androidx.annotation.NonNull;
+
 public class plus_AddMeal {
     private final String mealName;
     private final String protein;
@@ -39,5 +41,15 @@ public class plus_AddMeal {
 
     public String getTime() {
         return time;
+    }
+    @NonNull
+    @Override
+    public String toString() {
+        return "Meal Name: " + mealName +
+                ", Protein: " + protein +
+                ", Fat: " + fat +
+                ", Carbs: " + carbs +
+                ", Total Calories: " + totalCalories +
+                ", Time: " + time;
     }
 }
