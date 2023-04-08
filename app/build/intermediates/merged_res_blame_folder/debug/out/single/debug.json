@@ -20,12 +20,12 @@
         "source": "/Users/hongjing/.gradle/daemon/7.5/com.example.healthmate.app-main-35:/drawable/ic_launcher_rightsymbol.xml"
     },
     {
-        "merged": "/Users/hongjing/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-33:/layout_fragment_for_you.xml.flat",
-        "source": "/Users/hongjing/.gradle/daemon/7.5/com.example.healthmate.app-main-35:/layout/fragment_for_you.xml"
-    },
-    {
         "merged": "/Users/hongjing/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-33:/layout_activity_social.xml.flat",
         "source": "/Users/hongjing/.gradle/daemon/7.5/com.example.healthmate.app-main-35:/layout/activity_social.xml"
+    },
+    {
+        "merged": "/Users/hongjing/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-33:/layout_fragment_for_you.xml.flat",
+        "source": "/Users/hongjing/.gradle/daemon/7.5/com.example.healthmate.app-main-35:/layout/fragment_for_you.xml"
     },
     {
         "merged": "/Users/hongjing/.gradle/daemon/7.5/com.example.healthmate.app-merged_res-33:/mipmap-xxhdpi_ic_launcher.png.flat",
