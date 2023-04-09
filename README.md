@@ -37,3 +37,12 @@
 - implement Recycler View for calories 
 - Implement Running Page
 - Implement plus button on all pages
+
+
+
+## Final Road Map
+- Have a single class holder for social post 
+- Create activity for new post 
+- Recycle through a bunch of images instead of place holder 
+- Design class to hold all data while active 
+- Design local data memory using SharedPreferences Class 
