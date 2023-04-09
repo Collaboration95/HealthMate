@@ -36,7 +36,7 @@ public class newMealHolder extends Observable {
 
     public void notifyObservers() {
         for (MyObserver observer : observers) {
-            observer.onMealHolderChange();
+            observer.OnChange();
         }
     }
 

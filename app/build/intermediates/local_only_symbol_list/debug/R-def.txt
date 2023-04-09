@@ -64,6 +64,9 @@ id calorie
 id cancel_button
 id circularProgressIndicator
 id editMealName
+id editRunDistance
+id editRunName
+id editRunTime
 id editTextNumber
 id editTextNumber2
 id editTextNumber3
@@ -88,6 +91,7 @@ id linearProgressIndicator3
 id map
 id materialCardView
 id materialCardView2
+id materialCardView3
 id mealtitle
 id mon
 id newMeal
@@ -99,6 +103,7 @@ id protein
 id proteinProgress
 id run
 id sat
+id select_image
 id social
 id sun
 id tab_layout

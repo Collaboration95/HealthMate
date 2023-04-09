@@ -47,6 +47,10 @@
             android:name=".NewMeal"
             android:parentActivityName=".MainActivity"
             android:label="Add a meal" />
+        <activity
+            android:name=".NewPost"
+            android:parentActivityName=".MainActivity"
+            android:label="Create New Social Media Post" />
 
         <activity android:name=".MapsActivity" />
 

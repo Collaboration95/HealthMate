@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-55:12
+ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-59:12
 MERGED from [com.google.android.material:material:1.8.0] /Users/speedpowermac/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/speedpowermac/.gradle/caches/transforms-3/43341abde141a903890b3b877d0cb134/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/speedpowermac/.gradle/caches/transforms-3/aaa772381b6c33132288976ab9c5c585/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -51,22 +51,22 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/speedpowermac/.gra
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/speedpowermac/.gradle/caches/transforms-3/158d640c272dcbb64d7aefaa1c6a33a5/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/speedpowermac/.gradle/caches/transforms-3/7b9cb8d14cbe6b2dac1c137f6ae299ba/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/speedpowermac/.gradle/caches/transforms-3/76fbf5c4908dd6b9897dcfd3f501ed43/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-55:12
+INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-59:12
+INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-59:12
 	package
 		INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml
-		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-55:12
+		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-59:12
 		INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml
-		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-55:12
+		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-59:12
 		INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml
-		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-55:12
+		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:1-59:12
 		INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:2:11-69
@@ -89,7 +89,7 @@ MERGED from [com.google.android.gms:play-services-maps:18.1.0] /Users/speedpower
 	android:name
 		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:9:22-64
 application
-ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:11:5-53:19
+ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:11:5-57:19
 MERGED from [com.google.android.material:material:1.8.0] /Users/speedpowermac/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] /Users/speedpowermac/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/speedpowermac/.gradle/caches/transforms-3/43341abde141a903890b3b877d0cb134/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -188,10 +188,18 @@ ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFin
 		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:49:13-39
 	android:name
 		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:47:13-36
-activity#com.example.healthmate.MapsActivity
-ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:51:9-50
+activity#com.example.healthmate.NewPost
+ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:50:9-53:60
+	android:parentActivityName
+		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:52:13-55
+	android:label
+		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:53:13-57
 	android:name
-		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:51:19-47
+		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:51:13-36
+activity#com.example.healthmate.MapsActivity
+ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:55:9-50
+	android:name
+		ADDED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:55:19-47
 uses-sdk
 INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml

@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements MyObserver{
                         } else if (item.getItemId()==R.id.newRun) {
                             startActivity(new Intent(context, MapsActivity.class));
                         }
+                        else if (item.getItemId()==R.id.newPost){
+                            startActivity(new Intent(context, NewPost.class));
+                        }
                         return true;
                     }
                 });
@@ -109,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements MyObserver{
     }
 
     @Override
-    public void onMealHolderChange() {
+    public void OnChange() {
         updateUI(); // Call updateUI() method here
     }
 

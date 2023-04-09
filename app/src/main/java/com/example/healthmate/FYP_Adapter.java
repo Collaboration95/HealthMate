@@ -40,14 +40,19 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder>{
         holder.likes.setText(data.get(position).getLikes());
 
 // Set the image resources for the ImageViews
-        holder.Image.setImageResource(data.get(position).getImage());
-        holder.AddFriendicon.setImageResource(data.get(position).getAddFriendicon());
-        holder.activityIcon.setImageResource(data.get(position).getActivityIcon());
-        holder.likeIcon.setImageResource(data.get(position).getLikeIcon());
-        holder.timeIcon.setImageResource(data.get(position).getTimeIcon());
-        holder.distanceIcon.setImageResource(data.get(position).getDistanceIcon());
 
-
+        int Image = R.drawable.ic_launcher_background;
+        int profileIcon = R.drawable.ic_launcher_person;
+        int activityIcon = R.drawable.ic_launcher_rightsymbol;
+        int likeIcon = R.drawable.ic_launcher_addfriend;
+        int timeIcon = R.drawable.ic_launcher_timer;
+        int distanceIcon = R.drawable.ic_launcher_distance;
+        holder.Image.setImageResource(Image);
+        holder.AddFriendicon.setImageResource(profileIcon);
+        holder.activityIcon.setImageResource(activityIcon);
+        holder.likeIcon.setImageResource(likeIcon);
+        holder.timeIcon.setImageResource(timeIcon);
+        holder.distanceIcon.setImageResource(distanceIcon);
     }
 
     @Override

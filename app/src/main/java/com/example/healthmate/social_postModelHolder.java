@@ -37,7 +37,7 @@ public class social_postModelHolder extends Observable {
 
     public void notifyObservers() {
         for (MyObserver observer : observers) {
-            observer.onMealHolderChange();
+            observer.OnChange();
         }
     }
 

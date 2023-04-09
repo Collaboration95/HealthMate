@@ -56,7 +56,7 @@
 33-->[androidx.core:core:1.9.0] /Users/speedpowermac/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 34
 35    <application
-35-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:11:5-53:19
+35-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:11:5-57:19
 36        android:allowBackup="true"
 36-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:12:9-35
 37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -132,55 +132,63 @@
 74-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:49:13-39
 75            android:parentActivityName="com.example.healthmate.MainActivity" />
 75-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:48:13-55
-76        <activity android:name="com.example.healthmate.MapsActivity" />
-76-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:51:9-50
-76-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:51:19-47
-77
-78        <!-- Needs to be explicitly declared on P+ -->
-79        <uses-library
-79-->[com.google.android.gms:play-services-maps:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
-80            android:name="org.apache.http.legacy"
-80-->[com.google.android.gms:play-services-maps:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
-81            android:required="false" />
-81-->[com.google.android.gms:play-services-maps:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
-82
-83        <meta-data
-83-->[com.google.maps.android:android-maps-utils:3.4.0] /Users/speedpowermac/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:10:9-12:69
-84            android:name="com.google.android.gms.version"
-84-->[com.google.maps.android:android-maps-utils:3.4.0] /Users/speedpowermac/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:11:13-58
-85            android:value="@integer/google_play_services_version" />
-85-->[com.google.maps.android:android-maps-utils:3.4.0] /Users/speedpowermac/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:12:13-66
+76        <activity
+76-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:50:9-53:60
+77            android:name="com.example.healthmate.NewPost"
+77-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:51:13-36
+78            android:label="Create New Social Media Post"
+78-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:53:13-57
+79            android:parentActivityName="com.example.healthmate.MainActivity" />
+79-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:52:13-55
+80        <activity android:name="com.example.healthmate.MapsActivity" />
+80-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:55:9-50
+80-->/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/ProjectFinal/app/src/main/AndroidManifest.xml:55:19-47
+81
+82        <!-- Needs to be explicitly declared on P+ -->
+83        <uses-library
+83-->[com.google.android.gms:play-services-maps:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
+84            android:name="org.apache.http.legacy"
+84-->[com.google.android.gms:play-services-maps:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
+85            android:required="false" />
+85-->[com.google.android.gms:play-services-maps:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/08617ebb6f83777ccd34cc30d290d56f/transformed/play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
 86
-87        <activity
-87-->[com.google.android.gms:play-services-base:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
-88            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-88-->[com.google.android.gms:play-services-base:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
-89            android:exported="false"
-89-->[com.google.android.gms:play-services-base:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
-90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-90-->[com.google.android.gms:play-services-base:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
-91
-92        <provider
-92-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-93            android:name="androidx.startup.InitializationProvider"
-93-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-94            android:authorities="com.example.healthmate.androidx-startup"
-94-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-95            android:exported="false" >
-95-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-96            <meta-data
-96-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-97                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-97-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-98                android:value="androidx.startup" />
-98-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-99            <meta-data
-99-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/speedpowermac/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-100                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-100-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/speedpowermac/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-101                android:value="androidx.startup" />
-101-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/speedpowermac/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-102        </provider>
-103    </application>
-104
-105</manifest>
+87        <meta-data
+87-->[com.google.maps.android:android-maps-utils:3.4.0] /Users/speedpowermac/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:10:9-12:69
+88            android:name="com.google.android.gms.version"
+88-->[com.google.maps.android:android-maps-utils:3.4.0] /Users/speedpowermac/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:11:13-58
+89            android:value="@integer/google_play_services_version" />
+89-->[com.google.maps.android:android-maps-utils:3.4.0] /Users/speedpowermac/.gradle/caches/transforms-3/6764ab7e78a14a2546587681a5589671/transformed/android-maps-utils-3.4.0/AndroidManifest.xml:12:13-66
+90
+91        <activity
+91-->[com.google.android.gms:play-services-base:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+92            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+92-->[com.google.android.gms:play-services-base:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+93            android:exported="false"
+93-->[com.google.android.gms:play-services-base:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+94            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+94-->[com.google.android.gms:play-services-base:18.1.0] /Users/speedpowermac/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+95
+96        <provider
+96-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+97            android:name="androidx.startup.InitializationProvider"
+97-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+98            android:authorities="com.example.healthmate.androidx-startup"
+98-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+99            android:exported="false" >
+99-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+100            <meta-data
+100-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+101                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+101-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+102                android:value="androidx.startup" />
+102-->[androidx.emoji2:emoji2:1.2.0] /Users/speedpowermac/.gradle/caches/transforms-3/11fcfac137e125697c613e39357dafde/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+103            <meta-data
+103-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/speedpowermac/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+104                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+104-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/speedpowermac/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+105                android:value="androidx.startup" />
+105-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/speedpowermac/.gradle/caches/transforms-3/82aa4e2be19cd579e54c2d64889c1a1b/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+106        </provider>
+107    </application>
+108
+109</manifest>

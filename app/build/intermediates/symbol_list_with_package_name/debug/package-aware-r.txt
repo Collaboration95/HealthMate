@@ -3096,6 +3096,9 @@ id easeInOut
 id easeOut
 id east
 id editMealName
+id editRunDistance
+id editRunName
+id editRunTime
 id editTextNumber
 id editTextNumber2
 id editTextNumber3
@@ -3194,6 +3197,7 @@ id match_constraint
 id match_parent
 id materialCardView
 id materialCardView2
+id materialCardView3
 id material_clock_display
 id material_clock_display_and_toggle
 id material_clock_face
@@ -3347,6 +3351,7 @@ id search_view_toolbar
 id search_view_toolbar_container
 id search_voice_btn
 id select_dialog_listview
+id select_image
 id selected
 id selection_type
 id sharedValueSet

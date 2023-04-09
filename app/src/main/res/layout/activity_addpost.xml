@@ -7,10 +7,8 @@
     >
 
     <com.google.android.material.card.MaterialCardView
-        app:strokeColor="#1C54B2"
-        app:strokeWidth="3dp"
         android:layout_width="340dp"
-        android:layout_height="450dp"
+        android:layout_height="350dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="20dp"
         app:cardElevation="14dp"
@@ -19,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.19"
-        >
+        app:strokeColor="#1C54B2"
+        app:strokeWidth="3dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -50,38 +49,25 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.153" />
+                app:layout_constraintVertical_bias="0.19" />
 
             <TextView
                 android:id="@+id/textProtein"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Protein (g) :"
+                android:text="Run Distance"
                 android:textColor="@color/primaryColor"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.271" />
-
-            <TextView
-                android:id="@+id/textFat"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="264dp"
-                android:text="Fat (g) :"
-                android:textColor="@color/primaryColor"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/guideline" />
+                app:layout_constraintVertical_bias="0.31" />
 
             <TextView
                 android:id="@+id/textCarbs"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Carbs (g) :"
+                android:text="Run Time "
                 android:textColor="@color/primaryColor"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -89,36 +75,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.494" />
-
-            <TextView
-                android:id="@+id/textTotalCalories"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Total Calories :"
-                android:textColor="@color/primaryColor"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.619" />
-
-            <TextView
-
-                android:id="@+id/textTime"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Time (min) :"
-                android:textColor="@color/primaryColor"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.737" />
+                app:layout_constraintVertical_bias="0.44" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline"
@@ -128,7 +85,7 @@
                 app:layout_constraintGuide_begin="31dp" />
 
             <EditText
-                android:id="@+id/editMealName"
+                android:id="@+id/editRunName"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textMealName"
@@ -137,17 +94,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textMealName" />
 
             <EditText
-                android:id="@+id/editTextNumber"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textFat"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textFat" />
-
-            <EditText
-                android:id="@+id/editTextNumber2"
+                android:id="@+id/editRunDistance"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -159,17 +106,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textProtein" />
 
             <EditText
-                android:id="@+id/editTextNumber3"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textTotalCalories"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textTotalCalories" />
-
-            <EditText
-                android:id="@+id/editTextNumber6"
+                android:id="@+id/editRunTime"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -177,16 +114,6 @@
                 app:layout_constraintBaseline_toBaselineOf="@+id/textCarbs"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textCarbs" />
-
-            <EditText
-                android:id="@+id/editTextTime"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textTime"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textTime" />
 
 
             <com.google.android.material.card.MaterialCardView
@@ -231,7 +158,7 @@
                 app:layout_constraintHorizontal_bias="0.44"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.92"
+                app:layout_constraintVertical_bias="0.82"
                 app:strokeColor="@color/black"
                 app:strokeWidth="3dp">
 
@@ -241,6 +168,38 @@
                     android:layout_height="40dp"
                     android:backgroundTint="@color/primaryColor"
                     android:text="Cancel"
+
+                    />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primaryColor"
+                android:textAllCaps="false"
+                app:cardCornerRadius="12dp"
+
+                app:cardElevation="100dp"
+                app:cardPreventCornerOverlap="false"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.43"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.63"
+                app:strokeColor="@color/black"
+                app:strokeWidth="3dp">
+
+                <Button
+                    android:id="@+id/select_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:text="Select Image"
 
                     />
 

@@ -73,6 +73,10 @@
             android:name="com.example.healthmate.NewMeal"
             android:label="Add a meal"
             android:parentActivityName="com.example.healthmate.MainActivity" />
+        <activity
+            android:name="com.example.healthmate.NewPost"
+            android:label="Create New Social Media Post"
+            android:parentActivityName="com.example.healthmate.MainActivity" />
         <activity android:name="com.example.healthmate.MapsActivity" />
 
         <!-- Needs to be explicitly declared on P+ -->

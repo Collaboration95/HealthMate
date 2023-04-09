@@ -92,6 +92,8 @@ public class trend extends AppCompatActivity {
                         Toast.makeText(context, "Selected: " + item.getTitle(), Toast.LENGTH_SHORT).show();
                         if(item.getItemId()==R.id.newMeal){
                             startActivity(new Intent(context,NewMeal.class));
+                        }else if (item.getItemId()==R.id.newRun) {
+                            startActivity(new Intent(context, MapsActivity.class));
                         }
 
                         return true;
