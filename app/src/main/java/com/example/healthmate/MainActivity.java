@@ -46,15 +46,6 @@ public class MainActivity extends AppCompatActivity implements MyObserver{
             recyclerView.setAdapter(new MealAdapter(this, data));
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         }
-//        circularProgressIndicator = findViewById(R.id.circularProgressIndicator);
-//        circularProgressIndicator.setProgress(,true);
-//        Intent intent = getIntent();
-//        if (intent.getStringExtra("Key")!=null){
-//            String circularValue = intent.getStringExtra("Key").trim();
-//            Log.d("CircularValue",Integer.parseInt(circularValue)+"");
-//            circularProgressIndicator.setProgress(Integer.parseInt(circularValue));
-//
-//        }
 
         newMealHolder.getInstance().addObserver(this);
 

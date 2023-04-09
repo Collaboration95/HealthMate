@@ -137,6 +137,7 @@ id tue
 id viewpager
 id wed
 id weeklyCalendar
+layout activity_addpost
 layout activity_main
 layout activity_maps
 layout activity_newmeal
