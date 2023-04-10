@@ -65,7 +65,7 @@
             </intent-filter>
         </activity>
 
-        <!-- Trend_Class activity displays trends for various health metrics -->
+        <!-- Trend activity displays trends for various health metrics -->
         <activity
             android:name="com.example.healthmate.Trend"
             android:label="Trends"

@@ -77,7 +77,7 @@ public class Social extends AppCompatActivity {
                         startActivity(new Intent(context, MainActivity.class));
                         return true;
 
-                    case R.id.run:
+                    case R.id.alltrends:
                         Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Run.class));
                         return true;
@@ -86,7 +86,7 @@ public class Social extends AppCompatActivity {
                         Toast.makeText(context, "Social", Toast.LENGTH_SHORT).show();
                         return true;
 
-                    case R.id.trends:
+                    case R.id.goals:
                         Toast.makeText(context, "Trends", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Trend.class));
                         return true;

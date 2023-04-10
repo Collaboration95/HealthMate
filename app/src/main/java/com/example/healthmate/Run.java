@@ -33,7 +33,6 @@ public class Run extends AppCompatActivity {
     private TextView stepCountTextView;
     private TextView distanceTextView;
     private TextView caloriesTextView;
-    private TextView heartRateTextView;
     private Button refreshDataButton;
 
     /**
@@ -50,10 +49,9 @@ public class Run extends AppCompatActivity {
         googleFitManager.requestGoogleFitPermissions();
 
         // Initialize UI elements
-        stepCountTextView = findViewById(R.id.step_count_text_view);
-        distanceTextView = findViewById(R.id.distance_text_view);
-        caloriesTextView = findViewById(R.id.calories_text_view);
-        heartRateTextView = findViewById(R.id.heart_rate_text_view);
+        stepCountTextView = findViewById(R.id.textStepCount);
+        distanceTextView = findViewById(R.id.textDistance);
+        caloriesTextView = findViewById(R.id.textCaloriesBurnt);
         refreshDataButton = findViewById(R.id.refresh_data_button);
 
         // Add a click listener for the refresh data button
@@ -66,7 +64,7 @@ public class Run extends AppCompatActivity {
 
         // Set up bottom navigation and its event listeners
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.run);
+        bottomNavigationView.setSelectedItemId(R.id.alltrends);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -77,7 +75,7 @@ public class Run extends AppCompatActivity {
                         startActivity(new Intent(context, MainActivity.class));
                         return true;
 
-                    case R.id.run:
+                    case R.id.alltrends:
                         Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
                         fetchDataAndUpdateUI();
                         return true;
@@ -87,7 +85,7 @@ public class Run extends AppCompatActivity {
                         startActivity(new Intent(context, Social.class));
                         return true;
 
-                    case R.id.trends:
+                    case R.id.goals:
                         Toast.makeText(Run.this, "Trends", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Trend.class));
                         return true;
@@ -150,13 +148,13 @@ public class Run extends AppCompatActivity {
             }
         });
 
-        googleFitManager.getLatestHeartRate(new GoogleFitManager.OnDataPointListener() {
-            @Override
-            public void onDataPoint(DataPoint dataPoint) {
-                float heartRate = dataPoint.getValue(Field.FIELD_BPM).asFloat();
-                heartRateTextView.setText("Heart Rate: " + heartRate + " bpm");
-            }
-        });
+//        googleFitManager.getLatestHeartRate(new GoogleFitManager.OnDataPointListener() {
+//            @Override
+//            public void onDataPoint(DataPoint dataPoint) {
+//                float heartRate = dataPoint.getValue(Field.FIELD_BPM).asFloat();
+//                heartRateTextView.setText("Heart Rate: " + heartRate + " bpm");
+//            }
+//        });
     }
 }
 /**

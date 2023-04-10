@@ -32,39 +32,18 @@ public class Trend extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Intent intent;
     Context context = Trend.this;
-    ArrayList<Trend_Class> data = new ArrayList<>();
 
-    /**
-     * Initializes the data for the list of trends and sets up the RecyclerView and adapter.
-     */
-    private void setUpData() {
-        String[] activityName = {"Move", "Exercise", "Move", "Distance", "RunningPace", "Walking Pace"};
-        String[] activityNumber = {"1268", "1284", "1284", "1284", "1284", "1284"};
-        String[] activityUnit = {"Kcal/day", "Kcal/day", "Kcal/day", "Kcal/day", "Kcal/day", "Kcal/day"};
-        for (int i = 0; i < activityUnit.length; i++) {
-            data.add(new Trend_Class(activityName[i], activityNumber[i], activityUnit[i], R.drawable.ic_launcher_add));
-        }
-    }
 
-    /**
-     * Sets up the layout and functionality for the Trends page.
-     * It sets up the RecyclerView and adapter by calling setUpData method. It also sets up the bottom navigation view and handles navigation to other pages in the app.
-     * Finally, it sets up the card view and popup menu, which allow the user to perform additional actions on the Trends page.
-     */
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trend);
 
-        // Set up RecyclerView and adapter
-        RecyclerView recycle = findViewById(R.id.trend_recyler);
-        setUpData();
-        Trend_Adapter adapter = new Trend_Adapter(this, data);
-        recycle.setAdapter(adapter);
-        recycle.setLayoutManager(new LinearLayoutManager(this));
+
 
         // Set up bottom navigation view
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.trends);
+        bottomNavigationView.setSelectedItemId(R.id.goals);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -73,7 +52,7 @@ public class Trend extends AppCompatActivity {
                         Toast.makeText(context, "Calorie", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, MainActivity.class));
                         return true;
-                    case R.id.run:
+                    case R.id.alltrends:
                         Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Run.class));
                         return true;
@@ -81,7 +60,7 @@ public class Trend extends AppCompatActivity {
                         Toast.makeText(context, "Social", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Social.class));
                         return true;
-                    case R.id.trends:
+                    case R.id.goals:
                         Toast.makeText(context, "Trends", Toast.LENGTH_SHORT).show();
                         return true;
                 }

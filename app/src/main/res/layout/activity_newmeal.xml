@@ -128,7 +128,7 @@
                 app:layout_constraintGuide_begin="31dp" />
 
             <EditText
-                android:id="@+id/editMealName"
+                android:id="@+id/editUserName"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textMealName"
@@ -137,7 +137,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textMealName" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/editWeight"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -147,7 +147,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textFat" />
 
             <EditText
-                android:id="@+id/editTextNumber2"
+                android:id="@+id/editSex"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -159,7 +159,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textProtein" />
 
             <EditText
-                android:id="@+id/editTextNumber3"
+                android:id="@+id/editIntakeGoal"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -169,7 +169,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textTotalCalories" />
 
             <EditText
-                android:id="@+id/editTextNumber6"
+                android:id="@+id/editHeight"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -179,7 +179,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textCarbs" />
 
             <EditText
-                android:id="@+id/editTextTime"
+                android:id="@+id/editWorkoutGoal"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:ems="10"

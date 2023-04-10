@@ -42,12 +42,12 @@ public class NewMeal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Retrieve input values from the form
-                EditText editMealName = findViewById(R.id.editMealName);
-                EditText protein = findViewById(R.id.editTextNumber2);
-                EditText fat = findViewById(R.id.editTextNumber);
-                EditText carbs = findViewById(R.id.editTextNumber6);
-                EditText totalcalories = findViewById(R.id.editTextNumber3);
-                EditText time = findViewById(R.id.editTextTime);
+                EditText editMealName = findViewById(R.id.editUserName);
+                EditText protein = findViewById(R.id.editSex);
+                EditText fat = findViewById(R.id.editWeight);
+                EditText carbs = findViewById(R.id.editHeight);
+                EditText totalcalories = findViewById(R.id.editIntakeGoal);
+                EditText time = findViewById(R.id.editWorkoutGoal);
                 String mealName = editMealName.getText().toString();
                 String proteinText = protein.getText().toString();
                 String fatText = fat.getText().toString();

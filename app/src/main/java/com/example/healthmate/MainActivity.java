@@ -16,6 +16,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -58,7 +59,8 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
         setContentView(R.layout.activity_main);
 
         // Initialize GoogleFitManager and request permissions
-        googleFitManager = new GoogleFitManager(this, this);
+
+        googleFitManager = new GoogleFitManager(this, MainActivity.this );
         googleFitManager.requestGoogleFitPermissions();
 
         // Store the GoogleFitManager instance in the singleton
@@ -129,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
                         Log.d("Great Success", NewMealHolder.getInstance().getMealCount() + "");
                         return true;
 
-                    case R.id.run:
+                    case R.id.alltrends:
                         Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Run.class));
                         return true;
@@ -139,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
                         startActivity(new Intent(context, Social.class));
                         return true;
 
-                    case R.id.trends:
+                    case R.id.goals:
                         Toast.makeText(context, "Trends", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Trend.class));
                         return true;

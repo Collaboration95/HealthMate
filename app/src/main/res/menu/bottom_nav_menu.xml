@@ -7,15 +7,15 @@
     android:icon="@drawable/ic_launcher_calories"
     
     />
-    <item android:id="@+id/run"
-        android:title="Run"
-        android:icon="@drawable/ic_launcher_running"
+    <item android:id="@+id/alltrends"
+        android:title="Trends"
+        android:icon="@drawable/ic_launcher_trends"
 
         />
 
-    <item android:id="@+id/trends"
-        android:title="Trends"
-        android:icon="@drawable/ic_launcher_trends"
+    <item android:id="@+id/goals"
+        android:title="Goals"
+        android:icon="@drawable/ic_launcher_running"
         />
 
     <item android:id="@+id/social"
