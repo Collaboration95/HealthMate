@@ -6,4 +6,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="following_fragment">Following Fragment</string>
+    <string-array name="spinner_options">
+        <item> </item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Non Binary</item>
+        <item>Yes Please</item>
+    </string-array>
+
 </resources>

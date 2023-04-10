@@ -34,25 +34,31 @@ public class Run extends AppCompatActivity {
     private TextView distanceTextView;
     private TextView caloriesTextView;
     private Button refreshDataButton;
+    private Button signOutButton;
 
     /**
      * Initializes the activity, sets up the Google Fit manager, UI elements, and event listeners.
      *
      * @param savedInstanceState the saved instance state
      */
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_run);
 
-        // Initialize Google Fit manager and request necessary permissions
+        // Initialize GoogleFitManager
         googleFitManager = new GoogleFitManager(this, context);
-        googleFitManager.requestGoogleFitPermissions();
 
+        // Check if the user is signed in and request sign-in if not
+        if (!googleFitManager.getSignInStatus()) {
+            googleFitManager.requestGoogleFitPermissions();
+        }
         // Initialize UI elements
         stepCountTextView = findViewById(R.id.textStepCount);
         distanceTextView = findViewById(R.id.textDistance);
         caloriesTextView = findViewById(R.id.textCaloriesBurnt);
         refreshDataButton = findViewById(R.id.refresh_data_button);
+        signOutButton = findViewById(R.id.signOutButton);
 
         // Add a click listener for the refresh data button
         refreshDataButton.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +67,26 @@ public class Run extends AppCompatActivity {
                 fetchDataAndUpdateUI();
             }
         });
+
+        // Add a click listener for the Sign out button
+        signOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                googleFitManager.signOut(new GoogleFitManager.GoogleSignInResultCallBack() {
+                    @Override
+                    public void onSignOutSuccess() {
+                        Toast.makeText(context, "Signed out successfully.", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onSignOutFailure(Exception e) {
+                        Toast.makeText(context, "Sign out failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
+        fetchDataAndUpdateUI();
 
         // Set up bottom navigation and its event listeners
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -74,7 +100,6 @@ public class Run extends AppCompatActivity {
                         Toast.makeText(context, "Calorie", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, MainActivity.class));
                         return true;
-
                     case R.id.alltrends:
                         Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
                         fetchDataAndUpdateUI();
@@ -148,19 +173,9 @@ public class Run extends AppCompatActivity {
             }
         });
 
-//        googleFitManager.getLatestHeartRate(new GoogleFitManager.OnDataPointListener() {
-//            @Override
-//            public void onDataPoint(DataPoint dataPoint) {
-//                float heartRate = dataPoint.getValue(Field.FIELD_BPM).asFloat();
-//                heartRateTextView.setText("Heart Rate: " + heartRate + " bpm");
-//            }
-//        });
     }
+
 }
-/**
- *
- The updated code now includes comments explaining the purpose of the `Run` activity, the methods, and the different sections of code that
- are responsible for initializing the UI, setting up event listeners, and fetching and updating fitness data from the Google Fit manager.
 
- */
-
+// The updated code now includes comments explaining the purpose of the `Run` activity, the methods, and the different sections of code that
+ //are responsible for initializing the UI, setting up event listeners, and fetching and updating fitness data from the Google Fit manager.

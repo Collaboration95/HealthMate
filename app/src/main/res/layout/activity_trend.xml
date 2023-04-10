@@ -192,17 +192,17 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textFat" />
 
-            <EditText
+
+            <Spinner
                 android:id="@+id/editSex"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:ems="10"
-                android:inputType="number"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textProtein"
+                android:layout_marginEnd="28dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textProtein"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/textProtein" />
+                app:layout_constraintStart_toStartOf="@+id/editUserName"
+                app:layout_constraintTop_toTopOf="@+id/textProtein"
+                app:layout_constraintVertical_bias="1.0" />
 
             <EditText
                 android:id="@+id/editIntakeGoal"
@@ -252,7 +252,7 @@
                 app:strokeWidth="3dp">
 
                 <Button
-                    android:id="@+id/updatePost"
+                    android:id="@+id/updateData"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:backgroundTint="@color/primaryColor"

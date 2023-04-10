@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+array sex_options
+array spinner_options
 color black
 color custom_ripple_color
 color cyan_50
@@ -106,6 +108,7 @@ id proteinProgress
 id refresh_data_button
 id sat
 id select_image
+id signOutButton
 id social
 id suggestGoal
 id sun
@@ -135,7 +138,7 @@ id trend_icon
 id trend_number
 id trend_unit
 id tue
-id updatePost
+id updateData
 id viewpager
 id wed
 id weeklyCalendar

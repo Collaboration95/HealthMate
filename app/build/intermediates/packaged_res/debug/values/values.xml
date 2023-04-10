@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="sex_options"/>
+    <string-array name="spinner_options">
+        <item> </item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Non Binary</item>
+        <item>Yes Please</item>
+    </string-array>
     <color name="black">#FF000000</color>
     <color name="cyan_50">#D8FBF5</color>
     <color name="deep_purple_300">#9B5CE5</color>

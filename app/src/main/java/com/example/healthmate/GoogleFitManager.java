@@ -3,16 +3,23 @@ package com.example.healthmate;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.fitness.Fitness;
 import com.google.android.gms.fitness.FitnessOptions;
 import com.google.android.gms.fitness.data.DataPoint;
 import com.google.android.gms.fitness.data.DataSet;
 import com.google.android.gms.fitness.data.DataType;
 import com.google.android.gms.fitness.data.Field;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 
 /**
  * This class is used to manage Google Fit API integration and related tasks.
@@ -23,6 +30,11 @@ public class GoogleFitManager {
     private static final int GOOGLE_FIT_PERMISSIONS_REQUEST_CODE = 1001;
     private final Activity activity;
     private final Context context;
+
+    public static interface GoogleSignInResultCallBack {
+        void onSignOutSuccess();
+        void onSignOutFailure(Exception e);
+    }
 
     /**
      * Constructor for the GoogleFitManager class.
@@ -142,7 +154,40 @@ public class GoogleFitManager {
     public interface OnDataPointListener {
         void onDataPoint(DataPoint dataPoint);
     }
+    // Method to save the sign-in status to SharedPreferences
+    public void saveSignInStatus(boolean isSignedIn) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("GoogleFitPreferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("isSignedIn", isSignedIn);
+        editor.apply();
+    }
+    public boolean getSignInStatus() {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("GoogleFitPreferences", Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean("isSignedIn", false);
+    }
+    // Allow users to sign out
+    public void signOut(final GoogleSignInResultCallBack callback) {
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(context, gso);
+        googleSignInClient.signOut()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            saveSignInStatus(false);
+                            callback.onSignOutSuccess();
+                        } else {
+                            saveSignInStatus(false);
+                        }
+                    }
+                });
+    }
+
 }
+
 
 /**
  *

@@ -74,6 +74,8 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array sex_options
+array spinner_options
 attr SharedValue
 attr SharedValueId
 attr actionBarDivider
@@ -3362,6 +3364,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signOutButton
 id sin
 id skipCollapsed
 id skipped
@@ -3474,7 +3477,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
-id updatePost
+id updateData
 id useLogo
 id vertical_only
 id view_offset_helper

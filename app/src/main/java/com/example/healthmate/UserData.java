@@ -3,33 +3,32 @@ package com.example.healthmate;
 public class UserData {
     private static UserData instance = null;
     private String userName;
-    private String sex;
+    private int sex;
     private int weight;
     private int height;
     private int calorie_intake_goal;
     private int workoutGoal;
+    private boolean isDefault=true;
 
-    private UserData(String userName, String sex, int weight, int height, int calorie_intake_goal, int workoutGoal) {
-        this.userName = userName;
-        this.sex = sex;
-        this.weight = weight;
-        this.height = height;
-        this.calorie_intake_goal = calorie_intake_goal;
-        this.workoutGoal = workoutGoal;
+    private UserData() {
+
     }
 
-    public static UserData getInstance(String userName, String sex, int weight, int height, int calorie_intake_goal, int workoutGoal) {
+    public  UserData getInstance() {
         if (instance == null) {
-            instance = new UserData(userName, sex, weight, height, calorie_intake_goal, workoutGoal);
+            instance = new UserData();
+            instance.populateDefault();
         }
         return instance;
     }
+
+
 
     public String getUserName() {
         return userName;
     }
 
-    public String getSex() {
+    public int getSex() {
         return sex;
     }
 
@@ -49,22 +48,26 @@ public class UserData {
     public int getWorkoutGoal() {
         return workoutGoal;
     }
+    public boolean isDefault(){
+        return this.isDefault;
+    }
 
-    public void UpdateData(String userName, String sex, int weight, int height, int calorie_intake_goal, int workoutGoal) {
+    public void UpdateData(String userName, int sex, int weight, int height, int calorie_intake_goal, int workoutGoal) {
         this.userName=userName;
         this.sex=sex;
         this.weight=weight;
         this.height=height;
         this.calorie_intake_goal = calorie_intake_goal;
         this.workoutGoal = workoutGoal;
+        this.isDefault=false;
     }
     public void populateDefault() {
         this.userName="Guru";
-        this.sex="Male";
-        this.weight=weight;
-        this.height=height;
-        this.calorie_intake_goal = calorie_intake_goal;
-        this.workoutGoal = workoutGoal;
+        this.sex=1;
+        this.weight=89;
+        this.height=181;
+        this.calorie_intake_goal = 2400;
+        this.workoutGoal = 2900;
     }
 
 
