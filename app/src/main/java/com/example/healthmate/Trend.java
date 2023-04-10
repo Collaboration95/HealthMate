@@ -8,6 +8,8 @@ package com.example.healthmate;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -86,6 +88,22 @@ public class Trend extends AppCompatActivity {
                 return false;
             }
         });
+        suggestGoals= findViewById(R.id.suggestGoal);
+        suggestGoals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int userSexData = ((Spinner) findViewById(R.id.editSex)).getSelectedItemPosition();
+                int userWeight = Integer.parseInt(((EditText) findViewById(R.id.editWeight)).getText().toString());
+                int userHeight = Integer.parseInt(((EditText) findViewById(R.id.editHeight)).getText().toString());
+                EditText userCalGoal = findViewById(R.id.editIntakeGoal);
+                EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
+                double[] suggestedData = suggestGoal(userSexData, userWeight, userHeight);
+//                userCalGoal.setText((int) suggestedData[0]);
+//                userWorkoutGoal.setText((int) suggestedData[1]);
+                Log.d("Great Success","Suggested Cal: "+suggestedData[0]+"Suggested weight intake"+suggestedData[1]);
+            }
+        });
+
         updateData = findViewById(R.id.updateData);
         updateData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +114,42 @@ public class Trend extends AppCompatActivity {
                 EditText userHeight = findViewById(R.id.editHeight);
                 EditText userCalGoal = findViewById(R.id.editIntakeGoal);
                 EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
+
+
+                if (TextUtils.isEmpty(userName.getText()) || userSex.getSelectedItemPosition() == 0 ||
+                        TextUtils.isEmpty(userWeight.getText()) || TextUtils.isEmpty(userHeight.getText()) ||
+                        TextUtils.isEmpty(userCalGoal.getText()) || TextUtils.isEmpty(userWorkoutGoal.getText())) {
+                    Log.d("UpdateData Great Failure", "One or more fields are empty");
+                    return;
+                }
+                else if(checkIrregularInputs(Integer.parseInt(userWeight.getText().toString()),
+                        Integer.parseInt(userHeight.getText().toString()),
+                        Integer.parseInt(userCalGoal.getText().toString()),
+                        Integer.parseInt(userWorkoutGoal.getText().toString()))){
+                    Toast.makeText(Trend.this,"Please Check Inputs",Toast.LENGTH_SHORT).show();
+                }
+
+                UserData changed = new UserData();
+                changed.updateData(
+                        userName.getText().toString(),
+                        (int) userSex.getSelectedItemPosition(),
+                        Integer.parseInt(userWeight.getText().toString()),
+                        Integer.parseInt(userHeight.getText().toString()),
+                        Integer.parseInt(userCalGoal.getText().toString()),
+                        Integer.parseInt(userWorkoutGoal.getText().toString())
+                );
+
+                UserData userData1 = UserDataSingleton.getInstance().getUserData();
+                // set the fields of userData2 to be compared with userData1
+
+                int comparisonResult = UserDataSingleton.getInstance().userDataComparator.compare(userData1, changed);
+
+                if (comparisonResult != 0) {
+                    UserDataSingleton.getInstance().setUserData(changed);
+                    Log.d("UpdateData Great Success",UserDataSingleton.getInstance().toString());
+                } else {
+                    Log.d("UpdateData No  change made","Great Failure");
+                }
             }
         });
         // Set up card view and popup menu
@@ -125,6 +179,15 @@ public class Trend extends AppCompatActivity {
             }
         });
     }
+
+    private boolean checkIrregularInputs( int weight, int height, int calorieintake, int workout) {
+        if (weight > 250 || weight < 20 || height < 100 || height > 250 || calorieintake < 500 || calorieintake > 5000 || workout > calorieintake * 1.5) {
+            return false;
+        }
+        return true;
+    }
+
+
     public void populateData(){
         EditText userName = findViewById(R.id.editUserName);
         Spinner userSex = findViewById(R.id.editSex);
@@ -132,21 +195,38 @@ public class Trend extends AppCompatActivity {
         EditText userHeight = findViewById(R.id.editHeight);
         EditText userCalGoal = findViewById(R.id.editIntakeGoal);
         EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
-        // Get an instance of the userData singleton class
-//        UserData userData = UserData.getInstance();
 
-// Load default values from userData singleton class
-//        userName.setText(userData.getUserName());
-//        userWeight.setText(String.valueOf(userData.getWeight()));
-//        userHeight.setText(String.valueOf(userData.getHeight()));
-//        userCalGoal.setText(String.valueOf(userData.getCalorieIntakeGoal()));
-//        userWorkoutGoal.setText(String.valueOf(userData.getWorkoutGoal()));
-//
-//// Set default value for userSex
-//        int sexIndex = userData.getSex(); // Assuming getUserSex() returns an index
-//        userSex.setSelection(sexIndex);
+        UserData userData = UserDataSingleton.getInstance().getUserData();
+        // Load default values from userData singleton class
+        userName.setText(userData.getUserName());
+        userWeight.setText(String.valueOf(userData.getWeight()));
+        userHeight.setText(String.valueOf(userData.getHeight()));
+        userCalGoal.setText(String.valueOf(userData.getCalorieIntakeGoal()));
+        userWorkoutGoal.setText(String.valueOf(userData.getWorkoutGoal()));
 
+        // Set default value for userSex
+        int sexIndex = userData.getSex(); // Assuming getUserSex() returns an index
+        userSex.setSelection(sexIndex);
     }
+
+    public double[] suggestGoal(int userSex, int userWeight, int userHeight) {
+        // Calculate BMR based on sex, weight, and height
+        double bmr;
+        if (userSex%2==1) {
+            bmr = 66 + (6.2 * userWeight) + (12.7 * userHeight) - (6.76 * 30); // Assuming age of 30
+        } else {
+            bmr = 655 + (4.35 * userWeight) + (4.7 * userHeight) - (4.7 * 30); // Assuming age of 30
+        }
+
+        // Calculate calorie intake and burn goals
+        double calorieIntakeWeightMaintenance = userWeight * 13; // For weight maintenance
+
+        double calorieBurnModeratelyActive = bmr * 1.55;
+
+        // Return the suggested goals
+        return new double[] { calorieIntakeWeightMaintenance, calorieBurnModeratelyActive };
+    }
+
 }
 
 

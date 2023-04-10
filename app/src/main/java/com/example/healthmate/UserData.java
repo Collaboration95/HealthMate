@@ -73,6 +73,10 @@ package com.example.healthmate;
 //}
 
 
+import static java.security.AccessController.getContext;
+
+import android.widget.Spinner;
+
 public class UserData {
     private String userName;
     private int sex;
@@ -132,4 +136,18 @@ public class UserData {
         this.calorie_intake_goal = 2400;
         this.workoutGoal = 2900;
     }
+    @Override
+    public String toString() {
+
+        String[] Spinner_Array ={"","Male","Female","Non-binary","Yes-Please"};
+        return "User Data: \n" +
+                "User Name: " + userName + "\n" +
+                "Sex :"+ Spinner_Array[sex]+"\n"+
+                "Weight: " + weight + "\n" +
+                "Height: " + height + "\n" +
+                "Calorie Intake Goal: " + calorie_intake_goal + "\n" +
+                "Workout Goal: " + workoutGoal + "\n" +
+                "Is Default: " + isDefault + "\n";
+    }
+
 }

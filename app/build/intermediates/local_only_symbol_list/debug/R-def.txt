@@ -1,6 +1,5 @@
 R_DEF: Internal format may change without notice
 local
-array sex_options
 array spinner_options
 color black
 color custom_ripple_color
