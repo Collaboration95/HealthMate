@@ -214,6 +214,9 @@ public class Run extends AppCompatActivity {
     private TextView caloriesTextView;
     private Button refreshDataButton;
     private Button signOutButton;
+    private Button viewFitnessHistoryButton;
+
+    private Button clearHistoryButton;
 
     /**
      * Initializes the activity, sets up the Google Fit manager, UI elements, and event listeners.
@@ -238,6 +241,7 @@ public class Run extends AppCompatActivity {
         caloriesTextView = findViewById(R.id.textCaloriesBurnt);
         refreshDataButton = findViewById(R.id.refresh_data_button);
         signOutButton = findViewById(R.id.signOutButton);
+        clearHistoryButton = findViewById(R.id.clear_history_button);
 
         // Add a click listener for the refresh data button
         refreshDataButton.setOnClickListener(new View.OnClickListener() {
@@ -247,7 +251,7 @@ public class Run extends AppCompatActivity {
             }
         });
 
-        // Add a click listener for the Sign out button
+        // Add a click listener for the sign out button
         signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -262,6 +266,28 @@ public class Run extends AppCompatActivity {
                         Toast.makeText(context, "Sign out failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
+            }
+        });
+
+        // Add a click listener for the viewFitnessHistory button
+
+        viewFitnessHistoryButton = findViewById(R.id.view_fitness_history_button);
+        viewFitnessHistoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Run.this, FitnessHistory.class);
+                startActivity(intent);
+            }
+        });
+
+        // Add a click listener to clear previous recorded histories
+        clearHistoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FitnessDatabaseHelper dbHelper = new FitnessDatabaseHelper(Run.this);
+                dbHelper.clearFitnessHistory();
+                // Refresh your list or UI after clearing the history
+                Toast.makeText(context, "History successfully cleared!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -313,8 +339,7 @@ public class Run extends AppCompatActivity {
                             startActivity(new Intent(context, NewMeal.class));
                         } else if (item.getItemId() == R.id.newRun) {
                             startActivity(new Intent(context, MapsActivity.class));
-                        }
-                        else if (item.getItemId()==R.id.newPost){
+                        } else if (item.getItemId() == R.id.newPost) {
                             startActivity(new Intent(context, NewPost.class));
                         }
                         return true;
@@ -333,26 +358,40 @@ public class Run extends AppCompatActivity {
             @Override
             public void onDataPoint(DataPoint dataPoint) {
                 int stepCount = dataPoint.getValue(Field.FIELD_STEPS).asInt();
-                stepCountTextView.setText(stepCount);
-            }
-        });
-        googleFitManager.getTodayDistance(new GoogleFitManager.OnDataPointListener() {
-            @Override
-            public void onDataPoint(DataPoint dataPoint) {
-                float distance = dataPoint.getValue(Field.FIELD_DISTANCE).asFloat();
-                distanceTextView.setText(distance + " meters");
-            }
-        });
-        googleFitManager.getTodayCaloriesBurned(new GoogleFitManager.OnDataPointListener() {
-            @Override
-            public void onDataPoint(DataPoint dataPoint) {
-                float calories = dataPoint.getValue(Field.FIELD_CALORIES).asFloat();
-                caloriesTextView.setText(calories + " kcal");
-            }
-        });
+                stepCountTextView.setText(String.valueOf(stepCount));
 
+                googleFitManager.getTodayDistance(new GoogleFitManager.OnDataPointListener() {
+                    @Override
+                    public void onDataPoint(DataPoint dataPoint) {
+                        float distance = dataPoint.getValue(Field.FIELD_DISTANCE).asFloat();
+                        distanceTextView.setText(distance + " meters");
+
+                        googleFitManager.getTodayCaloriesBurned(new GoogleFitManager.OnDataPointListener() {
+                            @Override
+                            public void onDataPoint(DataPoint dataPoint) {
+                                float calories = dataPoint.getValue(Field.FIELD_CALORIES).asFloat();
+                                caloriesTextView.setText(calories + " kcal");
+
+                                // Save the fetched fitness data to the local database
+                                saveFitnessData(stepCount, distance, calories);
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 
+    private void saveFitnessData(int steps, float distance, float calories) {
+        FitnessData data = new FitnessData(steps, distance, calories, System.currentTimeMillis());
+        FitnessDatabaseHelper dbHelper = new FitnessDatabaseHelper(context);
+        dbHelper.saveFitnessData(data);
+        Toast.makeText(context, "Fitness data saved successfully.", Toast.LENGTH_SHORT).show();
+    }
 }
+//Now, the fetched fitness data (steps, distance, and calories) will be saved to the local SQLite database whenever the `fetchDataAndUpdateUI` method is called.
+
+
+
 // The updated code now includes comments explaining the purpose of the `Run` activity, the methods, and the different sections of code that
 //are responsible for initializing the UI, setting up event listeners, and fetching and updating fitness data from the Google Fit manager.

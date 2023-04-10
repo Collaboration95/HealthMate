@@ -97,6 +97,7 @@
 
         <!-- MapsActivity for integrating Google Maps -->
         <activity android:name="com.example.healthmate.MapsActivity" />
+        <activity android:name="com.example.healthmate.FitnessHistory" />
 
         <!-- Needs to be explicitly declared on P+ -->
         <uses-library

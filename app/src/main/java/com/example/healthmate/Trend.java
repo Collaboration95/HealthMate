@@ -136,15 +136,15 @@ public class Trend extends AppCompatActivity {
 //        UserData userData = UserData.getInstance();
 
 // Load default values from userData singleton class
-        userName.setText(userData.getUserName());
-        userWeight.setText(String.valueOf(userData.getWeight()));
-        userHeight.setText(String.valueOf(userData.getHeight()));
-        userCalGoal.setText(String.valueOf(userData.getCalorieIntakeGoal()));
-        userWorkoutGoal.setText(String.valueOf(userData.getWorkoutGoal()));
-
-// Set default value for userSex
-        int sexIndex = userData.getSex(); // Assuming getUserSex() returns an index
-        userSex.setSelection(sexIndex);
+//        userName.setText(userData.getUserName());
+//        userWeight.setText(String.valueOf(userData.getWeight()));
+//        userHeight.setText(String.valueOf(userData.getHeight()));
+//        userCalGoal.setText(String.valueOf(userData.getCalorieIntakeGoal()));
+//        userWorkoutGoal.setText(String.valueOf(userData.getWorkoutGoal()));
+//
+//// Set default value for userSex
+//        int sexIndex = userData.getSex(); // Assuming getUserSex() returns an index
+//        userSex.setSelection(sexIndex);
 
     }
 }

@@ -3011,6 +3011,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back_button
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3029,6 +3030,7 @@ id buttonPanel
 id cache_measures
 id callMeasure
 id calorie
+id calories_text_view
 id cancel_button
 id carbProgress
 id carryVelocity
@@ -3045,6 +3047,7 @@ id checked
 id chronometer
 id circle_center
 id circularProgressIndicator
+id clear_history_button
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -3069,6 +3072,7 @@ id customPanel
 id cut
 id dark
 id date_picker_actions
+id date_text_view
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -3088,6 +3092,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id distance_text_view
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3131,6 +3136,7 @@ id fitEnd
 id fitStart
 id fitToContents
 id fitXY
+id fitness_data_recyclerview
 id fixed
 id flip
 id floating
@@ -3154,6 +3160,7 @@ id groups
 id guideline
 id header_title
 id hideable
+id history_title
 id home
 id homeAsUp
 id honorRequest
@@ -3393,6 +3400,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id steps_text_view
 id stop
 id stretch
 id submenuarrow
@@ -3480,6 +3488,7 @@ id up
 id updateData
 id useLogo
 id vertical_only
+id view_fitness_history_button
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3611,6 +3620,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_addpost
+layout activity_fitness_history
 layout activity_main
 layout activity_maps
 layout activity_newmeal
@@ -3637,6 +3647,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fitness_data_list_item
 layout fragment_following
 layout fragment_for_you
 layout fyp_recyclerelement

@@ -69,6 +69,8 @@
         <!-- MapsActivity for integrating Google Maps -->
         <activity android:name=".MapsActivity" />
 
+        <activity android:name=".FitnessHistory"/>
+
 
     </application>
 
