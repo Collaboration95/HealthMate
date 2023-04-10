@@ -14,10 +14,16 @@ import com.example.healthmate.social_fragments.Fragment_ForYou;
  */
 public class Adapter_Social_Fragment extends FragmentStateAdapter {
 
+    /**
+     * Constructor for the Adapter_Social_Fragment class.
+     */
     public Adapter_Social_Fragment(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
 
+    /**
+     * This method creates a new instance of the Fragment corresponding to the given position.
+     */
     @NonNull
     @Override
     public Fragment createFragment(int position) {
@@ -29,6 +35,9 @@ public class Adapter_Social_Fragment extends FragmentStateAdapter {
         }
     }
 
+    /**
+     * This method returns the total number of fragments managed by the adapter.
+     */
     @Override
     public int getItemCount() {
         return 2;

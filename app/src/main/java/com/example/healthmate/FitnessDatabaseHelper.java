@@ -9,10 +9,17 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is a helper class for managing the SQLite database used to store
+ * fitness data in the HealthMate application.
+ */
 public class FitnessDatabaseHelper extends SQLiteOpenHelper {
+
+    // Database configuration
     private static final String DATABASE_NAME = "fitness_data.db";
     private static final int DATABASE_VERSION = 1;
 
+    // Table and column names
     private static final String TABLE_FITNESS_DATA = "fitness_data";
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_STEPS = "steps";
@@ -20,10 +27,12 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_CALORIES = "calories";
     private static final String COLUMN_TIMESTAMP = "timestamp";
 
+    // Constructor for FitnessDatabaseHelper
     public FitnessDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    // Called when database is created for the first time
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + TABLE_FITNESS_DATA + " (" +
@@ -35,12 +44,14 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createTable);
     }
 
+    // Called when database needs to be upgraded
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_FITNESS_DATA);
         onCreate(db);
     }
 
+    // Save the given FitnessData object to the database, if it is not a duplicate
     public void saveFitnessData(FitnessData data) {
         if (!isDuplicateEntry(data)) { // to prevent duplicate entries
             SQLiteDatabase db = this.getWritableDatabase();
@@ -55,6 +66,7 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    // Get a list of all FitnessData objects
     public List<FitnessData> getAllFitnessData() {
         List<FitnessData> fitnessDataList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -85,6 +97,7 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         return fitnessDataList;
     }
 
+    // Get fitness data for the specified date range.
     public List<FitnessData> getFitnessDataByDateRange(long startDate, long endDate) {
         List<FitnessData> fitnessDataList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -116,7 +129,7 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         return fitnessDataList;
     }
 
-    // To check for any duplicate entries
+    // To check for any duplicate entries, duplicate returns true. Else returns false
     public boolean isDuplicateEntry(FitnessData data) {
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM " + TABLE_FITNESS_DATA +

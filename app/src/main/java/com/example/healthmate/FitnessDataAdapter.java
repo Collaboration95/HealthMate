@@ -1,3 +1,8 @@
+/**
+ * This class is an adapter for displaying the fitness data in a RecyclerView within
+ * the HealthMate application. It binds the data from FitnessData objects to the
+ * corresponding views in the RecyclerView items.
+ */
 package com.example.healthmate;
 
 import android.view.LayoutInflater;
@@ -14,12 +19,15 @@ import java.util.Locale;
 
 public class FitnessDataAdapter extends RecyclerView.Adapter<FitnessDataAdapter.ViewHolder> {
 
+    // List of fitness data items to display in the RecyclerView
     private final List<FitnessData> fitnessDataList;
 
+    // Constructor for the FitnessDataAdapter
     public FitnessDataAdapter(List<FitnessData> fitnessDataList) {
         this.fitnessDataList = fitnessDataList;
     }
 
+    // Called when a ViewHolder is created for the RecyclerView
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -28,6 +36,7 @@ public class FitnessDataAdapter extends RecyclerView.Adapter<FitnessDataAdapter.
         return new ViewHolder(view);
     }
 
+    // Called to bind the data from the FitnessData object to the ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         FitnessData fitnessData = fitnessDataList.get(position);
@@ -43,17 +52,23 @@ public class FitnessDataAdapter extends RecyclerView.Adapter<FitnessDataAdapter.
         holder.caloriesTextView.setText(caloriesString);
     }
 
+
+
+    // Returns the total number of items in the RecyclerView
     @Override
     public int getItemCount() {
         return fitnessDataList.size();
     }
 
+
+    // ViewHolder class for RecyclerView items
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView dateTextView;
         TextView stepsTextView;
         TextView distanceTextView;
         TextView caloriesTextView;
 
+        // Constructor for the ViewHolder
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             dateTextView = itemView.findViewById(R.id.date_text_view);

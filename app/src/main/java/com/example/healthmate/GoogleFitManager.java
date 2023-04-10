@@ -393,9 +393,3 @@ public class GoogleFitManager {
  It describes how the class manages Google Fit API integration, requests permissions, handles activity results, and reads different types of fitness data.
  */
 
-/**
- *
- This updated documentation explains the purpose and functionality of the `GoogleFitManager` class, its methods, and the `OnDataPointListener` interface.
- It describes how the class manages Google Fit API integration, requests permissions, handles activity results, and reads different types of fitness data.
- */
-

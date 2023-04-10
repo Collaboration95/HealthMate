@@ -1,9 +1,5 @@
-/**
-
- This class is the adapter for the RecyclerView in the social section of the app.
- It displays social posts in a list format.
- */
 package com.example.healthmate;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +12,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder>{
+/**
+ * FYP_Adapter is the adapter for the RecyclerView in the social section of the app.
+ * It displays social posts in a list format.
+ */
+public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> {
     Context context;
     ArrayList<Social_PostModel> data;
 
-    // Constructor that takes in the context and social post data
+    /**
+     * Constructor that takes in the context and social post data.
+     *
+     * @param context the application context
+     * @param data    an ArrayList of Social_PostModel objects
+     */
     public FYP_Adapter(Context context, ArrayList<Social_PostModel> data) {
         this.context = context;
         this.data = data;
@@ -67,7 +72,7 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder>{
         return data.size();
     }
 
-    public static class myViewHolder extends RecyclerView.ViewHolder{
+    public static class myViewHolder extends RecyclerView.ViewHolder {
         // Define TextViews and ImageViews for each RecyclerView element
         TextView Name;
         TextView activityName;
@@ -81,7 +86,11 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder>{
         ImageView timeIcon;
         ImageView distanceIcon;
 
-        // Constructor that takes in a view for the RecyclerView element
+        /**
+         * Constructor that takes in a view for the RecyclerView element.
+         *
+         * @param itemView the view representing a single RecyclerView element
+         */
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             Image = itemView.findViewById(R.id.MainImage);
