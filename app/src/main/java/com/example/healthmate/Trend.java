@@ -91,7 +91,11 @@ public class Trend extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 EditText userName = findViewById(R.id.editUserName);
-
+                Spinner userSex = findViewById(R.id.editSex);
+                EditText userWeight = findViewById(R.id.editWeight);
+                EditText userHeight = findViewById(R.id.editHeight);
+                EditText userCalGoal = findViewById(R.id.editIntakeGoal);
+                EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
             }
         });
         // Set up card view and popup menu
@@ -129,7 +133,7 @@ public class Trend extends AppCompatActivity {
         EditText userCalGoal = findViewById(R.id.editIntakeGoal);
         EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
         // Get an instance of the userData singleton class
-        UserData userData = UserData.getInstance();
+//        UserData userData = UserData.getInstance();
 
 // Load default values from userData singleton class
         userName.setText(userData.getUserName());
@@ -139,11 +143,8 @@ public class Trend extends AppCompatActivity {
         userWorkoutGoal.setText(String.valueOf(userData.getWorkoutGoal()));
 
 // Set default value for userSex
-        String[] sexOptions = getResources().getStringArray(R.array.spinner_options);
         int sexIndex = userData.getSex(); // Assuming getUserSex() returns an index
         userSex.setSelection(sexIndex);
-
-
 
     }
 }
