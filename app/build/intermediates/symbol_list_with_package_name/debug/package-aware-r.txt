@@ -3024,7 +3024,10 @@ id buttonPanel
 id cache_measures
 id callMeasure
 id calorie
+id calories_burned_text_view
+id calories_text_view
 id cancel_button
+id carbProgress
 id carryVelocity
 id center
 id centerCrop
@@ -3082,6 +3085,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id distance_text_view
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3146,6 +3150,7 @@ id grouping
 id groups
 id guideline
 id header_title
+id heart_rate_text_view
 id hideable
 id home
 id homeAsUp
@@ -3182,11 +3187,6 @@ id light
 id line1
 id line3
 id linear
-id linearLayout
-id linearLayout2
-id linearProgressIndicator
-id linearProgressIndicator2
-id linearProgressIndicator3
 id listMode
 id list_item
 id m3_side_sheet
@@ -3219,7 +3219,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
-id mealtitle
+id mealTitle
 id message
 id middle
 id mini
@@ -3306,6 +3306,7 @@ id proteinProgress
 id radio
 id ratio
 id rectangles
+id refresh_data_button
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3388,6 +3389,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id step_count_text_view
 id stop
 id stretch
 id submenuarrow
@@ -3425,20 +3427,9 @@ id textTime
 id textTitle
 id textTop
 id textTotalCalories
-id textView
-id textView10
-id textView11
-id textView12
 id textView13
 id textView14
 id textView2
-id textView3
-id textView4
-id textView5
-id textView6
-id textView7
-id textView8
-id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3621,8 +3612,6 @@ layout amu_info_window
 layout amu_text_bubble
 layout amu_webview
 layout calendar_widget
-layout calorie_counter
-layout cheese
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3662,7 +3651,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
-layout meallayout
+layout meal_layout
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -3701,8 +3690,6 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout oatmilk
-layout orangejuice
 layout reusable_plus
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

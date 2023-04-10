@@ -2,10 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Permissions -->
+    <!-- Write external storage permission allows the app to save data to external storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Access fine and coarse location permissions allow the app to access device location -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Internet permission allows the app to access the internet for API requests -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -18,10 +21,12 @@
         android:theme="@style/Theme.HealthMate"
         tools:targetApi="31">
 
+        <!-- API key for Google Maps integration -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBFiJNB3fgiEj5CFTz8Hn5YdV-xRtj_3t4" />
 
+        <!-- MainActivity is the launcher activity for the app -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -31,28 +36,39 @@
             </intent-filter>
         </activity>
 
+        <!-- Trend_Class activity displays trends for various health metrics -->
         <activity
-            android:name=".trend"
+            android:name=".Trend"
             android:parentActivityName=".MainActivity"
             android:label="Trends" />
+
+        <!-- Run activity shows the running-related data and features -->
         <activity
-            android:name=".run"
+            android:name=".Run"
             android:parentActivityName=".MainActivity"
             android:label="Running" />
+
+        <!-- Social activity displays the social features of the app -->
         <activity
-            android:name=".social"
+            android:name=".Social"
             android:parentActivityName=".MainActivity"
             android:label="Socials" />
+
+        <!-- NewMeal activity allows the user to add a meal -->
         <activity
             android:name=".NewMeal"
             android:parentActivityName=".MainActivity"
             android:label="Add a meal" />
+
+        <!-- NewPost activity allows the user to create a new social media post -->
         <activity
             android:name=".NewPost"
             android:parentActivityName=".MainActivity"
             android:label="Create New Social Media Post" />
 
+        <!-- MapsActivity for integrating Google Maps -->
         <activity android:name=".MapsActivity" />
+
 
     </application>
 

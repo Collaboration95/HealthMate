@@ -17,6 +17,7 @@ import android.widget.Button;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.Priority;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -24,7 +25,12 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 
+/**
+ * MapsActivity is an activity for displaying the user's location and setting a destination on a map.
+ * It uses Google Maps API to display the map and handle user interactions.
+ */
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private LatLng destination;
@@ -46,6 +52,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setupTrackRunButton();
     }
 
+    /**
+     * This method is called when the map is ready to be used.
+     * It sets up the map and the listeners for user interactions.
+     *
+     * @param googleMap the GoogleMap instance
+     */
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
@@ -63,6 +75,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
     }
 
+    /**
+     * This method enables the location layer on the map if the necessary permissions are granted.
+     */
     private void enableMyLocation() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -74,6 +89,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
+    /**
+     * This method is called when the user responds to the permission request dialog.
+     * If the necessary permissions are granted, it enables the location layer on the map.
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -84,6 +103,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
+    /**
+     * This method fetches the user's last known location and opens
+     * Google Maps for navigation with the chosen destination.
+     */
     private void getLastKnownLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -101,6 +124,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
     }
 
+    /**
+     * This method opens Google Maps for navigation with the current location and destination.
+     *
+     * @param location the user's current location
+     */
     private void openGoogleMapsForNavigation(Location location) {
         if (location != null && destination != null) {
             Uri gmmIntentUri = Uri.parse("https://www.google.com/maps/dir/?api=1&origin="
@@ -115,6 +143,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         }
     }
+
+    /**
+     * This method sets up the click listener for the Track Run button.
+     */
     private void setupTrackRunButton() {
         Button trackRunButton = findViewById(R.id.track_run_button);
         trackRunButton.setOnClickListener(new View.OnClickListener() {
@@ -124,12 +156,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
     }
+
+    /**
+     * This method moves the camera to the user's current location.
+     */
     private void moveCameraToCurrentLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
-        fusedLocationClient.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
+        Task<Location> locationTask = fusedLocationClient.getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, null);
+        locationTask.addOnSuccessListener(this, new OnSuccessListener<Location>() {
             @Override
             public void onSuccess(Location location) {
                 if (location != null) {
@@ -139,6 +176,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
     }
-
 }
 
+
+/**
+This is an updated version of the MapsActivity.java file with added documentation.
+The purpose of this code is to display the user's location and allow them to set a destination on a map.
+It uses the Google Maps API to display the map and handle user interactions.
+The user can track their run by pressing the "Track Run" button, which opens Google Maps for navigation with the chosen destination.
+ **/

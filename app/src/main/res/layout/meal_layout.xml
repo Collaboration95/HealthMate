@@ -101,7 +101,7 @@
                 app:layout_constraintVertical_bias="0.611" />
 
             <com.google.android.material.progressindicator.LinearProgressIndicator
-                android:id="@+id/CarbProgress"
+                android:id="@+id/carbProgress"
                 android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:progress="15"
@@ -145,7 +145,7 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                android:id="@+id/mealtitle"
+                android:id="@+id/mealTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="36dp"

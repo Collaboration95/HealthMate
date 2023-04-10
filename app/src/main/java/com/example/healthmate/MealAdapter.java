@@ -1,28 +1,27 @@
 package com.example.healthmate;
 
 import android.content.Context;
-import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
+/**
+ * This class represents the MealAdapter, which is a custom RecyclerView.Adapter
+ * to display meal data in a RecyclerView.
+ */
 public class MealAdapter extends RecyclerView.Adapter<MealAdapter.myViewHolder> {
     Context context;
-    ArrayList<plus_AddMeal> data ;
+    ArrayList<Plus_AddMeal> data;
 
-    public MealAdapter(Context context, ArrayList<plus_AddMeal> data) {
+    public MealAdapter(Context context, ArrayList<Plus_AddMeal> data) {
         this.context = context;
         this.data = data;
     }
@@ -31,23 +30,25 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.myViewHolder> 
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.meallayout,parent ,false);
+        View view = inflater.inflate(R.layout.meal_layout, parent, false);
         return new MealAdapter.myViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
         holder.totalCalorie.setText(data.get(position).getTotalCalories());
-        holder.mealtitle.setText(data.get(position).getMealName());
-        Log.d("Great Success",data.get(position).toString());
-//        Carbohydrates provide 4 calories per gram, protein provides 4 calories per gram, and fat provides 9 calories per gram
-//        Carbs -> 4 * gram , Fat -> 9*gram , protien -> 4*gram
-        int tempcarbs = Integer.parseInt(data.get(position).getCarbs())*4;
-        int tempfat = Integer.parseInt(data.get(position).getFat())*9;
-        int tempprotein = Integer.parseInt(data.get(position).getProtein())*4;
-        holder.proteinProgress.setProgress((tempprotein*100)/(tempcarbs+tempfat+tempprotein),true);
-        holder.fatProgress.setProgress((tempfat*100)/(tempcarbs+tempfat+tempprotein),true);
-        holder.CarbProgress.setProgress((tempcarbs*100)/(tempcarbs+tempfat+tempprotein),true);
+        holder.mealTitle.setText(data.get(position).getMealName());
+
+        // Carbohydrates provide 4 calories per gram, protein provides 4 calories per gram, and fat provides 9 calories per gram
+        int tempCarbs = Integer.parseInt(data.get(position).getCarbs()) * 4;
+        int tempFat = Integer.parseInt(data.get(position).getFat()) * 9;
+        int tempProtein = Integer.parseInt(data.get(position).getProtein()) * 4;
+
+        // Update progress indicators
+        int totalCalories = tempCarbs + tempFat + tempProtein;
+        holder.proteinProgress.setProgress((tempProtein * 100) / totalCalories, true);
+        holder.fatProgress.setProgress((tempFat * 100) / totalCalories, true);
+        holder.carbProgress.setProgress((tempCarbs * 100) / totalCalories, true);
     }
 
     @Override
@@ -55,27 +56,28 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.myViewHolder> 
         return data.size();
     }
 
-    public void setData(ArrayList<plus_AddMeal> newData) {
+    public void setData(ArrayList<Plus_AddMeal> newData) {
         this.data = newData;
         notifyDataSetChanged();
     }
 
-    public  static class myViewHolder extends  RecyclerView.ViewHolder {
-
-        LinearProgressIndicator proteinProgress ;
-        LinearProgressIndicator fatProgress ;
-        LinearProgressIndicator CarbProgress;
+    /**
+     * ViewHolder class to store and manage the views for each data item.
+     */
+    public static class myViewHolder extends RecyclerView.ViewHolder {
+        LinearProgressIndicator proteinProgress;
+        LinearProgressIndicator fatProgress;
+        LinearProgressIndicator carbProgress;
         TextView totalCalorie;
-        TextView mealtitle;
+        TextView mealTitle;
+
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             totalCalorie = itemView.findViewById(R.id.totalCalorie);
-            mealtitle = itemView.findViewById(R.id.mealtitle);
+            mealTitle = itemView.findViewById(R.id.mealTitle);
             proteinProgress = itemView.findViewById(R.id.proteinProgress);
-            fatProgress =  itemView.findViewById(R.id.fatProgress);
-            CarbProgress =  itemView.findViewById(R.id.CarbProgress);
-
+            fatProgress = itemView.findViewById(R.id.fatProgress);
+            carbProgress = itemView.findViewById(R.id.carbProgress);
         }
-
     }
 }

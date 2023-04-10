@@ -1,5 +1,9 @@
-package com.example.healthmate;
+/**
 
+ This class is the adapter for the RecyclerView in the social section of the app.
+ It displays social posts in a list format.
+ */
+package com.example.healthmate;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,20 +17,23 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder>{
-
     Context context;
-    ArrayList<social_postModel> data;
-    public FYP_Adapter(Context context, ArrayList<social_postModel> data) {
+    ArrayList<Social_PostModel> data;
+
+    // Constructor that takes in the context and social post data
+    public FYP_Adapter(Context context, ArrayList<Social_PostModel> data) {
         this.context = context;
         this.data = data;
-
     }
 
     @NonNull
     @Override
     public FYP_Adapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Inflate the RecyclerView element layout
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.fyp_recyclerelement,parent,false);
+        View view = inflater.inflate(R.layout.fyp_recyclerelement, parent, false);
+
+        // Return a new ViewHolder for the layout
         return new FYP_Adapter.myViewHolder(view);
     }
 
@@ -39,12 +46,11 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder>{
         holder.Time.setText(data.get(position).getTime());
         holder.likes.setText(data.get(position).getLikes());
 
-// Set the image resources for the ImageViews
-
+        // Set the image resources for the ImageViews
         int Image = R.drawable.ic_launcher_background;
         int profileIcon = R.drawable.ic_launcher_person;
         int activityIcon = R.drawable.ic_launcher_rightsymbol;
-        int likeIcon = R.drawable.ic_launcher_addfriend;
+        int likeIcon = R.drawable.ic_launcher_thumbsup;
         int timeIcon = R.drawable.ic_launcher_timer;
         int distanceIcon = R.drawable.ic_launcher_distance;
         holder.Image.setImageResource(Image);
@@ -57,10 +63,12 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder>{
 
     @Override
     public int getItemCount() {
+        // Return the number of social posts in the data list
         return data.size();
     }
-    public static class myViewHolder extends RecyclerView.ViewHolder{
 
+    public static class myViewHolder extends RecyclerView.ViewHolder{
+        // Define TextViews and ImageViews for each RecyclerView element
         TextView Name;
         TextView activityName;
         TextView Distance;
@@ -73,6 +81,7 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder>{
         ImageView timeIcon;
         ImageView distanceIcon;
 
+        // Constructor that takes in a view for the RecyclerView element
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             Image = itemView.findViewById(R.id.MainImage);

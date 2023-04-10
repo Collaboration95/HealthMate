@@ -1,8 +1,8 @@
 package com.example.healthmate;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
@@ -11,35 +11,36 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
-public class social extends AppCompatActivity {
+public class Social extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    //    Variable to store context
-    Context context = social.this;
+    // Variable to store context for later use
+    Context context = Social.this;
 
+    // Declare UI components for the social activity
     TabLayout tabLayout;
     ViewPager2 viewPager2;
-    Adapter_social_fragment socialAdapter;
+    Adapter_Social_Fragment socialAdapter;
 
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_social);
-//
-        tabLayout= findViewById(R.id.tab_layout);
-        viewPager2 =findViewById(R.id.viewpager);
-        socialAdapter=new Adapter_social_fragment(this);
+
+        // Initialize the tab layout and view pager components
+        tabLayout = findViewById(R.id.tab_layout);
+        viewPager2 = findViewById(R.id.viewpager);
+        socialAdapter = new Adapter_Social_Fragment(this);
         viewPager2.setAdapter(socialAdapter);
 
+        // Set up the tab layout and view pager to work together
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -48,83 +49,81 @@ public class social extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
             }
         });
 
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 Objects.requireNonNull(tabLayout.getTabAt(position)).select();
             }
-
-
         });
-//       Following Code block to be included in every activity to take care of bottom navigation view functionality
+
+        // Set up the bottom navigation view for switching between activities
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-//        Code to set current selected icon in bottomnavigation view
         bottomNavigationView.setSelectedItemId(R.id.social);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
-            public boolean   onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
                     case R.id.calorie:
-                        Toast.makeText(context,"Calorie",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent( context, MainActivity.class  ));
+                        Toast.makeText(context, "Calorie", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(context, MainActivity.class));
                         return true;
 
                     case R.id.run:
-                        Toast.makeText(context,"Run",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent( context, run.class  ));
+                        Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(context, Run.class));
                         return true;
 
                     case R.id.social:
-                        Toast.makeText(context,"Social",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Social", Toast.LENGTH_SHORT).show();
                         return true;
 
                     case R.id.trends:
-                        Toast.makeText(context,"Trends",Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent( context, trend.class));
+                        Toast.makeText(context, "Trends", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(context, Trend.class));
                         return true;
-
                 }
                 return false;
             }
         });
 
-
+        // Set up the card view for displaying a popup menu
         CardView cardView = findViewById(R.id.bringtoFront);
         cardView.bringToFront();
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Create a popup menu and set a listener for menu item clicks
                 PopupMenu popupMenu = new PopupMenu(context, view);
                 popupMenu.inflate(R.menu.popup_menu);
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         Toast.makeText(context, "Selected: " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                        if(item.getItemId()==R.id.newMeal){
-                            startActivity(new Intent(context,NewMeal.class));
-                        }else if (item.getItemId()==R.id.newRun) {
+                        if (item.getItemId() == R.id.newMeal) {
+                            // Start the NewMeal activity when the "newMeal" menu item is clicked
+                            startActivity(new Intent(context, NewMeal.class));
+                        } else if (item.getItemId() == R.id.newRun) {
+                            // Start the MapsActivity when the "newRun" menu item is clicked
                             startActivity(new Intent(context, MapsActivity.class));
                         }
-
+                        else if (item.getItemId()==R.id.newPost){
+                            startActivity(new Intent(context, NewPost.class));
+                        }
                         return true;
                     }
                 });
+                // Show the popup menu
                 popupMenu.show();
             }
         });
     }
-
 }
-

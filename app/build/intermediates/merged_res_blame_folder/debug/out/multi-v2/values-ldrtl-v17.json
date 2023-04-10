@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.healthmate.app-mergeDebugResources-31:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.example.healthmate.app-mergeDebugResources-32:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/Users/speedpowermac/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "/Users/hongjing/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

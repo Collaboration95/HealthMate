@@ -8,9 +8,13 @@
         android:minSdkVersion="26"
         android:targetSdkVersion="33" />
 
+    <!-- Permissions -->
+    <!-- Write external storage permission allows the app to save data to external storage -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Access fine and coarse location permissions allow the app to access device location -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Internet permission allows the app to access the internet for API requests -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- Include required permissions for Google Maps API to run. -->
@@ -44,10 +48,13 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.HealthMate" >
+
+        <!-- API key for Google Maps integration -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBFiJNB3fgiEj5CFTz8Hn5YdV-xRtj_3t4" />
 
+        <!-- MainActivity is the launcher activity for the app -->
         <activity
             android:name="com.example.healthmate.MainActivity"
             android:exported="true" >
@@ -57,26 +64,38 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Trend_Class activity displays trends for various health metrics -->
         <activity
-            android:name="com.example.healthmate.trend"
+            android:name="com.example.healthmate.Trend"
             android:label="Trends"
             android:parentActivityName="com.example.healthmate.MainActivity" />
+
+        <!-- Run activity shows the running-related data and features -->
         <activity
-            android:name="com.example.healthmate.run"
+            android:name="com.example.healthmate.Run"
             android:label="Running"
             android:parentActivityName="com.example.healthmate.MainActivity" />
+
+        <!-- Social activity displays the social features of the app -->
         <activity
-            android:name="com.example.healthmate.social"
+            android:name="com.example.healthmate.Social"
             android:label="Socials"
             android:parentActivityName="com.example.healthmate.MainActivity" />
+
+        <!-- NewMeal activity allows the user to add a meal -->
         <activity
             android:name="com.example.healthmate.NewMeal"
             android:label="Add a meal"
             android:parentActivityName="com.example.healthmate.MainActivity" />
+
+        <!-- NewPost activity allows the user to create a new social media post -->
         <activity
             android:name="com.example.healthmate.NewPost"
             android:label="Create New Social Media Post"
             android:parentActivityName="com.example.healthmate.MainActivity" />
+
+        <!-- MapsActivity for integrating Google Maps -->
         <activity android:name="com.example.healthmate.MapsActivity" />
 
         <!-- Needs to be explicitly declared on P+ -->
@@ -87,6 +106,24 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.gms.fitness.sdk.version"
+            android:value="20.0.0" />
+
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+            Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:visibleToInstantApps="true" />
 
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"

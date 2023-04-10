@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.healthmate.app-mergeDebugResources-31:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.example.healthmate.app-mergeDebugResources-32:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/speedpowermac/.gradle/caches/transforms-3/e996fb6acbc9f67b000eae78132828cb/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "/Users/hongjing/.gradle/caches/transforms-3/e996fb6acbc9f67b000eae78132828cb/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

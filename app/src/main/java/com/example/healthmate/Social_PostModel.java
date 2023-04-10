@@ -1,13 +1,19 @@
 package com.example.healthmate;
 
-public class social_postModel {
+/**
+ * Social_PostModel class represents a single post object in the social feed.
+ */
+public class Social_PostModel {
     String Name;
     String activityName;
     String Distance;
     String Time;
     String likes;
 
-    public static void  populateDefault2() {
+    /**
+     * Populates the Social_PostModelHolder2 with default data for testing.
+     */
+    public static void populateDefault2() {
         String[] Name = {"Olivia Smith", "Lucas Johnson", "Sophie Garcia", "Isaac Rodriguez", "Ethan Hernandez", "Chloe Martinez", "Alexander Brown"};
         String[] activityName = {"Morning Run", "Yoga Class", "Cycling", "Swimming", "Evening Walk", "Weightlifting", "Hiking"};
         String[] Likes = {"20", "6", "15", "9", "3", "27", "12"};
@@ -15,16 +21,25 @@ public class social_postModel {
         String[] Time = {"27m", "31m", "45m", "52m", "18m", "38m", "1h 5m"};
 
         for (int i = 0; i < Name.length; i++) {
-            social_postModelHolder2.getInstance().storePost(new social_postModel(Name[i], activityName[i], Distance[i], Time[i], Likes[i]));
+            Social_PostModelHolder2.getInstance().storePost(new Social_PostModel(Name[i], activityName[i], Distance[i], Time[i], Likes[i]));
         }
     }
 
-    public social_postModel(String name, String activityName, String distance, String time,String likes) {
+    /**
+     * Constructs a Social_PostModel with the provided data.
+     *
+     * @param name         The name of the user.
+     * @param activityName The name of the activity.
+     * @param distance     The distance of the activity.
+     * @param time         The duration of the activity.
+     * @param likes        The number of likes for the post.
+     */
+    public Social_PostModel(String name, String activityName, String distance, String time, String likes) {
         this.Name = name;
         this.activityName = activityName;
         this.Distance = distance;
         this.Time = time;
-        this.likes =likes;
+        this.likes = likes;
     }
 
     public String getName() {
@@ -47,7 +62,10 @@ public class social_postModel {
         return likes;
     }
 
-    public static void  populateDefault() {
+    /**
+     * Populates the Social_PostModelHolder with default data for testing.
+     */
+    public static void populateDefault() {
         String[] Name = {"Maggie Smigth", "John Fugyoshi ", "Sarah Johnson", "Michael Brown", "Rachel Lee", "David Chen", "Emily Taylor"};
         String[] activityName = {"Evening Jog", "Morning Jog", "Hiking", "Biking", "Swimming", "Yoga", "Pilates"};
         String[] Likes = {"12", "10", "8", "5", "17", "133", "9"};
@@ -55,7 +73,7 @@ public class social_postModel {
         String[] Time = {"10m", "12m", "30m", "25m", "50m", "42m", "552m"};
 
         for (int i = 0; i < Name.length; i++) {
-            social_postModelHolder.getInstance().storePost(new social_postModel(Name[i], activityName[i], Distance[i], Time[i], Likes[i]));
+            Social_PostModelHolder.getInstance().storePost(new Social_PostModel(Name[i], activityName[i], Distance[i], Time[i], Likes[i]));
         }
     }
 }

@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.healthmate.app-mergeDebugResources-31:/values-ko/values-ko.xml",
+            "outputFile": "com.example.healthmate.app-mergeDebugResources-32:/values-ko/values-ko.xml",
             "map": [
                 {
-                    "source": "/Users/speedpowermac/.gradle/caches/transforms-3/e996fb6acbc9f67b000eae78132828cb/transformed/appcompat-1.6.1/res/values-ko/values-ko.xml",
+                    "source": "/Users/hongjing/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/res/values-ko/values-ko.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "114",
+                        "startColumns": "4",
+                        "startOffsets": "9268",
+                        "endColumns": "100",
+                        "endOffsets": "9364"
+                    }
+                },
+                {
+                    "source": "/Users/hongjing/.gradle/caches/transforms-3/e996fb6acbc9f67b000eae78132828cb/transformed/appcompat-1.6.1/res/values-ko/values-ko.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/speedpowermac/.gradle/caches/transforms-3/b215599a1ff75aa4b38b84b805169a81/transformed/play-services-basement-18.1.0/res/values-ko/values.xml",
+                    "source": "/Users/hongjing/.gradle/caches/transforms-3/b215599a1ff75aa4b38b84b805169a81/transformed/play-services-basement-18.1.0/res/values-ko/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/Users/speedpowermac/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/res/values-ko/values-ko.xml",
+                    "source": "/Users/hongjing/.gradle/caches/transforms-3/ba88dfdb21e52b6275c2510511da033e/transformed/material-1.8.0/res/values-ko/values-ko.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,7 +74,7 @@
                     }
                 },
                 {
-                    "source": "/Users/speedpowermac/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/res/values-ko/values.xml",
+                    "source": "/Users/hongjing/.gradle/caches/transforms-3/f91dd8c64a5816fb6ed3e905228eab35/transformed/play-services-base-18.1.0/res/values-ko/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -71,23 +88,6 @@
                         "startOffsets": "3494,3598,3737,3853,3955,4070,4187,4294,4510,4655,4758,4894,5012,5130,5249,5308,5366",
                         "endColumns": "103,138,115,101,114,116,106,94,144,102,135,117,117,118,58,57,74",
                         "endOffsets": "3593,3732,3848,3950,4065,4182,4289,4384,4650,4753,4889,5007,5125,5244,5303,5361,5436"
-                    }
-                },
-                {
-                    "source": "/Users/speedpowermac/.gradle/caches/transforms-3/2033df00c88964735466d344a7495998/transformed/core-1.9.0/res/values-ko/values-ko.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "114",
-                        "startColumns": "4",
-                        "startOffsets": "9268",
-                        "endColumns": "100",
-                        "endOffsets": "9364"
                     }
                 }
             ]
