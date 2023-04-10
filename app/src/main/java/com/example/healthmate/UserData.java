@@ -14,15 +14,13 @@ public class UserData {
 
     }
 
-    public  UserData getInstance() {
+    public static UserData getInstance() {
         if (instance == null) {
             instance = new UserData();
             instance.populateDefault();
         }
         return instance;
     }
-
-
 
     public String getUserName() {
         return userName;

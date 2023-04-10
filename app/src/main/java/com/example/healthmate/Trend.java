@@ -129,7 +129,7 @@ public class Trend extends AppCompatActivity {
         EditText userCalGoal = findViewById(R.id.editIntakeGoal);
         EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
         // Get an instance of the userData singleton class
-        UserData userData = userData.getInstance();
+        UserData userData = UserData.getInstance();
 
 // Load default values from userData singleton class
         userName.setText(userData.getUserName());
