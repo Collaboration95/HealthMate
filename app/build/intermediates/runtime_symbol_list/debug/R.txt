@@ -2424,6 +2424,7 @@ int dimen m3_sys_state_pressed_state_layer_opacity 0x7f0701c0
 int dimen m3_timepicker_display_stroke_width 0x7f0701c1
 int dimen m3_timepicker_window_elevation 0x7f0701c2
 int dimen m3_toolbar_text_size_title 0x7f0701c3
+int dimen margin_10dp 0x7f0702c3
 int dimen material_bottom_sheet_max_width 0x7f0701c4
 int dimen material_clock_display_height 0x7f0701c5
 int dimen material_clock_display_padding 0x7f0701c6
@@ -2904,6 +2905,14 @@ int drawable notification_template_icon_low_bg 0x7f080106
 int drawable notification_tile_bg 0x7f080107
 int drawable notify_panel_notification_icon_bg 0x7f080108
 int drawable popupmenu 0x7f080109
+int drawable stock1 0x7f08010d
+int drawable stock2 0x7f08010e
+int drawable stock3 0x7f08010f
+int drawable stock4 0x7f080110
+int drawable stock5 0x7f080111
+int drawable stock6 0x7f080112
+int drawable stock7 0x7f080113
+int drawable stock8 0x7f080114
 int drawable test_level_drawable 0x7f08010a
 int drawable tooltip_frame_dark 0x7f08010b
 int drawable tooltip_frame_light 0x7f08010c

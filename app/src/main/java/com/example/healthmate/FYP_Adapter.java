@@ -50,15 +50,15 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
         holder.Distance.setText(data.get(position).getDistance());
         holder.Time.setText(data.get(position).getTime());
         holder.likes.setText(data.get(position).getLikes());
-
         // Set the image resources for the ImageViews
-        int Image = R.drawable.ic_launcher_background;
+
+
         int profileIcon = R.drawable.ic_launcher_person;
         int activityIcon = R.drawable.ic_launcher_rightsymbol;
         int likeIcon = R.drawable.ic_launcher_thumbsup;
         int timeIcon = R.drawable.ic_launcher_timer;
         int distanceIcon = R.drawable.ic_launcher_distance;
-        holder.Image.setImageResource(Image);
+        holder.Image.setImageResource(data.get(position).getImage());
         holder.AddFriendicon.setImageResource(profileIcon);
         holder.activityIcon.setImageResource(activityIcon);
         holder.likeIcon.setImageResource(likeIcon);

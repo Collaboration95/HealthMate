@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="_10sdp">10dp</dimen>
+    <dimen name="margin_10dp">100dp</dimen>
+
 </resources>

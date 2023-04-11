@@ -24,6 +24,7 @@ color teal_700
 color teal_a200
 color white
 dimen _10sdp
+dimen margin_10dp
 drawable addmeal
 drawable bottomnavigation
 drawable box_rounded
@@ -49,6 +50,14 @@ drawable ic_launcher_trends
 drawable ic_launcher_trends1
 drawable ic_launcher_trends2
 drawable popupmenu
+drawable stock1
+drawable stock2
+drawable stock3
+drawable stock4
+drawable stock5
+drawable stock6
+drawable stock7
+drawable stock8
 id CarbProgress
 id Distance
 id Likes

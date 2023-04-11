@@ -2425,6 +2425,7 @@ dimen m3_sys_state_pressed_state_layer_opacity
 dimen m3_timepicker_display_stroke_width
 dimen m3_timepicker_window_elevation
 dimen m3_toolbar_text_size_title
+dimen margin_10dp
 dimen material_bottom_sheet_max_width
 dimen material_clock_display_height
 dimen material_clock_display_padding
@@ -2905,6 +2906,14 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable popupmenu
+drawable stock1
+drawable stock2
+drawable stock3
+drawable stock4
+drawable stock5
+drawable stock6
+drawable stock7
+drawable stock8
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light

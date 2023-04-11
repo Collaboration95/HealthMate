@@ -67,6 +67,6 @@ public class NewPost extends AppCompatActivity {
      * @param time     The time of the run.
      */
     private void setUpPost(String name, String distance, String time) {
-        Social_PostModelHolder.getInstance().storePost(new Social_PostModel("Guru", name, distance, time, "0"));
+        Social_PostModelHolder.getInstance().storePost(new Social_PostModel("Guru", name, distance, time, "0",R.drawable.stock1));
     }
 }
