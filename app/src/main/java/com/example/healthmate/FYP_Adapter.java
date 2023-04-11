@@ -1,6 +1,7 @@
 package com.example.healthmate;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +43,29 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
         return new FYP_Adapter.myViewHolder(view);
     }
 
+//    public void onBindViewHolder(@NonNull FYP_Adapter.myViewHolder holder, int position) {
+//        // Set the text for the TextViews
+//        holder.Name.setText(data.get(position).getName());
+//        holder.activityName.setText(data.get(position).getActivityName());
+//        holder.Distance.setText(data.get(position).getDistance());
+//        holder.Time.setText(data.get(position).getTime());
+//        holder.likes.setText(data.get(position).getLikes());
+//        // Set the image resources for the ImageViews
+//
+//
+//        int profileIcon = R.drawable.ic_launcher_person;
+//        int activityIcon = R.drawable.ic_launcher_rightsymbol;
+//        int likeIcon = R.drawable.ic_launcher_thumbsup;
+//        int timeIcon = R.drawable.ic_launcher_timer;
+//        int distanceIcon = R.drawable.ic_launcher_distance;
+//        holder.Image.setImageResource(data.get(position).getImage());
+//        holder.AddFriendicon.setImageResource(profileIcon);
+//        holder.activityIcon.setImageResource(activityIcon);
+//        holder.likeIcon.setImageResource(likeIcon);
+//        holder.timeIcon.setImageResource(timeIcon);
+//        holder.distanceIcon.setImageResource(distanceIcon);
+//    }
+
     @Override
     public void onBindViewHolder(@NonNull FYP_Adapter.myViewHolder holder, int position) {
         // Set the text for the TextViews
@@ -50,21 +74,38 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
         holder.Distance.setText(data.get(position).getDistance());
         holder.Time.setText(data.get(position).getTime());
         holder.likes.setText(data.get(position).getLikes());
+
         // Set the image resources for the ImageViews
-
-
         int profileIcon = R.drawable.ic_launcher_person;
         int activityIcon = R.drawable.ic_launcher_rightsymbol;
         int likeIcon = R.drawable.ic_launcher_thumbsup;
         int timeIcon = R.drawable.ic_launcher_timer;
         int distanceIcon = R.drawable.ic_launcher_distance;
-        holder.Image.setImageResource(data.get(position).getImage());
+
         holder.AddFriendicon.setImageResource(profileIcon);
         holder.activityIcon.setImageResource(activityIcon);
         holder.likeIcon.setImageResource(likeIcon);
         holder.timeIcon.setImageResource(timeIcon);
         holder.distanceIcon.setImageResource(distanceIcon);
+
+        // Get the image resource ID and calculate its aspect ratio
+        int imageResId = data.get(position).getImage();
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(context.getResources(), imageResId, options);
+        float aspectRatio = (float) options.outWidth / (float) options.outHeight;
+
+        // Set the ImageView's ScaleType based on the aspect ratio
+        if (aspectRatio > 1.0) {
+            holder.Image.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        } else {
+            holder.Image.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        }
+
+        // Set the image resource for the ImageView
+        holder.Image.setImageResource(imageResId);
     }
+
 
     @Override
     public int getItemCount() {
