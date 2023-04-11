@@ -149,6 +149,11 @@ public class Trend extends AppCompatActivity {
                 if (comparisonResult != 0) {
                     UserDataSingleton.getInstance().setUserData(changed);
                     Log.d("UpdateData Great Success",UserDataSingleton.getInstance().toString());
+
+//                   Update Ui elemnts of mainactivity
+                    Intent intent = new Intent("com.example.myapp.ACTION_CALL_FUNCTION");
+                    startActivity(intent);
+
                 } else {
                     Log.d("UpdateData No  change made","Great Failure");
                 }

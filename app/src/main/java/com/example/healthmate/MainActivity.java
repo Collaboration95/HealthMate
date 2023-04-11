@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
         setContentView(R.layout.activity_main);
 
         // Initialize GoogleFitManager and request permissions
-
         googleFitManager = new GoogleFitManager(this, MainActivity.this );
         googleFitManager.requestGoogleFitPermissions();
 
@@ -84,8 +83,18 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
 
         // Set up event listeners for UI components
         setupListeners();
+
+        //     Code to update UI elements
+        Intent intent2 = getIntent();
+        if (intent2 != null && intent2.getAction() != null && intent2.getAction().equals("com.example.myapp.ACTION_CALL_FUNCTION")) {
+            updateUI();
+        }
     }
 
+
+//    if (intent2 != null && intent.getAction().equals("com.example.myapp.ACTION_CALL_FUNCTION")) {
+//        //Do nothing
+//    }
     /**
      * setupListeners sets up event listeners for UI components like
      * the bottom navigation and popup menu.
@@ -168,7 +177,8 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
             public void run() {
                 // Find and initialize UI elements
                 CircularProgressIndicator circularProgressIndicator = findViewById(R.id.circularProgressIndicator);
-                TextView totalCalorie = findViewById(R.id.textCalorie);
+                TextView calorieConsumed = findViewById(R.id.textCalorie);
+                TextView totalCal =findViewById(R.id.totalCalorie);
                 ProgressBar progressBarProtein = findViewById(R.id.proteinProgress);
                 ProgressBar progressBarFat = findViewById(R.id.fatProgress);
                 ProgressBar progressBarCarbs = findViewById(R.id.CarbProgress);
@@ -190,12 +200,16 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
 
                 // Update the circular progress indicator with the total calorie count
                 if (circularProgressIndicator != null) {
-                    circularProgressIndicator.setProgress(NewMealHolder.getInstance().TotalCalories(), true);
+                    int progress =((NewMealHolder.getInstance().TotalCalories()*100)/UserDataSingleton.getInstance().getUserData().getCalorieIntakeGoal());
+                    Log.d("UpdateUi Great Success",progress+" ");
+                    circularProgressIndicator.setProgress(progress, true);
                 }
 
+
+                totalCal.setText(String.format("of %d kcal",UserDataSingleton.getInstance().getUserData().getCalorieIntakeGoal()));
                 // Update the total calorie text with data from newMealHolder
-                if (totalCalorie != null) {
-                    totalCalorie.setText(NewMealHolder.getInstance().TotalCalories() + " ");
+                if (calorieConsumed != null) {
+                    calorieConsumed.setText(NewMealHolder.getInstance().TotalCalories() + " ");
                 }
             }
         });

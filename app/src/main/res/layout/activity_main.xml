@@ -61,7 +61,7 @@
                 android:id="@+id/totalCalorie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="of 1200 kcal"
+                android:text="of 2400 kcal"
                 android:textColor="@color/secondaryColor"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/circularProgressIndicator"
