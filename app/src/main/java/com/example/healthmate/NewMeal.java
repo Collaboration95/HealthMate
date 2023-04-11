@@ -34,6 +34,7 @@ public class NewMeal extends AppCompatActivity {
         setContentView(R.layout.activity_newmeal);
 
         Button cancel = findViewById(R.id.cancel_button);
+
         central_data = NewMealHolder.getInstance().getData();
 
         // Set up the "add" button to add a new meal when clicked
@@ -72,7 +73,8 @@ public class NewMeal extends AppCompatActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(NewMeal.this, central_data.size() + "Guru ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(NewMeal.this, "Meal Add Cancelled", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(NewMeal.this,MainActivity.class));
             }
         });
     }

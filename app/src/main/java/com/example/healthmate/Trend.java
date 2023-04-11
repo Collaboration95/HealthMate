@@ -7,6 +7,7 @@
 package com.example.healthmate;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -37,6 +38,8 @@ Context variable to store the current context. The class also has an ArrayList t
 public class Trend extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Intent intent;
+    private SharedPreferences sharedPrefs;
+    private static final String SHARED_PREFS_NAME = "UserDataPrefs";
     Context context = Trend.this;
     Button updateData;
     Button suggestGoals;
@@ -128,7 +131,7 @@ public class Trend extends AppCompatActivity {
                         Integer.parseInt(userHeight.getText().toString()),
                         Integer.parseInt(userCalGoal.getText().toString()),
                         Integer.parseInt(userWorkoutGoal.getText().toString()))){
-                    Toast.makeText(Trend.this,"Please Check Inputs",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Trend.this,"Please Check Inputs",Toast.LENGTH_SHORT).show(); // fix this later
                 }
 
                 UserData changed = new UserData();
@@ -243,6 +246,38 @@ public class Trend extends AppCompatActivity {
     public static int roundToNearest100(double num) {
         int roundedNum = (int) Math.round(num / 100.0) * 100;
         return roundedNum;
+    }
+
+    private void saveUserData() {
+        UserData userData = UserDataSingleton.getInstance().getUserData();
+        sharedPrefs = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        editor.putString("userName", userData.getUserName());
+        editor.putInt("sex", userData.getSex());
+        editor.putInt("weight", userData.getWeight());
+        editor.putInt("height", userData.getHeight());
+        editor.putInt("calorie_intake_goal", userData.getCalorieIntakeGoal());
+        editor.putInt("workoutGoal", userData.getWorkoutGoal());
+        editor.putBoolean("isDefault", userData.isDefault());
+        editor.apply();
+
+        Log.d("Process Destroyed","Data saved");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        saveUserData();
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        saveUserData();
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        saveUserData();
     }
 
 }

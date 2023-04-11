@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -40,10 +41,13 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements MyObserver {
     // UI components
     private Button button;
+    private boolean isFirstLaunch; // To check if its first launch of activity
     private Context context = MainActivity.this;
     private BottomNavigationView bottomNavigationView;
     private CircularProgressIndicator circularProgressIndicator;
     private MealAdapter adapter;
+    private SharedPreferences sharedPrefs;
+    private static final String SHARED_PREFS_NAME = "UserDataPrefs";
 
     // GoogleFitManager instance for managing Google Fit data
     private GoogleFitManager googleFitManager;
@@ -54,7 +58,12 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Standard activity initialization
+
+        sharedPrefs = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE);
+        // Load user data from shared preferences
+        loadUserData();
+
+    // Standard activity initialization
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -266,6 +275,44 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
             }
         });
     }
+
+    private void saveUserData() {
+        UserData userData = UserDataSingleton.getInstance().getUserData();
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        editor.putString("userName", userData.getUserName());
+        editor.putInt("sex", userData.getSex());
+        editor.putInt("weight", userData.getWeight());
+        editor.putInt("height", userData.getHeight());
+        editor.putInt("calorie_intake_goal", userData.getCalorieIntakeGoal());
+        editor.putInt("workoutGoal", userData.getWorkoutGoal());
+        editor.putBoolean("isDefault", userData.isDefault());
+        editor.apply();
+
+        Log.d("Process Destroyed","Data saved");
+    }
+
+    // Method to load user data from shared preferences
+    private void loadUserData() {
+        String userName = sharedPrefs.getString("userName", "Guru");
+        int sex = sharedPrefs.getInt("sex", 2);
+        int weight = sharedPrefs.getInt("weight", 85);
+        int height = sharedPrefs.getInt("height", 183);
+        int calorie_intake_goal = sharedPrefs.getInt("calorie_intake_goal", 2400);
+        int workoutGoal = sharedPrefs.getInt("workoutGoal", 2900);
+        boolean isDefault = sharedPrefs.getBoolean("isDefault", true);
+        UserData temp = new UserData();
+        temp.updateData(userName, sex, weight, height, calorie_intake_goal, workoutGoal);
+        Log.d("This is getting called","LoadUserData");
+        UserDataSingleton.getInstance().setUserData(temp);
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        // Save user data to shared preferences when the activity is destroyed
+        saveUserData();
+    }
+
 }
 
 /**
