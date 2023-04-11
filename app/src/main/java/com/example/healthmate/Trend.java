@@ -97,10 +97,12 @@ public class Trend extends AppCompatActivity {
                 int userHeight = Integer.parseInt(((EditText) findViewById(R.id.editHeight)).getText().toString());
                 EditText userCalGoal = findViewById(R.id.editIntakeGoal);
                 EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
-                double[] suggestedData = suggestGoal(userSexData, userWeight, userHeight);
-//                userCalGoal.setText((int) suggestedData[0]);
+                int[] suggestedData = suggestGoal(userSexData, userWeight, userHeight);
+//                TODO : Fix resource not found string error
+//                userCalGoal.setText( suggestedData[0]);
 //                userWorkoutGoal.setText((int) suggestedData[1]);
-                Log.d("Great Success","Suggested Cal: "+suggestedData[0]+"Suggested weight intake"+suggestedData[1]);
+
+                Toast.makeText(context,"Suggested Cal: "+suggestedData[0]+"Suggested weight intake"+suggestedData[1],Toast.LENGTH_LONG).show();
             }
         });
 
@@ -209,22 +211,33 @@ public class Trend extends AppCompatActivity {
         userSex.setSelection(sexIndex);
     }
 
-    public double[] suggestGoal(int userSex, int userWeight, int userHeight) {
-        // Calculate BMR based on sex, weight, and height
-        double bmr;
+
+    public int[] suggestGoal(int userSex, double userWeight, double userHeight ) {
+        double BMR;
+        double activityFactor = 1.55; // Assume moderately active level for all users
+        double calorieDeficit = 7700; // Create a calorie deficit of 7700 calories per month to lose 1 kg of body weight
+        int userAge =24; // Constant for now
+        // Calculate BMR based on user sex
         if (userSex%2==1) {
-            bmr = 66 + (6.2 * userWeight) + (12.7 * userHeight) - (6.76 * 30); // Assuming age of 30
+            BMR = 10 * userWeight + 6.25 * userHeight - 5 * userAge + 5; // Mifflin-St Jeor Equation
+            //BMR = 13.397 * userWeight + 4.799 * userHeight - 5.677 * userAge + 88.362; // Revised Harris-Benedict Equation
+            //BMR = 370 + 21.6 * (1 - getBodyFatPercentage()) * userWeight; // Katch-McArdle Formula
         } else {
-            bmr = 655 + (4.35 * userWeight) + (4.7 * userHeight) - (4.7 * 30); // Assuming age of 30
+            BMR = 10 * userWeight + 6.25 * userHeight - 5 * userAge - 161; // Mifflin-St Jeor Equation
+            //BMR = 9.247 * userWeight + 3.098 * userHeight - 4.330 * userAge + 447.593; // Revised Harris-Benedict Equation
+            //BMR = 370 + 21.6 * (1 - getBodyFatPercentage()) * userWeight; // Katch-McArdle Formula
         }
 
-        // Calculate calorie intake and burn goals
-        double calorieIntakeWeightMaintenance = userWeight * 13; // For weight maintenance
+        // Calculate recommended daily calorie intake and burn
+        double maintenanceCalories = BMR * activityFactor;
+        double targetCalories = maintenanceCalories - (calorieDeficit / 30); // Create a calorie deficit of 7700 calories per month to lose 1 kg of body weight
+        double calorieBurn = targetCalories;
+        return new int[] { roundToNearest100(maintenanceCalories),roundToNearest100(targetCalories) };
 
-        double calorieBurnModeratelyActive = bmr * 1.55;
-
-        // Return the suggested goals
-        return new double[] { calorieIntakeWeightMaintenance, calorieBurnModeratelyActive };
+    }
+    public static int roundToNearest100(double num) {
+        int roundedNum = (int) Math.round(num / 100.0) * 100;
+        return roundedNum;
     }
 
 }
