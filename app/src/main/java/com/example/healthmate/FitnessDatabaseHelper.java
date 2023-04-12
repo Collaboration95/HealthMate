@@ -148,10 +148,14 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         long endOfDayTimestamp = cal.getTimeInMillis() - 1;
 
         String query = "SELECT * FROM " + TABLE_FITNESS_DATA +
-                " WHERE " + COLUMN_TIMESTAMP + " >= ? AND " + COLUMN_TIMESTAMP + " <= ?";
+                " WHERE " + COLUMN_TIMESTAMP + " >= ? AND " + COLUMN_TIMESTAMP + " <= ? AND " +
+                COLUMN_STEPS + " = ? AND " + COLUMN_DISTANCE + " = ? AND " + COLUMN_CALORIES + " = ?";
         Cursor cursor = db.rawQuery(query, new String[]{
                 String.valueOf(startOfDayTimestamp),
-                String.valueOf(endOfDayTimestamp)
+                String.valueOf(endOfDayTimestamp),
+                String.valueOf(data.getSteps()),
+                String.valueOf(data.getDistance()),
+                String.valueOf(data.getCalories())
         });
         boolean isDuplicate = cursor.getCount() > 0;
         cursor.close();

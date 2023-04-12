@@ -25,6 +25,8 @@ import com.google.android.material.navigation.NavigationBarView;
  * and heart rate, as well as handling bottom navigation and popup menu interactions.
  */
 public class Run extends AppCompatActivity {
+    // Add this flag to check if the activity is being resumed
+    private boolean isResumed = false;
     BottomNavigationView bottomNavigationView;
     Context context = Run.this;
     private GoogleFitManager googleFitManager;
@@ -33,7 +35,6 @@ public class Run extends AppCompatActivity {
     private TextView stepCountTextView;
     private TextView distanceTextView;
     private TextView caloriesTextView;
-    private Button refreshDataButton;
     private Button signOutButton;
     private Button viewFitnessHistoryButton;
     private Button clearHistoryButton;
@@ -60,17 +61,8 @@ public class Run extends AppCompatActivity {
         stepCountTextView = findViewById(R.id.textStepCount);
         distanceTextView = findViewById(R.id.textDistance);
         caloriesTextView = findViewById(R.id.textCaloriesBurnt);
-        refreshDataButton = findViewById(R.id.refresh_data_button);
         signOutButton = findViewById(R.id.signOutButton);
         clearHistoryButton = findViewById(R.id.clear_history_button);
-
-        // Add a click listener for the refresh data button
-        refreshDataButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fetchDataAndUpdateUI();
-            }
-        });
 
         // Add a click listener for the sign out button
         signOutButton.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +95,7 @@ public class Run extends AppCompatActivity {
         // Add a click listener to clear previous recorded histories
         clearHistoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view){
                 FitnessDatabaseHelper dbHelper = new FitnessDatabaseHelper(Run.this);
                 dbHelper.clearFitnessHistory();
                 // Refresh your list or UI after clearing the history
@@ -169,10 +161,18 @@ public class Run extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Set the flag to true when the activity is resumed
+        isResumed = true;
+    }
+
     /**
      * Fetches fitness data from Google Fit manager and updates the UI elements.
      */
     private void fetchDataAndUpdateUI() {
+        // Fetch data regardless of the activity state
         googleFitManager.getTodayStepCount(new GoogleFitManager.OnDataPointListener() {
             @Override
             public void onDataPoint(DataPoint dataPoint) {
@@ -197,9 +197,9 @@ public class Run extends AppCompatActivity {
                                 if (!dbHelper.isDuplicateEntry(data)) {
                                     dbHelper.saveFitnessData(data);
                                     Toast.makeText(context, "Fitness data saved successfully.", Toast.LENGTH_SHORT).show();
-                                } else {
-                                    Toast.makeText(context, "Duplicate entries!", Toast.LENGTH_SHORT).show();
                                 }
+                                // Reset the flag when fetchDataAndUpdateUI is called
+                                isResumed = false;
                             }
                         });
                     }
