@@ -123,7 +123,7 @@ public class NewPost extends AppCompatActivity {
     }
 
     // Handle the result of the camera intent
-    @Override
+    @Override// Handle the result of the camera intent
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
@@ -132,8 +132,26 @@ public class NewPost extends AppCompatActivity {
             if (imageBitmap==null){
                 Log.d("Something is not working","why ");
             }
+        } else if (requestCode == REQUEST_GALLERY && resultCode == RESULT_OK) {
+            Uri selectedImageUri = data.getData();
+            try {
+                imageBitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
+
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+//            Bundle extras = data.getExtras();
+//            imageBitmap = (Bitmap) extras.get("data");
+//            if (imageBitmap==null){
+//                Log.d("Something is not working","why ");
+//            }
+//        }
+//    }
 
     // Call this method to get the stored image
     public Bitmap getImageBitmap() {

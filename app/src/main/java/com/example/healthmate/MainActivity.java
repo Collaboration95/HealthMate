@@ -330,11 +330,16 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
         ArrayList<Plus_AddMeal>central_data = gson.fromJson(json, type);
         if (central_data!=null){
             Log.e("LoadUserData ","length of datastore"+central_data.size());
+            NewMealHolder.getInstance().deleteData();
+            for (Plus_AddMeal var: central_data){
+                NewMealHolder.getInstance().storeMeal(var);
+            }
         }
-        NewMealHolder.getInstance().deleteData();
-        for (Plus_AddMeal var: central_data){
-            NewMealHolder.getInstance().storeMeal(var);
-        }
+
+//        NewMealHolder.getInstance().deleteData();
+//        for (Plus_AddMeal var: central_data){
+//            NewMealHolder.getInstance().storeMeal(var);
+//        }
 
     }
     @Override
