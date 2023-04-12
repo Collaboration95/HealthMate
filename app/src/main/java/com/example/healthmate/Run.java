@@ -192,27 +192,20 @@ public class Run extends AppCompatActivity {
                                 caloriesTextView.setText(calories + " kcal");
 
                                 // Save the fetched fitness data to the local database
-                                saveFitnessData(stepCount, distance, calories);
+                                FitnessData data = new FitnessData(stepCount, distance, calories, System.currentTimeMillis());
+                                FitnessDatabaseHelper dbHelper = new FitnessDatabaseHelper(context);
+                                if (!dbHelper.isDuplicateEntry(data)) {
+                                    dbHelper.saveFitnessData(data);
+                                    Toast.makeText(context, "Fitness data saved successfully.", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(context, "Duplicate entries!", Toast.LENGTH_SHORT).show();
+                                }
                             }
                         });
                     }
                 });
             }
         });
-    }
-
-    /**
-     * Saves the fetched fitness data to the local SQLite database.
-     *
-     * @param steps    the number of steps
-     * @param distance the distance in meters
-     * @param calories the calories burned in kcal
-     */
-    private void saveFitnessData(int steps, float distance, float calories) {
-        FitnessData data = new FitnessData(steps, distance, calories, System.currentTimeMillis());
-        FitnessDatabaseHelper dbHelper = new FitnessDatabaseHelper(context);
-        dbHelper.saveFitnessData(data);
-        Toast.makeText(context, "Fitness data saved successfully.", Toast.LENGTH_SHORT).show();
     }
 }
 

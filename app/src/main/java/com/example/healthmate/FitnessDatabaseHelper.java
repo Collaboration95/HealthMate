@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -132,18 +133,32 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
     // To check for any duplicate entries, duplicate returns true. Else returns false
     public boolean isDuplicateEntry(FitnessData data) {
         SQLiteDatabase db = this.getReadableDatabase();
+
+        // Round down the timestamp to the start of the day
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(data.getTimestamp());
+        cal.set(Calendar.HOUR_OF_DAY, 0);
+        cal.set(Calendar.MINUTE, 0);
+        cal.set(Calendar.SECOND, 0);
+        cal.set(Calendar.MILLISECOND, 0);
+        long startOfDayTimestamp = cal.getTimeInMillis();
+
+        // Calculate end of the day timestamp
+        cal.add(Calendar.DATE, 1);
+        long endOfDayTimestamp = cal.getTimeInMillis() - 1;
+
         String query = "SELECT * FROM " + TABLE_FITNESS_DATA +
-                " WHERE " + COLUMN_STEPS + "=? AND " + COLUMN_DISTANCE + "=? AND " + COLUMN_CALORIES + "=? AND " + COLUMN_TIMESTAMP + "=?";
+                " WHERE " + COLUMN_TIMESTAMP + " >= ? AND " + COLUMN_TIMESTAMP + " <= ?";
         Cursor cursor = db.rawQuery(query, new String[]{
-                String.valueOf(data.getSteps()),
-                String.valueOf(data.getDistance()),
-                String.valueOf(data.getCalories()),
-                String.valueOf(data.getTimestamp())
+                String.valueOf(startOfDayTimestamp),
+                String.valueOf(endOfDayTimestamp)
         });
         boolean isDuplicate = cursor.getCount() > 0;
         cursor.close();
         return isDuplicate;
     }
+
+
 
     // Clear all entries currently stored in the fitness history table
     public void clearFitnessHistory() {

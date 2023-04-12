@@ -319,7 +319,6 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
 In this updated version of MainActivity.java, the code documentation is enhanced to better explain the purpose and functionality
 of the activity within the context of the Fitness Tracker app.
 The code is organized into distinct sections for initializing the activity, setting up event listeners, updating the UI, and handling Google Fit data.
-Each method now includes a concise description, and the code is organized in a way that is easier to read and understand.
  **/
 
 
