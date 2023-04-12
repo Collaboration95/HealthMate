@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tab_layout"
-        app:layout_constraintTop_toTopOf="@+id/tab_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="250dp"
@@ -18,41 +19,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tabTextColor="@color/tab_text_color_selector">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="fill_parent"
+            app:tabTextAppearance="@style/TabItemAppearance"
+            android:layout_height="wrap_content"
+            android:id="@+id/fyp"
+            app:tabTextColor="#FFFFFF"
+            android:text="@string/for_you"/>
 
 
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="fill_parent"
-                    app:tabTextAppearance="@style/TabItemAppearance"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/fyp"
-                    app:tabTextColor="#FFFFFF"
-                    android:text="@string/for_you"/>
-
-
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="fill_parent"
-                    app:tabTextAppearance="@style/TabItemAppearance"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/following"
-                    android:text="@string/following"/>
-
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="fill_parent"
+            app:tabTextAppearance="@style/TabItemAppearance"
+            android:layout_height="wrap_content"
+            android:id="@+id/following"
+            android:text="@string/following"/>
 
     </com.google.android.material.tabs.TabLayout>
 
+
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
         android:id="@+id/bringtoFront"
-        app:cardCornerRadius="25dp"
-        android:scaleY="1.3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="27dp"
         android:scaleX="1.3"
+        android:scaleY="1.3"
+        app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottomCard"
         app:layout_constraintEnd_toEndOf="@+id/bottomCard"
-        app:layout_constraintStart_toStartOf="@+id/bottomCard"
-        android:layout_height="wrap_content">
+        app:layout_constraintStart_toStartOf="@+id/bottomCard">
+
         <include layout="@layout/reusable_plus"/>
 
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/bottomCard"
         android:layout_width="match_parent"
@@ -60,18 +61,27 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            app:itemIconSize="40dp"
-            android:background="@drawable/bottomnavigation"
-            app:itemIconTint="@color/primaryColor"
-            app:itemTextColor="@color/primaryColor"
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:background="@drawable/bottomnavigation"
             android:elevation="2dp"
+            app:itemIconSize="40dp"
+            app:itemIconTint="@color/primaryColor"
+            app:itemTextColor="@color/primaryColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/bottom_nav_menu" />
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/share_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

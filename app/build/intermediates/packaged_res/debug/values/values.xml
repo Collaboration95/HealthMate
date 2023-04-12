@@ -40,12 +40,12 @@
     </style>
     <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
         <item name="android:popupBackground">@drawable/popupmenu</item>
-
     </style>
     <style name="TabItemAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">16sp  </item>
     </style>
     <style name="Theme.HealthMate" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
         
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorControlHighlight">@color/primaryColor</item>

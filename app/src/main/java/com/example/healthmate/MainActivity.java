@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
     // UI components
     private Button button;
     private boolean isFirstLaunch; // To check if its first launch of activity
-    private Context context = MainActivity.this;
+    private final Context context = MainActivity.this;
     private BottomNavigationView bottomNavigationView;
     private CircularProgressIndicator circularProgressIndicator;
     private MealAdapter adapter;

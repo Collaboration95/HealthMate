@@ -123,6 +123,7 @@ id proteinProgress
 id refresh_data_button
 id sat
 id select_image
+id share_button
 id signOutButton
 id social
 id steps_text_view

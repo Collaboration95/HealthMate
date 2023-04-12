@@ -16,9 +16,9 @@ import java.util.List;
 
 public class NewMealHolder extends Observable {
     private static NewMealHolder instance;
-    private List<MyObserver> observers = new ArrayList<>();
+    private final List<MyObserver> observers = new ArrayList<>();
 
-    private ArrayList<Plus_AddMeal> data;
+    private final ArrayList<Plus_AddMeal> data;
 
     // Private constructor to enforce singleton pattern
     private NewMealHolder() {

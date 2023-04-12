@@ -13,9 +13,9 @@ import java.util.List;
  */
 public class Social_PostModelHolder extends Observable {
     private static Social_PostModelHolder instance;
-    private List<MyObserver> observers = new ArrayList<>();
+    private final List<MyObserver> observers = new ArrayList<>();
 
-    private ArrayList<Social_PostModel> data;
+    private final ArrayList<Social_PostModel> data;
 
     private Social_PostModelHolder() {
         data = new ArrayList<>();

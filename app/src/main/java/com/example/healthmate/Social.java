@@ -2,9 +2,12 @@ package com.example.healthmate;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
@@ -18,6 +21,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Social extends AppCompatActivity {
@@ -29,6 +33,7 @@ public class Social extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     Adapter_Social_Fragment socialAdapter;
+    Button shareButton;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +42,17 @@ public class Social extends AppCompatActivity {
         // Initialize the tab layout and view pager components
         tabLayout = findViewById(R.id.tab_layout);
         viewPager2 = findViewById(R.id.viewpager);
+        shareButton = findViewById(R.id.share_button);
         socialAdapter = new Adapter_Social_Fragment(this);
         viewPager2.setAdapter(socialAdapter);
+
+        // Set up the shareButton to share posts
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shareToSocialMedia();
+            }
+        });
 
         // Set up the tab layout and view pager to work together
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -60,7 +74,10 @@ public class Social extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-                Objects.requireNonNull(tabLayout.getTabAt(position)).select();
+                TabLayout.Tab tab = tabLayout.getTabAt(position);
+                if (tab != null) {
+                    tab.select();
+                }
             }
         });
 
@@ -125,5 +142,39 @@ public class Social extends AppCompatActivity {
                 popupMenu.show();
             }
         });
+    }
+
+    // Implement the shareToSocialMedia() method
+    private void shareToSocialMedia() {
+        String textToShare = "Your text to share";
+        String mimeType = "text/plain";
+
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType(mimeType);
+        shareIntent.putExtra(Intent.EXTRA_TEXT, textToShare);
+
+        PackageManager packageManager = getPackageManager();
+        List<ResolveInfo> resolveInfoList = packageManager.queryIntentActivities(shareIntent, 0);
+
+        boolean facebookAppFound = false;
+        boolean instagramAppFound = false;
+
+        for (ResolveInfo resolveInfo : resolveInfoList) {
+            String packageName = resolveInfo.activityInfo.packageName;
+
+            if (packageName.contains("com.facebook.katana")) {
+                shareIntent.setPackage(packageName);
+                facebookAppFound = true;
+            } else if (packageName.contains("com.instagram.android")) {
+                shareIntent.setPackage(packageName);
+                instagramAppFound = true;
+            }
+        }
+
+        if (facebookAppFound || instagramAppFound) {
+            startActivity(shareIntent);
+        } else {
+            Toast.makeText(this, "Facebook and Instagram apps not found", Toast.LENGTH_SHORT).show();
+        }
     }
 }

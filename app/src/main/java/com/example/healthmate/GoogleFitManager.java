@@ -31,7 +31,7 @@ public class GoogleFitManager {
     private final Activity activity;
     private final Context context;
 
-    public static interface GoogleSignInResultCallBack {
+    public interface GoogleSignInResultCallBack {
         void onSignOutSuccess();
 
         void onSignOutFailure(Exception e);

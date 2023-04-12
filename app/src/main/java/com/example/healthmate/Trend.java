@@ -191,10 +191,7 @@ public class Trend extends AppCompatActivity {
     }
 
     private boolean checkIrregularInputs( int weight, int height, int calorieintake, int workout) {
-        if (weight > 250 || weight < 20 || height < 100 || height > 250 || calorieintake < 500 || calorieintake > 5000 || workout > calorieintake * 1.5) {
-            return false;
-        }
-        return true;
+        return weight <= 250 && weight >= 20 && height >= 100 && height <= 250 && calorieintake >= 500 && calorieintake <= 5000 && !(workout > calorieintake * 1.5);
     }
 
 

@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.HealthMate" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorControlHighlight">@color/primaryColor</item>
@@ -23,8 +24,6 @@
     </style>
     <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
         <item name="android:popupBackground">@drawable/popupmenu</item>
-<!--        <item name="android:popupBackground">@color/secondaryColor</item>-->
     </style>
-
 
 </resources>
