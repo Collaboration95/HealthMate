@@ -35,17 +35,21 @@ import com.google.android.gms.fitness.data.Field;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Array;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements MyObserver {
     // UI components
-    private Button button;
-    private boolean isFirstLaunch; // To check if its first launch of activity
     private final Context context = MainActivity.this;
     private BottomNavigationView bottomNavigationView;
     private CircularProgressIndicator circularProgressIndicator;
     private MealAdapter adapter;
+    private SharedPreferences sharedPrefsMeal;
+    private static final String SHARED_PREFS_NAME_MEAL = "MealPrefs";
     private SharedPreferences sharedPrefs;
     private static final String SHARED_PREFS_NAME = "UserDataPrefs";
 
@@ -60,14 +64,16 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
     protected void onCreate(Bundle savedInstanceState) {
 
         sharedPrefs = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE);
+        sharedPrefsMeal= getSharedPreferences(SHARED_PREFS_NAME_MEAL,MODE_PRIVATE);
         // Load user data from shared preferences
         loadUserData();
 
-    // Standard activity initialization
+
+        // Standard activity initialization
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize GoogleFitManager and request permissions
+        //Recycler view thingy
         googleFitManager = new GoogleFitManager(this, MainActivity.this );
         googleFitManager.requestGoogleFitPermissions();
 
@@ -101,8 +107,6 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
     }
 
 
-//    if (intent2 != null && intent.getAction().equals("com.example.myapp.ACTION_CALL_FUNCTION")) {
-//        //Do nothing
 //    }
     /**
      * setupListeners sets up event listeners for UI components like
@@ -145,7 +149,6 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
                 // Handle bottom navigation item clicks and start the appropriate activity
                 switch (item.getItemId()) {
                     case R.id.calorie:
-                        Toast.makeText(context, "Calorie", Toast.LENGTH_SHORT).show();
                         Log.d("Great Success", NewMealHolder.getInstance().getMealCount() + "");
                         return true;
 
@@ -173,6 +176,8 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
      * OnChange method is called when meal data updates. Update the UI accordingly.
      */
     @Override
+
+
     public void OnChange() {
         updateUI();
     }
@@ -220,6 +225,17 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
                 if (calorieConsumed != null) {
                     calorieConsumed.setText(NewMealHolder.getInstance().TotalCalories() + " ");
                 }
+//                ArrayList<Data> newData = getData(); // replace with your own logic to get new data
+//                mDataSource.clear();
+//                mDataSource.addAll(newData);
+//
+//                // Notify the adapter that the data has changed
+
+
+                // Register MainActivity as an observer for meal data updates
+//                NewMealHolder.getInstance().addObserver(MainActivity.this);
+
+
             }
         });
     }
@@ -304,11 +320,26 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
         temp.updateData(userName, sex, weight, height, calorie_intake_goal, workoutGoal);
         Log.d("This is getting called","LoadUserData");
         UserDataSingleton.getInstance().setUserData(temp);
+
+
+        Gson gson = new Gson();
+
+        // Retrieve the central data from SharedPreferences
+        String json = sharedPrefsMeal.getString("central_data", "");
+        Type type = new TypeToken<ArrayList<Plus_AddMeal>>() {}.getType();
+        ArrayList<Plus_AddMeal>central_data = gson.fromJson(json, type);
+        if (central_data!=null){
+            Log.e("LoadUserData ","length of datastore"+central_data.size());
+        }
+        NewMealHolder.getInstance().deleteData();
+        for (Plus_AddMeal var: central_data){
+            NewMealHolder.getInstance().storeMeal(var);
+        }
+
     }
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
         // Save user data to shared preferences when the activity is destroyed
         saveUserData();
     }
@@ -316,9 +347,9 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
 }
 
 /**
-In this updated version of MainActivity.java, the code documentation is enhanced to better explain the purpose and functionality
-of the activity within the context of the Fitness Tracker app.
-The code is organized into distinct sections for initializing the activity, setting up event listeners, updating the UI, and handling Google Fit data.
- **/
+ In this updated version of MainActivity.java, the code documentation is enhanced to better explain the purpose and functionality
 
+ of the activity within the context of the Fitness Tracker app.
+ The code is organized into distinct sections for initializing the activity, setting up event listeners, updating the UI, and handling Google Fit data.
+ **/
 

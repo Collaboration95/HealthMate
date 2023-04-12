@@ -11,7 +11,7 @@
 
         android:id="@+id/materialCardView"
         android:layout_marginTop="10dp"
-        android:layout_width="400dp"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
         app:cardCornerRadius="22dp"
         app:cardElevation="20dp"
@@ -30,10 +30,10 @@
                 android:id="@+id/circularProgressIndicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
                 android:progress="25"
                 app:indicatorColor="@color/primaryColor"
                 app:indicatorSize="160dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.934"
                 app:layout_constraintStart_toStartOf="parent"
@@ -80,10 +80,11 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.032"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.209" />
+                app:layout_constraintVertical_bias="0.22" />
+
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/proteinProgress"
                 android:layout_width="100dp"
@@ -93,7 +94,7 @@
                 app:indicatorColor="@color/teal_a200"
                 app:layout_constraintBottom_toBottomOf="@+id/protein"
                 app:layout_constraintEnd_toStartOf="@+id/circularProgressIndicator"
-                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/protein"
                 app:layout_constraintTop_toTopOf="@+id/protein"
                 app:layout_constraintVertical_bias="1.0"
@@ -114,7 +115,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/protein"
                 app:layout_constraintTop_toBottomOf="@+id/protein"
-                app:layout_constraintVertical_bias="0.448" />
+                app:layout_constraintVertical_bias="0.44" />
 
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/fatProgress"
@@ -124,7 +125,7 @@
                 app:indicatorColor="@color/deep_purple_300"
                 app:layout_constraintBottom_toBottomOf="@+id/textView13"
                 app:layout_constraintEnd_toStartOf="@+id/circularProgressIndicator"
-                app:layout_constraintHorizontal_bias="0.741"
+                app:layout_constraintHorizontal_bias="0.787"
                 app:layout_constraintStart_toEndOf="@+id/textView13"
                 app:layout_constraintTop_toTopOf="@+id/textView13"
                 app:layout_constraintVertical_bias="0.5"
@@ -201,10 +202,12 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:paddingBottom="2dp"
+        android:clipToPadding="false"
 
         android:layout_width="409dp"
         android:id="@+id/Mealrecyclerview"
-        android:layout_height="500dp"
+        android:layout_height="460dp"
         android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottomCard"
         app:layout_constraintEnd_toEndOf="parent"

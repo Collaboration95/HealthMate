@@ -1,14 +1,14 @@
-#Wed Apr 12 23:56:00 SGT 2023
+#Thu Apr 13 01:05:43 SGT 2023
 path.4=classes2.dex
 path.3=2/classes.dex
 path.2=13/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.4=/Users/hongjing/Downloads/Filename/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
-base.3=/Users/hongjing/Downloads/Filename/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
-base.2=/Users/hongjing/Downloads/Filename/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
-base.1=/Users/hongjing/Downloads/Filename/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.0=/Users/hongjing/Downloads/Filename/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.4=/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/FinalProject/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+base.3=/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/FinalProject/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
+base.2=/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/FinalProject/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
+base.1=/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/FinalProject/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.0=/Users/speedpowermac/Documents/projects/CODE_MAIN/IntroSys/FinalProject/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex

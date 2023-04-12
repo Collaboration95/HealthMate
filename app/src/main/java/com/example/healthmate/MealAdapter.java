@@ -1,6 +1,7 @@
 package com.example.healthmate;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,6 +50,7 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.myViewHolder> 
         holder.proteinProgress.setProgress((tempProtein * 100) / totalCalories, true);
         holder.fatProgress.setProgress((tempFat * 100) / totalCalories, true);
         holder.carbProgress.setProgress((tempCarbs * 100) / totalCalories, true);
+
     }
 
     @Override

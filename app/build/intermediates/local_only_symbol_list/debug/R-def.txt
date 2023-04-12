@@ -120,7 +120,6 @@ id plus
 id plusCard
 id protein
 id proteinProgress
-id refresh_data_button
 id sat
 id select_image
 id share_button

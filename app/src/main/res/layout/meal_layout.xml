@@ -8,18 +8,21 @@
 
 
     <com.google.android.material.card.MaterialCardView
+
         android:layout_width="350dp"
         android:layout_height="130dp"
         android:background="@color/white"
-        app:cardCornerRadius="30dp"
         android:padding="10dp"
-        app:cardElevation="@android:dimen/app_icon_size"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
         app:strokeColor="@color/primaryColor"
         app:strokeWidth="3dp">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -158,5 +161,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </com.google.android.material.card.MaterialCardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

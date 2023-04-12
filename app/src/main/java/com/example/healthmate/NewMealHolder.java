@@ -46,6 +46,10 @@ public class NewMealHolder extends Observable {
         data.add(meal);
         notifyObservers();
     }
+    public void deleteData() {
+        data.clear();
+        notifyObservers();
+    }
 
     /**
      * Adds an observer to the list of observers.
@@ -157,5 +161,3 @@ public class NewMealHolder extends Observable {
         return totalCarbs;
     }
 }
-
-

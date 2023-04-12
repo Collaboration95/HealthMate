@@ -3325,7 +3325,6 @@ id proteinProgress
 id radio
 id ratio
 id rectangles
-id refresh_data_button
 id reverseSawtooth
 id right
 id rightToLeft

@@ -1,6 +1,7 @@
 package com.example.healthmate;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,10 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 /**
@@ -18,9 +23,8 @@ import java.util.ArrayList;
  * meal data and add it to the list of meals stored in the application.
  */
 public class NewMeal extends AppCompatActivity {
-
-    private ArrayList<Plus_AddMeal> central_data;
-
+    private SharedPreferences sharedPrefs;
+    private static final String SHARED_PREFS_NAME = "MealPrefs";
     /**
      * Set up a new meal with the provided information and store it.
      */
@@ -30,12 +34,12 @@ public class NewMeal extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        sharedPrefs = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newmeal);
 
         Button cancel = findViewById(R.id.cancel_button);
 
-        central_data = NewMealHolder.getInstance().getData();
 
         // Set up the "add" button to add a new meal when clicked
         Button add = findViewById(R.id.add_meal);
@@ -77,5 +81,42 @@ public class NewMeal extends AppCompatActivity {
                 startActivity(new Intent(NewMeal.this,MainActivity.class));
             }
         });
+    }
+
+    private void saveUserData() {
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        Log.d("SaveUserData NewMeal",NewMealHolder.getInstance().getMealCount()+" ");
+        // Save the central data to SharedPreferences as a JSON string
+        Gson gson = new Gson();
+        String json = gson.toJson(NewMealHolder.getInstance().getData());
+        editor.putString("central_data", json);
+        editor.apply();
+        Log.d("Data saved","NewMeal");
+        tempLoadData();
+    }
+    private void tempLoadData(){
+        Gson gson = new Gson();
+
+        // Retrieve the central data from SharedPreferences
+        String json = sharedPrefs.getString("central_data", "");
+        Type type = new TypeToken<ArrayList<Plus_AddMeal>>() {}.getType();
+        ArrayList<Plus_AddMeal>central_data = gson.fromJson(json, type);
+        if(central_data!=null){
+            Log.d("tempLoadData",central_data.size()+" ");
+        }
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        saveUserData();
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        saveUserData();
     }
 }

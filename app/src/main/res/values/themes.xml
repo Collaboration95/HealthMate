@@ -1,7 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.HealthMate" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-
+    <style name="Theme.HealthMate" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+            <!-- Hide the status bar
+            -->
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorControlHighlight">@color/primaryColor</item>
@@ -16,6 +17,7 @@
         <item name="android:popupMenuStyle">@style/PopupMenu</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="TabItemAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">16sp  </item>
     </style>
