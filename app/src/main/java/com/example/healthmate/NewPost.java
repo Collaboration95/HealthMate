@@ -1,14 +1,22 @@
 package com.example.healthmate;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -18,17 +26,24 @@ import java.util.Random;
 public class NewPost extends AppCompatActivity {
     Button SelectImage;
     int defaultimage = R.drawable.stock1;
-    int image;
+    int image=0;
+    private static final int REQUEST_GALLERY = 1001;
+    private final int REQUEST_IMAGE_CAPTURE = 1;
+    private Bitmap imageBitmap;
     int[] images = {R.drawable.stock1, R.drawable.stock2, R.drawable.stock3, R.drawable.stock4, R.drawable.stock5, R.drawable.stock6, R.drawable.stock7};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addpost);
+//        imageView = findViewById(R.id.imageView);
 
+        // Call openCamera() when the user clicks on a button to open the camera
+//        findViewById(R.id.button).setOnClickListener(view -> openCamera());
         // Initialize buttons
         Button cancel = findViewById(R.id.cancel_button);
         Button add = findViewById(R.id.add_meal);
-        Button select= findViewById(R.id.select_image);
+        Button select = findViewById(R.id.select_image);
 
         // Set onClickListener for the add button
         add.setOnClickListener(new View.OnClickListener() {
@@ -47,11 +62,10 @@ public class NewPost extends AppCompatActivity {
                 // Check if the input fields are not empty
                 if (!name.isEmpty() && !distance.isEmpty() && !time.isEmpty()) {
                     // Set up the post with the input values
-                    if(image!=0){
-                        setUpPost(name, distance, time,image);
-                    }
-                    else {
-                        setUpPost(name,distance,time,defaultimage);
+                    if (getImageBitmap() != null) {
+                        setUpPost(name, distance, time, getImageBitmap());
+                    } else {
+                        setUpPost(name, distance, time, defaultimage);
                     }
 
                     // Redirect to the Social activity
@@ -72,13 +86,58 @@ public class NewPost extends AppCompatActivity {
         select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Random random = new Random();
-                // Use the random.nextInt() method to generate a random index within the range of the images array:
-                image = images[random.nextInt(images.length)];
+                // Create a new AlertDialog to display the options to the user
+                AlertDialog.Builder builder = new AlertDialog.Builder(NewPost.this);
+                builder.setTitle("Select Image");
+                builder.setItems(new CharSequence[]{"Gallery", "Camera"}, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                // User selected "Gallery"
+                                openGallery();
+                                break;
+                            case 1:
+                                // User selected "Camera"
+                                openCamera();
+                                break;
+                        }
+                    }
+                });
+                builder.show();
             }
         });
 
+    }
+    private void openGallery() {
+        Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(galleryIntent, REQUEST_GALLERY);
+    }
+
+    // Call this method to open the camera
+    private void openCamera() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
+    // Handle the result of the camera intent
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            imageBitmap = (Bitmap) extras.get("data");
+            if (imageBitmap==null){
+                Log.d("Something is not working","why ");
+            }
+        }
+    }
+
+    // Call this method to get the stored image
+    public Bitmap getImageBitmap() {
+        return imageBitmap;
     }
 
     // Set onClickListener for the select image button
@@ -91,5 +150,8 @@ public class NewPost extends AppCompatActivity {
      */
     private void setUpPost(String name, String distance, String time,int image) {
         Social_PostModelHolder.getInstance().storePost(new Social_PostModel("Guru", name, distance, time, "0",image ));
+    }
+    private void setUpPost(String name, String distance, String time,Bitmap customImage) {
+        Social_PostModelHolder.getInstance().storePost(new Social_PostModel("Guru", name, distance, time, "0",customImage ));
     }
 }

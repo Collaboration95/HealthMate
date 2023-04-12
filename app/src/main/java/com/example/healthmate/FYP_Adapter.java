@@ -1,7 +1,9 @@
 package com.example.healthmate;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,20 +92,28 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
 
         // Get the image resource ID and calculate its aspect ratio
         int imageResId = data.get(position).getImage();
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(context.getResources(), imageResId, options);
-        float aspectRatio = (float) options.outWidth / (float) options.outHeight;
+        Bitmap imageBitmap = data.get(position).getCustomImage();
+        if (imageBitmap == null) {
+            // Load the default image Bitmap
+            imageBitmap = BitmapFactory.decodeResource(context.getResources(), imageResId);
+        }
 
-        // Set the ImageView's ScaleType based on the aspect ratio
+// Set the ImageView's ScaleType based on the aspect ratio of the imageBitmap
+        float aspectRatio = (float) imageBitmap.getWidth() / (float) imageBitmap.getHeight();
         if (aspectRatio > 1.0) {
             holder.Image.setScaleType(ImageView.ScaleType.CENTER_CROP);
         } else {
             holder.Image.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         }
 
-        // Set the image resource for the ImageView
-        holder.Image.setImageResource(imageResId);
+    // Scale the imageBitmap to a larger size
+        int newWidth = 800; // adjust as needed
+        int newHeight = (int) (newWidth / aspectRatio);
+        imageBitmap = Bitmap.createScaledBitmap(imageBitmap, newWidth, newHeight, true);
+
+    // Set the image Bitmap for the ImageView
+        holder.Image.setImageBitmap(imageBitmap);
+
     }
 
 

@@ -1,5 +1,8 @@
 package com.example.healthmate;
 
+import android.graphics.Bitmap;
+import android.util.Log;
+
 /**
  * Social_PostModel class represents a single post object in the social feed.
  */
@@ -10,6 +13,11 @@ public class Social_PostModel {
     String Time;
     String likes;
     int image;
+    Bitmap customImage;
+
+    public Bitmap getCustomImage() {
+        return customImage;
+    }
 
     /**
      * Populates the Social_PostModelHolder2 with default data for testing.
@@ -36,14 +44,28 @@ public class Social_PostModel {
      * @param likes        The number of likes for the post.
      */
     public Social_PostModel(String name, String activityName, String distance, String time, String likes,int image) {
+        Log.d("Normal gets evoked","Great Success");
         this.Name = name;
         this.activityName = activityName;
         this.Distance = distance;
         this.Time = time;
         this.likes = likes;
         this.image   =image;
+        this.customImage = null;
 
     }
+
+    public Social_PostModel(String name, String activityName, String distance, String time, String likes,Bitmap customeImage) {
+        Log.d("BitmapConstructor gets evoked","Great Success");
+        this.Name = name;
+        this.activityName = activityName;
+        this.Distance = distance;
+        this.Time = time;
+        this.likes = likes;
+        this.image = 0;
+        this.customImage = customeImage;
+    }
+
 
     public String getName() {
         return Name;
