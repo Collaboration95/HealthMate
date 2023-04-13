@@ -47,12 +47,12 @@ public class Social extends AppCompatActivity {
         viewPager2.setAdapter(socialAdapter);
 
         // Set up the shareButton to share posts
-        shareButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                shareToSocialMedia();
-            }
-        });
+//        shareButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                shareToSocialMedia();
+//            }
+//        });
 
         // Set up the tab layout and view pager to work together
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -145,36 +145,7 @@ public class Social extends AppCompatActivity {
     }
 
     // Implement the shareToSocialMedia() method
-    private void shareToSocialMedia() {
-        String textToShare = "Your text to share";
-        String mimeType = "text/plain";
 
-        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.setType(mimeType);
-        shareIntent.putExtra(Intent.EXTRA_TEXT, textToShare);
 
-        PackageManager packageManager = getPackageManager();
-        List<ResolveInfo> resolveInfoList = packageManager.queryIntentActivities(shareIntent, 0);
 
-        boolean facebookAppFound = false;
-        boolean instagramAppFound = false;
-
-        for (ResolveInfo resolveInfo : resolveInfoList) {
-            String packageName = resolveInfo.activityInfo.packageName;
-
-            if (packageName.contains("com.facebook.katana")) {
-                shareIntent.setPackage(packageName);
-                facebookAppFound = true;
-            } else if (packageName.contains("com.instagram.android")) {
-                shareIntent.setPackage(packageName);
-                instagramAppFound = true;
-            }
-        }
-
-        if (facebookAppFound || instagramAppFound) {
-            startActivity(shareIntent);
-        } else {
-            Toast.makeText(this, "Facebook and Instagram apps not found", Toast.LENGTH_SHORT).show();
-        }
-    }
 }

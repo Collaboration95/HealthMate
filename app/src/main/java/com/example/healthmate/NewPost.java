@@ -143,17 +143,6 @@ public class NewPost extends AppCompatActivity {
         }
     }
 
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-//            Bundle extras = data.getExtras();
-//            imageBitmap = (Bitmap) extras.get("data");
-//            if (imageBitmap==null){
-//                Log.d("Something is not working","why ");
-//            }
-//        }
-//    }
-
     // Call this method to get the stored image
     public Bitmap getImageBitmap() {
         return imageBitmap;
@@ -168,9 +157,12 @@ public class NewPost extends AppCompatActivity {
      * @param time     The time of the run.
      */
     private void setUpPost(String name, String distance, String time,int image) {
-        Social_PostModelHolder.getInstance().storePost(new Social_PostModel("Guru", name, distance, time, "0",image ));
+        String userName = UserDataSingleton.getInstance().getUserData().getUserName();
+
+        Social_PostModelHolder.getInstance().storePost(new Social_PostModel(userName, name, distance, time, "0",image ));
     }
     private void setUpPost(String name, String distance, String time,Bitmap customImage) {
-        Social_PostModelHolder.getInstance().storePost(new Social_PostModel("Guru", name, distance, time, "0",customImage ));
+        String userName = UserDataSingleton.getInstance().getUserData().getUserName();
+        Social_PostModelHolder.getInstance().storePost(new Social_PostModel(userName, name, distance, time, "0",customImage ));
     }
 }

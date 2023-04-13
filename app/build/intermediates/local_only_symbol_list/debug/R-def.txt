@@ -44,6 +44,7 @@ drawable ic_launcher_plus
 drawable ic_launcher_rightsymbol
 drawable ic_launcher_running
 drawable ic_launcher_search
+drawable ic_launcher_share
 drawable ic_launcher_thumbsup
 drawable ic_launcher_timer
 drawable ic_launcher_trends
@@ -122,6 +123,7 @@ id protein
 id proteinProgress
 id sat
 id select_image
+id share
 id share_button
 id signOutButton
 id social

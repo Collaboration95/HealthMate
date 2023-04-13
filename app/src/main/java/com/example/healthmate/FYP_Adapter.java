@@ -1,6 +1,9 @@
 package com.example.healthmate;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
@@ -9,11 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * FYP_Adapter is the adapter for the RecyclerView in the social section of the app.
@@ -45,29 +50,6 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
         return new FYP_Adapter.myViewHolder(view);
     }
 
-//    public void onBindViewHolder(@NonNull FYP_Adapter.myViewHolder holder, int position) {
-//        // Set the text for the TextViews
-//        holder.Name.setText(data.get(position).getName());
-//        holder.activityName.setText(data.get(position).getActivityName());
-//        holder.Distance.setText(data.get(position).getDistance());
-//        holder.Time.setText(data.get(position).getTime());
-//        holder.likes.setText(data.get(position).getLikes());
-//        // Set the image resources for the ImageViews
-//
-//
-//        int profileIcon = R.drawable.ic_launcher_person;
-//        int activityIcon = R.drawable.ic_launcher_rightsymbol;
-//        int likeIcon = R.drawable.ic_launcher_thumbsup;
-//        int timeIcon = R.drawable.ic_launcher_timer;
-//        int distanceIcon = R.drawable.ic_launcher_distance;
-//        holder.Image.setImageResource(data.get(position).getImage());
-//        holder.AddFriendicon.setImageResource(profileIcon);
-//        holder.activityIcon.setImageResource(activityIcon);
-//        holder.likeIcon.setImageResource(likeIcon);
-//        holder.timeIcon.setImageResource(timeIcon);
-//        holder.distanceIcon.setImageResource(distanceIcon);
-//    }
-
     @Override
     public void onBindViewHolder(@NonNull FYP_Adapter.myViewHolder holder, int position) {
         // Set the text for the TextViews
@@ -83,12 +65,26 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
         int likeIcon = R.drawable.ic_launcher_thumbsup;
         int timeIcon = R.drawable.ic_launcher_timer;
         int distanceIcon = R.drawable.ic_launcher_distance;
+        int shareicon = R.drawable.ic_launcher_share;
 
         holder.AddFriendicon.setImageResource(profileIcon);
         holder.activityIcon.setImageResource(activityIcon);
         holder.likeIcon.setImageResource(likeIcon);
         holder.timeIcon.setImageResource(timeIcon);
         holder.distanceIcon.setImageResource(distanceIcon);
+        holder.shareIcon.setImageResource(shareicon);
+            if(UserDataSingleton.getInstance().getUserData().getUserName().equals(data.get(holder.getAdapterPosition()).getName())){
+                holder.shareIcon.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+//                        Log.d("Something is not working","why ");
+                        shareToSocialMedia();
+                    }
+
+                });
+
+            }else{
+                Toast.makeText(context,"Not your Post ",Toast.LENGTH_SHORT).show();}
 
         // Get the image resource ID and calculate its aspect ratio
         int imageResId = data.get(position).getImage();
@@ -136,6 +132,7 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
         ImageView likeIcon;
         ImageView timeIcon;
         ImageView distanceIcon;
+        ImageView shareIcon;
 
         /**
          * Constructor that takes in a view for the RecyclerView element.
@@ -155,6 +152,41 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
             likeIcon = itemView.findViewById(R.id.iconLike);
             timeIcon = itemView.findViewById(R.id.iconTime);
             distanceIcon = itemView.findViewById(R.id.iconDistance);
+            shareIcon = itemView.findViewById(R.id.share);
         }
     }
+
+    private void shareToSocialMedia() {
+//        String textToShare = "Your text to share";
+//        String mimeType = "text/plain";
+//
+//        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+//        shareIntent.setType(mimeType);
+//        shareIntent.putExtra(Intent.EXTRA_TEXT, textToShare);
+//
+//        PackageManager packageManager = getPackageManager();
+//        List<ResolveInfo> resolveInfoList = packageManager.queryIntentActivities(shareIntent, 0);
+//
+//        boolean facebookAppFound = false;
+//        boolean instagramAppFound = false;
+//
+//        for (ResolveInfo resolveInfo : resolveInfoList) {
+//            String packageName = resolveInfo.activityInfo.packageName;
+//
+//            if (packageName.contains("com.facebook.katana")) {
+//                shareIntent.setPackage(packageName);
+//                facebookAppFound = true;
+//            } else if (packageName.contains("com.instagram.android")) {
+//                shareIntent.setPackage(packageName);
+//                instagramAppFound = true;
+//            }
+//        }
+//
+//        if (facebookAppFound || instagramAppFound) {
+//            startActivity(shareIntent);
+//        } else {
+//            Toast.makeText(this, "Facebook and Instagram apps not found", Toast.LENGTH_SHORT).show();
+//        }
+    }
+
 }

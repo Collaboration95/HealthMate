@@ -2821,6 +2821,7 @@ drawable ic_launcher_plus
 drawable ic_launcher_rightsymbol
 drawable ic_launcher_running
 drawable ic_launcher_search
+drawable ic_launcher_share
 drawable ic_launcher_thumbsup
 drawable ic_launcher_timer
 drawable ic_launcher_trends
@@ -3372,6 +3373,7 @@ id select_dialog_listview
 id select_image
 id selected
 id selection_type
+id share
 id share_button
 id sharedValueSet
 id sharedValueUnset
