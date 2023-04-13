@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,14 +43,6 @@ public class Social extends AppCompatActivity {
         viewPager2 = findViewById(R.id.viewpager);
         socialAdapter = new Adapter_Social_Fragment(this);
         viewPager2.setAdapter(socialAdapter);
-
-        // Set up the shareButton to share posts
-//        shareButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                shareToSocialMedia();
-//            }
-//        });
 
         // Set up the tab layout and view pager to work together
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

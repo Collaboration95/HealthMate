@@ -153,17 +153,16 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
                         return true;
 
                     case R.id.alltrends:
-                        Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
+
                         startActivity(new Intent(context, Run.class));
                         return true;
 
                     case R.id.social:
-                        Toast.makeText(context, "Social", Toast.LENGTH_SHORT).show();
+
                         startActivity(new Intent(context, Social.class));
                         return true;
 
                     case R.id.goals:
-                        Toast.makeText(context, "Trends", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Trend.class));
                         return true;
                 }

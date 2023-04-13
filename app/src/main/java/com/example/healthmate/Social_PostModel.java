@@ -23,7 +23,7 @@ public class Social_PostModel {
      * Populates the Social_PostModelHolder2 with default data for testing.
      */
     public static void populateDefault2() {
-        String[] Name = {"Olivia Smith", "Lucas Johnson", "Sophie Garcia", "Isaac Rodriguez", "Ethan Hernandez", "Chloe Martinez", "Alexander Brown"};
+        String[] Name = {"Olivia", "Lucas", "Sophie", "Isaac", "Ethan", "Chloe", "Alexander"};
         String[] activityName = {"Morning Run", "Yoga Class", "Cycling", "Swimming", "Evening Walk", "Weightlifting", "Hiking"};
         String[] Likes = {"20", "6", "15", "9", "3", "27", "12"};
         String[] Distance = {"3.1km", "2.7km", "7.8km", "4.5km", "1.8km", "6.2km", "5.3km"};
@@ -95,7 +95,7 @@ public class Social_PostModel {
      * Populates the Social_PostModelHolder with default data for testing.
      */
     public static void populateDefault() {
-        String[] Name = {"Maggie Smigth", "John Fugyoshi ", "Sarah Johnson", "Michael Brown", "Rachel Lee", "David Chen", "Emily Taylor"};
+        String[] Name = {"Maggie", "John ", "Sarah", "Michael", "Rachel", "David", "Emily"};
         String[] activityName = {"Evening Jog", "Morning Jog", "Hiking", "Biking", "Swimming", "Yoga", "Pilates"};
         String[] Likes = {"12", "10", "8", "5", "17", "133", "9"};
         String[] Distance = {"1.23km", "2.3km", "5.1km", "2.27km", "3.8km", "4.2km", "6.5km"};

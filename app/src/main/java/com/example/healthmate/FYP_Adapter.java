@@ -85,7 +85,7 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
         holder.timeIcon.setImageResource(timeIcon);
         holder.distanceIcon.setImageResource(distanceIcon);
         holder.shareIcon.setImageResource(shareicon);
-            if(UserDataSingleton.getInstance().getUserData().getUserName().equals(data.get(holder.getAdapterPosition()).getName())){
+            if(UserDataSingleton.getInstance().getUserData().getUserName().equals(data.get(holder.getAdapterPosition()).getName())) {
                 holder.shareIcon.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -95,8 +95,7 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
 
                 });
 
-            }else{
-                Toast.makeText(context,"Not your Post ",Toast.LENGTH_SHORT).show();}
+            }
 
         // Get the image resource ID and calculate its aspect ratio
         int imageResId = data.get(position).getImage();
