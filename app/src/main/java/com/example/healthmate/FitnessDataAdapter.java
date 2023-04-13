@@ -43,7 +43,7 @@ public class FitnessDataAdapter extends RecyclerView.Adapter<FitnessDataAdapter.
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         String dateString = sdf.format(fitnessData.getTimestamp());
         String stepsString = fitnessData.getSteps() + " steps";
-        String distanceString = String.format(Locale.getDefault(), "%.1f km", fitnessData.getDistance() / 1000);
+        String distanceString = String.format(Locale.getDefault(), "%.2f km", fitnessData.getDistance());
         String caloriesString = String.format(Locale.getDefault(), "%.0f kcal", fitnessData.getCalories());
 
         holder.dateTextView.setText(dateString);
@@ -51,7 +51,6 @@ public class FitnessDataAdapter extends RecyclerView.Adapter<FitnessDataAdapter.
         holder.distanceTextView.setText(distanceString);
         holder.caloriesTextView.setText(caloriesString);
     }
-
 
 
     // Returns the total number of items in the RecyclerView

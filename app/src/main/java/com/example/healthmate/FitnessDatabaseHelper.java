@@ -54,19 +54,16 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
 
     // Save the given FitnessData object to the database, if it is not a duplicate
     public void saveFitnessData(FitnessData data) {
-        if (!isDuplicateEntry(data)) { // to prevent duplicate entries
-            SQLiteDatabase db = this.getWritableDatabase();
-            ContentValues contentValues = new ContentValues();
-            contentValues.put(COLUMN_STEPS, data.getSteps());
-            contentValues.put(COLUMN_DISTANCE, data.getDistance());
-            contentValues.put(COLUMN_CALORIES, data.getCalories());
-            contentValues.put(COLUMN_TIMESTAMP, data.getTimestamp());
-            long id = db.insert(TABLE_FITNESS_DATA, null, contentValues);
-            data.setId(id);
-            db.close();
-        }
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_STEPS, data.getSteps());
+        contentValues.put(COLUMN_DISTANCE, data.getDistance());
+        contentValues.put(COLUMN_CALORIES, data.getCalories());
+        contentValues.put(COLUMN_TIMESTAMP, data.getTimestamp());
+        long id = db.insert(TABLE_FITNESS_DATA, null, contentValues);
+        data.setId(id);
+        db.close();
     }
-
     // Get a list of all FitnessData objects
     public List<FitnessData> getAllFitnessData() {
         List<FitnessData> fitnessDataList = new ArrayList<>();
@@ -96,9 +93,7 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         db.close();
 
         return fitnessDataList;
-    }
-
-    // Get fitness data for the specified date range.
+    }// Get fitness data for the specified date range.
     public List<FitnessData> getFitnessDataByDateRange(long startDate, long endDate) {
         List<FitnessData> fitnessDataList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -130,48 +125,9 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         return fitnessDataList;
     }
 
-    // To check for any duplicate entries, duplicate returns true. Else returns false
-    public boolean isDuplicateEntry(FitnessData data) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        // Round down the timestamp to the start of the day
-        Calendar cal = Calendar.getInstance();
-        cal.setTimeInMillis(data.getTimestamp());
-        cal.set(Calendar.HOUR_OF_DAY, 0);
-        cal.set(Calendar.MINUTE, 0);
-        cal.set(Calendar.SECOND, 0);
-        cal.set(Calendar.MILLISECOND, 0);
-        long startOfDayTimestamp = cal.getTimeInMillis();
-
-        // Calculate end of the day timestamp
-        cal.add(Calendar.DATE, 1);
-        long endOfDayTimestamp = cal.getTimeInMillis() - 1;
-
-        String query = "SELECT * FROM " + TABLE_FITNESS_DATA +
-                " WHERE " + COLUMN_TIMESTAMP + " >= ? AND " + COLUMN_TIMESTAMP + " <= ? AND " +
-                COLUMN_STEPS + " = ? AND " + COLUMN_DISTANCE + " = ? AND " + COLUMN_CALORIES + " = ?";
-        Cursor cursor = db.rawQuery(query, new String[]{
-                String.valueOf(startOfDayTimestamp),
-                String.valueOf(endOfDayTimestamp),
-                String.valueOf(data.getSteps()),
-                String.valueOf(data.getDistance()),
-                String.valueOf(data.getCalories())
-        });
-        boolean isDuplicate = cursor.getCount() > 0;
-        cursor.close();
-        return isDuplicate;
-    }
-
-
-
     // Clear all entries currently stored in the fitness history table
     public void clearFitnessHistory() {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_FITNESS_DATA, null, null);
         db.close();
-    }
-
-
-
-}
-
+    }}

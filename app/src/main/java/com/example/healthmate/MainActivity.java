@@ -251,7 +251,8 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
             // Permissions granted, you can access Google Fit API data here.
             fetchDataAndUpdateUI();
         } else {
-// Permissions denied, handle this case in your app.
+//            When user is not signed
+        Toast.makeText(context,"Please Sign in ",Toast.LENGTH_SHORT).show();
         }
     }
 

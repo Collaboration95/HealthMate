@@ -3325,6 +3325,7 @@ int id proteinProgress 0x7f090194
 int id radio 0x7f090195
 int id ratio 0x7f090196
 int id rectangles 0x7f090197
+int id refresh_data_button 0x7f09025c
 int id reverseSawtooth 0x7f090198
 int id right 0x7f090199
 int id rightToLeft 0x7f09019a

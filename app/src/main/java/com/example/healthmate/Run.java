@@ -25,8 +25,6 @@ import com.google.android.material.navigation.NavigationBarView;
  * and heart rate, as well as handling bottom navigation and popup menu interactions.
  */
 public class Run extends AppCompatActivity {
-    // Add this flag to check if the activity is being resumed
-    private boolean isResumed = false;
     BottomNavigationView bottomNavigationView;
     Context context = Run.this;
     private GoogleFitManager googleFitManager;
@@ -35,6 +33,7 @@ public class Run extends AppCompatActivity {
     private TextView stepCountTextView;
     private TextView distanceTextView;
     private TextView caloriesTextView;
+    private Button refreshDataButton;
     private Button signOutButton;
     private Button viewFitnessHistoryButton;
     private Button clearHistoryButton;
@@ -61,8 +60,17 @@ public class Run extends AppCompatActivity {
         stepCountTextView = findViewById(R.id.textStepCount);
         distanceTextView = findViewById(R.id.textDistance);
         caloriesTextView = findViewById(R.id.textCaloriesBurnt);
+        refreshDataButton = findViewById(R.id.refresh_data_button);
         signOutButton = findViewById(R.id.signOutButton);
         clearHistoryButton = findViewById(R.id.clear_history_button);
+
+        // Add a click listener for the refresh data button
+        refreshDataButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fetchDataAndUpdateUI();
+            }
+        });
 
         // Add a click listener for the sign out button
         signOutButton.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +103,7 @@ public class Run extends AppCompatActivity {
         // Add a click listener to clear previous recorded histories
         clearHistoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View v) {
                 FitnessDatabaseHelper dbHelper = new FitnessDatabaseHelper(Run.this);
                 dbHelper.clearFitnessHistory();
                 // Refresh your list or UI after clearing the history
@@ -103,7 +111,6 @@ public class Run extends AppCompatActivity {
             }
         });
 
-        fetchDataAndUpdateUI();
         // Set up bottom navigation and its event listeners
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.alltrends);
@@ -161,45 +168,36 @@ public class Run extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        // Set the flag to true when the activity is resumed
-        isResumed = true;
-    }
-
     /**
      * Fetches fitness data from Google Fit manager and updates the UI elements.
      */
     private void fetchDataAndUpdateUI() {
-        // Fetch data regardless of the activity state
         googleFitManager.getTodayStepCount(new GoogleFitManager.OnDataPointListener() {
             @Override
             public void onDataPoint(DataPoint dataPoint) {
-                int stepCount = dataPoint.getValue(Field.FIELD_STEPS).asInt();
+                final int stepCount = dataPoint.getValue(Field.FIELD_STEPS).asInt();
                 stepCountTextView.setText(String.valueOf(stepCount));
 
                 googleFitManager.getTodayDistance(new GoogleFitManager.OnDataPointListener() {
                     @Override
                     public void onDataPoint(DataPoint dataPoint) {
-                        float distance = dataPoint.getValue(Field.FIELD_DISTANCE).asFloat();
-                        distanceTextView.setText(distance + " meters");
+                        float distanceMeters = dataPoint.getValue(Field.FIELD_DISTANCE).asFloat();
+                        final float distanceKm = distanceMeters / 1000;
+                        String formattedDistance = String.format("%.2f km", distanceKm);
+                        distanceTextView.setText(formattedDistance);
 
                         googleFitManager.getTodayCaloriesBurned(new GoogleFitManager.OnDataPointListener() {
                             @Override
                             public void onDataPoint(DataPoint dataPoint) {
                                 float calories = dataPoint.getValue(Field.FIELD_CALORIES).asFloat();
-                                caloriesTextView.setText(calories + " kcal");
+                                String formattedCalories = String.format("%.2f kcal", calories);
+                                caloriesTextView.setText(formattedCalories);
 
                                 // Save the fetched fitness data to the local database
-                                FitnessData data = new FitnessData(stepCount, distance, calories, System.currentTimeMillis());
+                                FitnessData data = new FitnessData(stepCount, distanceKm, calories, System.currentTimeMillis());
                                 FitnessDatabaseHelper dbHelper = new FitnessDatabaseHelper(context);
-                                if (!dbHelper.isDuplicateEntry(data)) {
-                                    dbHelper.saveFitnessData(data);
-                                    Toast.makeText(context, "Fitness data saved successfully.", Toast.LENGTH_SHORT).show();
-                                }
-                                // Reset the flag when fetchDataAndUpdateUI is called
-                                isResumed = false;
+                                dbHelper.saveFitnessData(data);
+                                Toast.makeText(context, "Fitness data saved successfully.", Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
@@ -207,6 +205,5 @@ public class Run extends AppCompatActivity {
             }
         });
     }
+
 }
-
-
