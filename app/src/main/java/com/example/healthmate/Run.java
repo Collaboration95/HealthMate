@@ -119,21 +119,21 @@ public class Run extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.calorie:
-                        Toast.makeText(context, "Calorie", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(context, "Navigating to Calorie", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, MainActivity.class));
                         return true;
                     case R.id.alltrends:
-                        Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
                         fetchDataAndUpdateUI();
                         return true;
 
                     case R.id.social:
-                        Toast.makeText(context, "Social", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(context, "Social", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Social.class));
                         return true;
 
                     case R.id.goals:
-                        Toast.makeText(Run.this, "Trends", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(Run.this, "Trends", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Trend.class));
                         return true;
                 }
@@ -152,7 +152,7 @@ public class Run extends AppCompatActivity {
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(context, "Selected:" + item.getTitle(), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(context, "Selected:" + item.getTitle(), Toast.LENGTH_SHORT).show();
                         if (item.getItemId() == R.id.newMeal) {
                             startActivity(new Intent(context, NewMeal.class));
                         } else if (item.getItemId() == R.id.newRun) {

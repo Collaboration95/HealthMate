@@ -1,11 +1,18 @@
 package com.example.healthmate;
 
+import android.content.ActivityNotFoundException;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +22,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,7 +90,7 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
                     @Override
                     public void onClick(View view) {
 //                        Log.d("Something is not working","why ");
-                        shareToSocialMedia();
+                        shareToSocialMedia(holder.getAdapterPosition());
                     }
 
                 });
@@ -156,37 +168,52 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
         }
     }
 
-    private void shareToSocialMedia() {
-//        String textToShare = "Your text to share";
-//        String mimeType = "text/plain";
-//
-//        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-//        shareIntent.setType(mimeType);
-//        shareIntent.putExtra(Intent.EXTRA_TEXT, textToShare);
-//
-//        PackageManager packageManager = getPackageManager();
-//        List<ResolveInfo> resolveInfoList = packageManager.queryIntentActivities(shareIntent, 0);
-//
-//        boolean facebookAppFound = false;
-//        boolean instagramAppFound = false;
-//
-//        for (ResolveInfo resolveInfo : resolveInfoList) {
-//            String packageName = resolveInfo.activityInfo.packageName;
-//
-//            if (packageName.contains("com.facebook.katana")) {
-//                shareIntent.setPackage(packageName);
-//                facebookAppFound = true;
-//            } else if (packageName.contains("com.instagram.android")) {
-//                shareIntent.setPackage(packageName);
-//                instagramAppFound = true;
-//            }
-//        }
-//
-//        if (facebookAppFound || instagramAppFound) {
-//            startActivity(shareIntent);
-//        } else {
-//            Toast.makeText(this, "Facebook and Instagram apps not found", Toast.LENGTH_SHORT).show();
-//        }
+    private void shareToSocialMedia(int position) {
+        Social_PostModel post = Social_PostModelHolder.getInstance().getPost(position);
+        String postName = post.getActivityName();
+        Bitmap bitmap = post.getCustomImage();
+        if (bitmap== null) {
+            // Load the default image Bitmap
+         bitmap = BitmapFactory.decodeResource(context.getResources(),post.getImage());
+        }
+        Uri imageUri = getImageUriFromBitmap(bitmap);
+
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("image/*");
+        shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
+        shareIntent.putExtra(Intent.EXTRA_TEXT, postName);
+        shareIntent.setPackage("com.instagram.android");
+        shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+        try {
+            context.startActivity(shareIntent);
+            ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("Caption", postName);
+            clipboard.setPrimaryClip(clip);
+            Toast.makeText(context, "Caption copied to clipboard. Paste it in the Instagram post.", Toast.LENGTH_SHORT).show();
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(context, "Instagram is not installed on this device", Toast.LENGTH_SHORT).show();
+        }
     }
+
+
+    private void shareImage(Bitmap bitmap) {
+        Uri imageUri = getImageUriFromBitmap(bitmap);
+
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("image/*");
+        shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
+        shareIntent.setPackage("com.instagram.android");
+
+        context.startActivity(Intent.createChooser(shareIntent, "Share Image"));
+    }
+
+    private Uri getImageUriFromBitmap(Bitmap bitmap) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        String path = MediaStore.Images.Media.insertImage(context.getContentResolver(), bitmap, "Title", null);
+        return Uri.parse(path);
+    }
+
 
 }

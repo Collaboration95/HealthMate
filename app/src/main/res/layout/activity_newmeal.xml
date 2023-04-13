@@ -10,7 +10,7 @@
         app:strokeColor="#1C54B2"
         app:strokeWidth="3dp"
         android:layout_width="340dp"
-        android:layout_height="450dp"
+        android:layout_height="410dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="20dp"
         app:cardElevation="14dp"
@@ -62,20 +62,21 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.271" />
+                app:layout_constraintVertical_bias="0.3" />
 
             <TextView
                 android:id="@+id/textFat"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="264dp"
                 android:text="Fat (g) :"
                 android:textColor="@color/primaryColor"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/guideline" />
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.44" />
 
             <TextView
                 android:id="@+id/textCarbs"
@@ -89,7 +90,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.494" />
+                app:layout_constraintVertical_bias="0.57" />
 
             <TextView
                 android:id="@+id/textTotalCalories"
@@ -103,22 +104,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.619" />
-
-            <TextView
-
-                android:id="@+id/textTime"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Time (min) :"
-                android:textColor="@color/primaryColor"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.737" />
+                app:layout_constraintVertical_bias="0.7" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline"
@@ -163,6 +149,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                app:layout_constraintVertical_bias="0.5"
                 android:inputType="number"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textTotalCalories"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -177,16 +164,6 @@
                 app:layout_constraintBaseline_toBaselineOf="@+id/textCarbs"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textCarbs" />
-
-            <EditText
-                android:id="@+id/editWorkoutGoal"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textTime"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textTime" />
 
 
             <com.google.android.material.card.MaterialCardView

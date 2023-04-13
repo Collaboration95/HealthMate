@@ -106,4 +106,18 @@ public class Social_PostModel {
             Social_PostModelHolder.getInstance().storePost(new Social_PostModel(Name[i], activityName[i], Distance[i], Time[i], Likes[i],images[i]));
         }
     }
+
+    @Override
+    public String toString() {
+        return "Social_PostModel{" +
+                "Name='" + Name + '\'' +
+                ", activityName='" + activityName + '\'' +
+                ", Distance='" + Distance + '\'' +
+                ", Time='" + Time + '\'' +
+                ", likes='" + likes + '\'' +
+                ", image=" + image +
+                ", customImage=" + customImage +
+                '}';
+    }
+
 }

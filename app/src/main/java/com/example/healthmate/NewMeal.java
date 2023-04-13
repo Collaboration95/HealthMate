@@ -28,8 +28,8 @@ public class NewMeal extends AppCompatActivity {
     /**
      * Set up a new meal with the provided information and store it.
      */
-    private void setupMeal(String mealName, String proteinText, String fatText, String carbsText, String caloriesText, String timeText) {
-        NewMealHolder.getInstance().storeMeal(new Plus_AddMeal(mealName, proteinText, fatText, carbsText, caloriesText, timeText));
+    private void setupMeal(String mealName, String proteinText, String fatText, String carbsText, String caloriesText) {
+        NewMealHolder.getInstance().storeMeal(new Plus_AddMeal(mealName, proteinText, fatText, carbsText, caloriesText));
     }
 
     @Override
@@ -58,12 +58,11 @@ public class NewMeal extends AppCompatActivity {
                 String fatText = fat.getText().toString();
                 String carbsText = carbs.getText().toString();
                 String caloriesText = totalcalories.getText().toString();
-                String timeText = time.getText().toString();
 
                 // Ensure all fields have values before setting up the meal
                 if (!mealName.isEmpty() && !proteinText.isEmpty() && !fatText.isEmpty() &&
-                        !carbsText.isEmpty() && !caloriesText.isEmpty() && !timeText.isEmpty()) {
-                    setupMeal(mealName, proteinText, fatText, carbsText, caloriesText, timeText);
+                        !carbsText.isEmpty() && !caloriesText.isEmpty() ) {
+                    setupMeal(mealName, proteinText, fatText, carbsText, caloriesText);
 
                     Log.d("Great Sucess", NewMealHolder.getInstance().TotalCalories() + " ");
                     startActivity(new Intent(NewMeal.this, MainActivity.class).putExtra("Key", NewMealHolder.getInstance().TotalCalories() + " "));

@@ -12,7 +12,7 @@ public class Plus_AddMeal {
     private final String fat;
     private final String carbs;
     private final String totalCalories;
-    private final String time;
+
 
     /**
      * Constructs a new meal object.
@@ -22,15 +22,15 @@ public class Plus_AddMeal {
      * @param fat           The fat content of the meal (in grams).
      * @param carbs         The carbohydrate content of the meal (in grams).
      * @param totalCalories The total calorie content of the meal.
-     * @param time          The time the meal was consumed.
+
      */
-    public Plus_AddMeal(String mealName, String protein, String fat, String carbs, String totalCalories, String time) {
+    public Plus_AddMeal(String mealName, String protein, String fat, String carbs, String totalCalories) {
         this.mealName = mealName;
         this.protein = protein;
         this.fat = fat;
         this.carbs = carbs;
         this.totalCalories = totalCalories;
-        this.time = time;
+
     }
 
     /**
@@ -69,13 +69,6 @@ public class Plus_AddMeal {
     }
 
     /**
-     * @return The time the meal was consumed.
-     */
-    public String getTime() {
-        return time;
-    }
-
-    /**
      * Returns a string representation of the meal object.
      *
      * @return A string containing information about the meal.
@@ -87,7 +80,6 @@ public class Plus_AddMeal {
                 ", Protein: " + protein +
                 ", Fat: " + fat +
                 ", Carbs: " + carbs +
-                ", Total Calories: " + totalCalories +
-                ", Time: " + time;
+                ", Total Calories: " + totalCalories;
     }
 }

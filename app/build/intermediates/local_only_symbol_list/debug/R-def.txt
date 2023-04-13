@@ -95,7 +95,6 @@ id editWorkoutGoal
 id fatProgress
 id fitness_data_recyclerview
 id following
-id fri
 id fyp
 id fyp_RecyclerView
 id goals
@@ -112,8 +111,8 @@ id materialCardView2
 id materialCardView3
 id materialCardView4
 id materialCardView5
+id materialCardView6
 id mealTitle
-id mon
 id newMeal
 id newPost
 id newRun
@@ -122,15 +121,12 @@ id plusCard
 id protein
 id proteinProgress
 id refresh_data_button
-id sat
 id select_image
 id share
-id share_button
 id signOutButton
 id social
 id steps_text_view
 id suggestGoal
-id sun
 id tab_layout
 id textCalorie
 id textCaloriesBurnt
@@ -146,9 +142,6 @@ id textTotalCalories
 id textView13
 id textView14
 id textView2
-id textView6
-id textView7
-id thu
 id totalCalorie
 id track_run_button
 id trendTitle
@@ -156,12 +149,9 @@ id trend_activity
 id trend_icon
 id trend_number
 id trend_unit
-id tue
 id updateData
 id view_fitness_history_button
 id viewpager
-id wed
-id weeklyCalendar
 layout activity_addpost
 layout activity_fitness_history
 layout activity_main
@@ -170,7 +160,6 @@ layout activity_newmeal
 layout activity_run
 layout activity_social
 layout activity_trend
-layout calendar_widget
 layout fitness_data_list_item
 layout fragment_following
 layout fragment_for_you
@@ -198,3 +187,4 @@ style TabItemAppearance
 style Theme.HealthMate
 xml backup_rules
 xml data_extraction_rules
+xml file_paths

@@ -28,6 +28,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -73,19 +74,15 @@ public class Trend extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.calorie:
-                        Toast.makeText(context, "Calorie", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, MainActivity.class));
                         return true;
                     case R.id.alltrends:
-                        Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Run.class));
                         return true;
                     case R.id.social:
-                        Toast.makeText(context, "Social", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Social.class));
                         return true;
                     case R.id.goals:
-                        Toast.makeText(context, "Trends", Toast.LENGTH_SHORT).show();
                         return true;
                 }
                 return false;
@@ -101,12 +98,12 @@ public class Trend extends AppCompatActivity {
                 EditText userCalGoal = findViewById(R.id.editIntakeGoal);
                 EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
                 int[] suggestedData = suggestGoal(userSexData, userWeight, userHeight);
-//                TODO : Fix resource not found string error
-//                userCalGoal.setText( suggestedData[0]);
-//                userWorkoutGoal.setText((int) suggestedData[1]);
 
-                Toast.makeText(context,"Suggested Cal: "+suggestedData[0]+"Suggested weight intake"+suggestedData[1],Toast.LENGTH_LONG).show();
+                Snackbar snackbar = Snackbar
+                        .make(view, "Suggested Calorie Intake: "+suggestedData[1]+"\n"+"Suggested Workout Goal: "+suggestedData[0], Snackbar.LENGTH_LONG);
+                snackbar.show();
             }
+
         });
 
         updateData = findViewById(R.id.updateData);
@@ -124,7 +121,7 @@ public class Trend extends AppCompatActivity {
                 if (TextUtils.isEmpty(userName.getText()) || userSex.getSelectedItemPosition() == 0 ||
                         TextUtils.isEmpty(userWeight.getText()) || TextUtils.isEmpty(userHeight.getText()) ||
                         TextUtils.isEmpty(userCalGoal.getText()) || TextUtils.isEmpty(userWorkoutGoal.getText())) {
-                    Log.d("UpdateData Great Failure", "One or more fields are empty");
+                    Log.d("UpdateData", "One or more fields are empty");
                     return;
                 }
                 else if(checkIrregularInputs(Integer.parseInt(userWeight.getText().toString()),
@@ -153,12 +150,12 @@ public class Trend extends AppCompatActivity {
                     UserDataSingleton.getInstance().setUserData(changed);
                     Log.d("UpdateData Great Success",UserDataSingleton.getInstance().toString());
 
-//                   Update Ui elemnts of mainactivity
+//                   Update Ui elements of MainActivity
                     Intent intent = new Intent("com.example.myapp.ACTION_CALL_FUNCTION");
                     startActivity(intent);
 
                 } else {
-                    Log.d("UpdateData No  change made","Great Failure");
+                    Log.d("UpdateData ","No changes made");
                 }
             }
         });

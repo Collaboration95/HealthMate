@@ -131,7 +131,7 @@ public class NewPost extends AppCompatActivity {
             Bundle extras = data.getExtras();
             imageBitmap = (Bitmap) extras.get("data");
             if (imageBitmap==null){
-                Log.d("Something is not working","why ");
+                Log.d("Get image from camera","Returns null");
             }
         } else if (requestCode == REQUEST_GALLERY && resultCode == RESULT_OK) {
             Uri selectedImageUri = data.getData();

@@ -3152,7 +3152,6 @@ id floating
 id following
 id forever
 id fragment_container_view_tag
-id fri
 id frost
 id fullscreen_header
 id fyp
@@ -3218,6 +3217,7 @@ id materialCardView2
 id materialCardView3
 id materialCardView4
 id materialCardView5
+id materialCardView6
 id material_clock_display
 id material_clock_display_and_toggle
 id material_clock_face
@@ -3243,7 +3243,6 @@ id mealTitle
 id message
 id middle
 id mini
-id mon
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3334,7 +3333,6 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
-id sat
 id satellite
 id save_non_transition_alpha
 id save_overlay_view
@@ -3375,7 +3373,6 @@ id select_image
 id selected
 id selection_type
 id share
-id share_button
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3417,7 +3414,6 @@ id stretch
 id submenuarrow
 id submit_area
 id suggestGoal
-id sun
 id supportScrollUp
 id tabMode
 id tab_layout
@@ -3456,8 +3452,6 @@ id textTotalCalories
 id textView13
 id textView14
 id textView2
-id textView6
-id textView7
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3467,7 +3461,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id thu
 id time
 id title
 id titleDividerNoCustom
@@ -3491,7 +3484,6 @@ id trend_icon
 id trend_number
 id trend_unit
 id triangle
-id tue
 id unchecked
 id uniform
 id unlabeled
@@ -3510,8 +3502,6 @@ id viewpager
 id visible
 id visible_removing_fragment_view_tag
 id webview
-id wed
-id weeklyCalendar
 id west
 id wide
 id window
@@ -3641,7 +3631,6 @@ layout activity_trend
 layout amu_info_window
 layout amu_text_bubble
 layout amu_webview
-layout calendar_widget
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -5171,3 +5160,4 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
+xml file_paths

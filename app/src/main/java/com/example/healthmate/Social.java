@@ -42,7 +42,6 @@ public class Social extends AppCompatActivity {
         // Initialize the tab layout and view pager components
         tabLayout = findViewById(R.id.tab_layout);
         viewPager2 = findViewById(R.id.viewpager);
-        shareButton = findViewById(R.id.share_button);
         socialAdapter = new Adapter_Social_Fragment(this);
         viewPager2.setAdapter(socialAdapter);
 
@@ -90,21 +89,17 @@ public class Social extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.calorie:
-                        Toast.makeText(context, "Calorie", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, MainActivity.class));
                         return true;
 
                     case R.id.alltrends:
-                        Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Run.class));
                         return true;
 
                     case R.id.social:
-                        Toast.makeText(context, "Social", Toast.LENGTH_SHORT).show();
                         return true;
 
                     case R.id.goals:
-                        Toast.makeText(context, "Trends", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Trend.class));
                         return true;
                 }
@@ -124,7 +119,6 @@ public class Social extends AppCompatActivity {
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(context, "Selected: " + item.getTitle(), Toast.LENGTH_SHORT).show();
                         if (item.getItemId() == R.id.newMeal) {
                             // Start the NewMeal activity when the "newMeal" menu item is clicked
                             startActivity(new Intent(context, NewMeal.class));
@@ -144,7 +138,6 @@ public class Social extends AppCompatActivity {
         });
     }
 
-    // Implement the shareToSocialMedia() method
 
 
 
