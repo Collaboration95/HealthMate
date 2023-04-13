@@ -37,43 +37,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fitness_data_recyclerview" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/bringtoFront"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="27dp"
-        android:scaleX="1.3"
-        android:scaleY="1.3"
-        app:cardCornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomCard"
-        app:layout_constraintEnd_toEndOf="@+id/bottomCard"
-        app:layout_constraintStart_toStartOf="@+id/bottomCard">
 
-        <include
-            layout="@layout/reusable_plus" />
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/bottomCard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/bottomnavigation"
-            android:elevation="2dp"
-            app:itemIconSize="40dp"
-            app:itemIconTint="@color/primaryColor"
-            app:itemTextColor="@color/primaryColor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:menu="@menu/bottom_nav_menu" />
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
