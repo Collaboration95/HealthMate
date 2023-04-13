@@ -77,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
-                android:text="TextView"
+                android:text=""
                 android:textSize="20dp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textProtein"
                 app:layout_constraintEnd_toEndOf="parent" />
@@ -87,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
-                android:text="TextView"
+                android:text=""
                 android:textSize="20dp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textMealName"
                 app:layout_constraintEnd_toEndOf="parent" />
@@ -97,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
-                android:text="TextView"
+                android:text=""
                 android:textSize="20dp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textCarbs"
                 app:layout_constraintEnd_toEndOf="parent" />
