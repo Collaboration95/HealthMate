@@ -5,7 +5,6 @@
         <item>Male</item>
         <item>Female</item>
         <item>Non Binary</item>
-        <item>Yes Please</item>
     </string-array>
     <color name="black">#FF000000</color>
     <color name="cyan_50">#D8FBF5</color>

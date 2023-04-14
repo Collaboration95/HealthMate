@@ -105,7 +105,7 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
             imageBitmap = BitmapFactory.decodeResource(context.getResources(), imageResId);
         }
 
-// Set the ImageView's ScaleType based on the aspect ratio of the imageBitmap
+        // Set the ImageView's ScaleType based on the aspect ratio of the imageBitmap
         float aspectRatio = (float) imageBitmap.getWidth() / (float) imageBitmap.getHeight();
         if (aspectRatio > 1.0) {
             holder.Image.setScaleType(ImageView.ScaleType.CENTER_CROP);
@@ -123,13 +123,11 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
 
     }
 
-
+    // Return the number of social posts in the data list
     @Override
     public int getItemCount() {
-        // Return the number of social posts in the data list
         return data.size();
     }
-
     public static class myViewHolder extends RecyclerView.ViewHolder {
         // Define TextViews and ImageViews for each RecyclerView element
         TextView Name;
@@ -167,16 +165,24 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
         }
     }
 
+    // This method shares a post from the given position in the list to Instagram
     private void shareToSocialMedia(int position) {
+        // Get the post from the given position
         Social_PostModel post = Social_PostModelHolder.getInstance().getPost(position);
+        // Get the activity name from the post
         String postName = post.getActivityName();
+        // Get the custom image if available
         Bitmap bitmap = post.getCustomImage();
+
+        // If custom image is not available, load the default image Bitmap
         if (bitmap== null) {
-            // Load the default image Bitmap
          bitmap = BitmapFactory.decodeResource(context.getResources(),post.getImage());
         }
+
+        // Get the image Uri from the Bitmap
         Uri imageUri = getImageUriFromBitmap(bitmap);
 
+        // Create a new intent for sharing
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("image/*");
         shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
@@ -185,34 +191,28 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
         shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
         try {
+            // Start the Instagram sharing activity
             context.startActivity(shareIntent);
+            // Copy the post caption to the clipboard
             ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText("Caption", postName);
             clipboard.setPrimaryClip(clip);
+            // Show a message to the user
             Toast.makeText(context, "Caption copied to clipboard. Paste it in the Instagram post.", Toast.LENGTH_SHORT).show();
         } catch (ActivityNotFoundException e) {
+            // Show an error message if Instagram is not installed
             Toast.makeText(context, "Instagram is not installed on this device", Toast.LENGTH_SHORT).show();
         }
     }
 
-
-    private void shareImage(Bitmap bitmap) {
-        Uri imageUri = getImageUriFromBitmap(bitmap);
-
-        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.setType("image/*");
-        shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
-        shareIntent.setPackage("com.instagram.android");
-
-        context.startActivity(Intent.createChooser(shareIntent, "Share Image"));
-    }
-
+    // This method converts a Bitmap into an Uri for sharing
     private Uri getImageUriFromBitmap(Bitmap bitmap) {
+        // Compress the Bitmap into a ByteArrayOutputStream
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        // Insert the compressed Bitmap into the MediaStore and get the Uri
         String path = MediaStore.Images.Media.insertImage(context.getContentResolver(), bitmap, "Title", null);
+        // Return the Uri
         return Uri.parse(path);
     }
-
-
 }

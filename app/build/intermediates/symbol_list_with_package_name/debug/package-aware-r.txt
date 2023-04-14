@@ -2765,6 +2765,7 @@ drawable amu_bubble_mask
 drawable amu_bubble_shadow
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_run_circle_24
 drawable bottomnavigation
 drawable box_rounded
 drawable box_rounded_16

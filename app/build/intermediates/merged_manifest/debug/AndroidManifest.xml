@@ -44,7 +44,7 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher_1"
+        android:icon="@drawable/baseline_run_circle_24"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:testOnly="true"

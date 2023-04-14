@@ -2,8 +2,6 @@ package com.example.healthmate;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,15 +11,11 @@ import android.widget.PopupMenu;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-
 import androidx.viewpager2.widget.ViewPager2;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
 
-import java.util.List;
-import java.util.Objects;
 
 public class Social extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;

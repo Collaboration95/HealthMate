@@ -26,6 +26,7 @@ color white
 dimen _10sdp
 dimen margin_10dp
 drawable addmeal
+drawable baseline_run_circle_24
 drawable bottomnavigation
 drawable box_rounded
 drawable box_rounded_16

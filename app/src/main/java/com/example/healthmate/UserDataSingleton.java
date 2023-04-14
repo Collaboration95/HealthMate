@@ -2,15 +2,32 @@ package com.example.healthmate;
 
 import java.util.Comparator;
 
+
+/**
+ * UserDataSingleton is a singleton class that holds a single instance of UserData,
+ * which represents the user's data such as name, sex, weight, height, calorie intake goal,
+ * and workout goal. The singleton pattern ensures that there is only one instance of the
+ * user's data throughout the app.
+ */
 public class UserDataSingleton {
 
+    // The single instance of UserDataSingleton
     private static UserDataSingleton instance = null;
     private UserData userData;
 
+    /**
+     * Private constructor to prevent creating multiple instances of this class.
+     */
     private UserDataSingleton() {
         this.userData = new UserData();
     }
 
+    /**
+     * Returns the single instance of UserDataSingleton.
+     * If there is no instance yet, create a new one.
+     *
+     * @return the single instance of UserDataSingleton
+     */
     public static UserDataSingleton getInstance() {
         if (instance == null) {
             instance = new UserDataSingleton();
@@ -18,16 +35,28 @@ public class UserDataSingleton {
         return instance;
     }
 
-    // Getter and Setter methods for UserData
+    /**
+     * Returns the UserData object associated with this singleton.
+     *
+     * @return the UserData object
+     */
     public UserData getUserData() {
         return userData;
     }
 
+    /**
+     * Sets the UserData object for this singleton.
+     *
+     * @param userData the new UserData object
+     */
     public void setUserData(UserData userData) {
         this.userData = userData;
     }
 
-    // Comparator for UserData objects
+    /**
+     * A comparator for UserData objects.
+     * Compares each field of the UserData objects to determine if they are equal.
+     */
     public Comparator<UserData> userDataComparator = new Comparator<UserData>() {
         @Override
         public int compare(UserData userData1, UserData userData2) {
@@ -54,9 +83,14 @@ public class UserDataSingleton {
             }
         }
     };
-
+    /**
+     * Returns a string representation of the UserData object associated with this singleton.
+     *
+     * @return a string representation of the UserData object
+     */
     @Override
     public String toString() {
         return userData.toString();
     }
 }
+

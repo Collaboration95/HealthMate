@@ -10,7 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Goals"
+        android:text="Update Data"
         android:textColor="#1C45B2"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/materialCardView4"
@@ -85,7 +85,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.034" />
-
             <TextView
                 android:id="@+id/textMealName"
                 android:layout_width="150dp"
@@ -172,7 +171,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_begin="31dp" />
-
             <EditText
                 android:id="@+id/editUserName"
                 android:layout_width="100dp"
@@ -259,7 +257,6 @@
                     android:text="Update Data" />
 
             </com.google.android.material.card.MaterialCardView>
-
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/materialCardView2"
                 android:layout_width="wrap_content"
@@ -283,7 +280,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:backgroundTint="@color/primaryColor"
-                    android:text="Sugest Goals" />
+                    android:text="Suggest Goals" />
 
             </com.google.android.material.card.MaterialCardView>
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,7 +36,6 @@ public class Social_PostModel {
 
     /**
      * Constructs a Social_PostModel with the provided data.
-     *
      * @param name         The name of the user.
      * @param activityName The name of the activity.
      * @param distance     The distance of the activity.
@@ -52,10 +51,9 @@ public class Social_PostModel {
         this.likes = likes;
         this.image   =image;
         this.customImage = null;
-
     }
 
-    public Social_PostModel(String name, String activityName, String distance, String time, String likes,Bitmap customeImage) {
+    public Social_PostModel(String name, String activityName, String distance, String time, String likes,Bitmap customImage) {
         Log.d("BitmapConstructor gets evoked","Great Success");
         this.Name = name;
         this.activityName = activityName;
@@ -63,7 +61,7 @@ public class Social_PostModel {
         this.Time = time;
         this.likes = likes;
         this.image = 0;
-        this.customImage = customeImage;
+        this.customImage = customImage;
     }
 
 
@@ -106,7 +104,6 @@ public class Social_PostModel {
             Social_PostModelHolder.getInstance().storePost(new Social_PostModel(Name[i], activityName[i], Distance[i], Time[i], Likes[i],images[i]));
         }
     }
-
     @Override
     public String toString() {
         return "Social_PostModel{" +
@@ -119,5 +116,4 @@ public class Social_PostModel {
                 ", customImage=" + customImage +
                 '}';
     }
-
 }

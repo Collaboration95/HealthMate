@@ -4,7 +4,7 @@
 
     <!-- Permissions -->
     <!-- Write external storage permission allows the app to save data to external storage -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- Access fine and coarse location permissions allow the app to access device location -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -16,7 +16,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher_1"
+        android:icon="@drawable/baseline_run_circle_24"
         android:label="@string/app_name"
 
         android:supportsRtl="true"

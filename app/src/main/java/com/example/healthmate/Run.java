@@ -25,11 +25,12 @@ import com.google.android.material.navigation.NavigationBarView;
  * and heart rate, as well as handling bottom navigation and popup menu interactions.
  */
 public class Run extends AppCompatActivity {
+    // Declare variables for UI elements and GoogleFitManager
     BottomNavigationView bottomNavigationView;
     Context context = Run.this;
     private GoogleFitManager googleFitManager;
 
-    // UI elements
+    // Declare variables for UI elements
     private TextView stepCountTextView;
     private TextView distanceTextView;
     private TextView caloriesTextView;
@@ -117,23 +118,20 @@ public class Run extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                // Handle bottom navigation item clicks
                 switch (item.getItemId()) {
                     case R.id.calorie:
-//                        Toast.makeText(context, "Navigating to Calorie", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, MainActivity.class));
                         return true;
                     case R.id.alltrends:
-//                        Toast.makeText(context, "Run", Toast.LENGTH_SHORT).show();
-                        fetchDataAndUpdateUI();
+                        fetchDataAndUpdateUI(); // Fetch fitness data and update UI elements
                         return true;
 
                     case R.id.social:
-//                        Toast.makeText(context, "Social", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Social.class));
                         return true;
 
                     case R.id.goals:
-//                        Toast.makeText(Run.this, "Trends", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context, Trend.class));
                         return true;
                 }
@@ -147,6 +145,7 @@ public class Run extends AppCompatActivity {
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Create and display a PopupMenu when the floating action button is clicked
                 PopupMenu popupMenu = new PopupMenu(context, view);
                 popupMenu.inflate(R.menu.popup_menu);
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -172,12 +171,14 @@ public class Run extends AppCompatActivity {
      * Fetches fitness data from Google Fit manager and updates the UI elements.
      */
     private void fetchDataAndUpdateUI() {
+        // Get today's step count
         googleFitManager.getTodayStepCount(new GoogleFitManager.OnDataPointListener() {
             @Override
             public void onDataPoint(DataPoint dataPoint) {
                 final int stepCount = dataPoint.getValue(Field.FIELD_STEPS).asInt();
                 stepCountTextView.setText(String.valueOf(stepCount));
 
+                // Get today's distance
                 googleFitManager.getTodayDistance(new GoogleFitManager.OnDataPointListener() {
                     @Override
                     public void onDataPoint(DataPoint dataPoint) {
@@ -186,6 +187,7 @@ public class Run extends AppCompatActivity {
                         String formattedDistance = String.format("%.2f km", distanceKm);
                         distanceTextView.setText(formattedDistance);
 
+                        // Get today's calories burned
                         googleFitManager.getTodayCaloriesBurned(new GoogleFitManager.OnDataPointListener() {
                             @Override
                             public void onDataPoint(DataPoint dataPoint) {
@@ -205,5 +207,4 @@ public class Run extends AppCompatActivity {
             }
         });
     }
-
 }

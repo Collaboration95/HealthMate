@@ -33,7 +33,8 @@ import com.google.android.material.snackbar.Snackbar;
 import java.util.ArrayList;
 
 /**
-The Trend class represents the Trends page in the HealthMate app. It has an instance variable bottomNavigationView to manage the bottom navigation view and a
+The Trend class represents the Goals page in the HealthMate app.
+ It has an instance variable bottomNavigationView to manage the bottom navigation view and a
 Context variable to store the current context. The class also has an ArrayList to store the data for the list of trends.
  **/
 public class Trend extends AppCompatActivity {
@@ -45,6 +46,11 @@ public class Trend extends AppCompatActivity {
     Button updateData;
     Button suggestGoals;
 
+    /**
+     * onCreate method sets up the necessary views and event listeners for the Trend class.
+     *
+     * @param savedInstanceState Bundle object to save any previously saved state
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trend);
@@ -56,19 +62,20 @@ public class Trend extends AppCompatActivity {
         bottomNavigationView.setSelectedItemId(R.id.goals);
         Spinner spinner = findViewById(R.id.editSex);
 
-// Create an ArrayAdapter using a string array and a default spinner layout
+        // Create an ArrayAdapter using a string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.spinner_options, android.R.layout.simple_spinner_item);
 
-// Specify the layout to use when the list of choices appears
+        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-// Apply the adapter to the spinner
+        // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
-// Set the default selected item to the second option in the array
+        // Set the default selected item to the second option in the array
         spinner.setSelection(0);
 
+        // Set up bottom navigation view onItemSelectedListener
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -88,6 +95,8 @@ public class Trend extends AppCompatActivity {
                 return false;
             }
         });
+
+        // Set up "Suggest Goals" button click event
         suggestGoals= findViewById(R.id.suggestGoal);
         suggestGoals.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,14 +107,13 @@ public class Trend extends AppCompatActivity {
                 EditText userCalGoal = findViewById(R.id.editIntakeGoal);
                 EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
                 int[] suggestedData = suggestGoal(userSexData, userWeight, userHeight);
-
                 Snackbar snackbar = Snackbar
                         .make(view, "Suggested Calorie Intake: "+suggestedData[1]+"\n"+"Suggested Workout Goal: "+suggestedData[0], Snackbar.LENGTH_LONG);
                 snackbar.show();
             }
-
         });
 
+        // Set up "Update Data" button click event
         updateData = findViewById(R.id.updateData);
         updateData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,7 +125,6 @@ public class Trend extends AppCompatActivity {
                 EditText userCalGoal = findViewById(R.id.editIntakeGoal);
                 EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
 
-
                 if (TextUtils.isEmpty(userName.getText()) || userSex.getSelectedItemPosition() == 0 ||
                         TextUtils.isEmpty(userWeight.getText()) || TextUtils.isEmpty(userHeight.getText()) ||
                         TextUtils.isEmpty(userCalGoal.getText()) || TextUtils.isEmpty(userWorkoutGoal.getText())) {
@@ -128,7 +135,7 @@ public class Trend extends AppCompatActivity {
                         Integer.parseInt(userHeight.getText().toString()),
                         Integer.parseInt(userCalGoal.getText().toString()),
                         Integer.parseInt(userWorkoutGoal.getText().toString()))){
-                    Toast.makeText(Trend.this,"Please Check Inputs",Toast.LENGTH_SHORT).show(); // fix this later
+                    Toast.makeText(Trend.this,"Please Check Inputs",Toast.LENGTH_SHORT).show();
                 }
 
                 UserData changed = new UserData();
@@ -150,7 +157,7 @@ public class Trend extends AppCompatActivity {
                     UserDataSingleton.getInstance().setUserData(changed);
                     Log.d("UpdateData Great Success",UserDataSingleton.getInstance().toString());
 
-//                   Update Ui elements of MainActivity
+//                   Update UI elements of MainActivity
                     Intent intent = new Intent("com.example.myapp.ACTION_CALL_FUNCTION");
                     startActivity(intent);
 
@@ -159,6 +166,7 @@ public class Trend extends AppCompatActivity {
                 }
             }
         });
+
         // Set up card view and popup menu
         CardView cardView = findViewById(R.id.bringtoFront);
         cardView.bringToFront();
@@ -187,11 +195,21 @@ public class Trend extends AppCompatActivity {
         });
     }
 
+/**
+ * Check the input fields for irregular inputs.
+ * @param weight The weight
+ * @param height The height
+ * @param calorieintake The calorie intake goal
+ * @param workout The workout goal
+ * @return true if any input field is irregular, false otherwise
+ **/
     private boolean checkIrregularInputs( int weight, int height, int calorieintake, int workout) {
         return weight <= 250 && weight >= 20 && height >= 100 && height <= 250 && calorieintake >= 500 && calorieintake <= 5000 && !(workout > calorieintake * 1.5);
     }
 
-
+    /**
+     * Populate the input fields with the current user data.
+     */
     public void populateData(){
         EditText userName = findViewById(R.id.editUserName);
         Spinner userSex = findViewById(R.id.editSex);
@@ -201,6 +219,7 @@ public class Trend extends AppCompatActivity {
         EditText userWorkoutGoal = findViewById(R.id.editWorkoutGoal);
 
         UserData userData = UserDataSingleton.getInstance().getUserData();
+
         // Load default values from userData singleton class
         userName.setText(userData.getUserName());
         userWeight.setText(String.valueOf(userData.getWeight()));
@@ -213,12 +232,19 @@ public class Trend extends AppCompatActivity {
         userSex.setSelection(sexIndex);
     }
 
-
+    /**
+     * Suggest a goal for the user based on their sex, weight, and height.
+     * @param userSex The sex of the user
+     * @param userWeight The weight of the user
+     * @param userHeight The height of the user
+     * @return An array containing the suggested workout and calorie intake goals
+     */
     public int[] suggestGoal(int userSex, double userWeight, double userHeight ) {
         double BMR;
         double activityFactor = 1.55; // Assume moderately active level for all users
         double calorieDeficit = 7700; // Create a calorie deficit of 7700 calories per month to lose 1 kg of body weight
         int userAge =24; // Constant for now
+
         // Calculate BMR based on user sex
         if (userSex%2==1) {
             BMR = 10 * userWeight + 6.25 * userHeight - 5 * userAge + 5; // Mifflin-St Jeor Equation
@@ -235,13 +261,22 @@ public class Trend extends AppCompatActivity {
         double targetCalories = maintenanceCalories - (calorieDeficit / 30); // Create a calorie deficit of 7700 calories per month to lose 1 kg of body weight
         double calorieBurn = targetCalories;
         return new int[] { roundToNearest100(maintenanceCalories),roundToNearest100(targetCalories) };
-
     }
+
+    /**
+     * Round a given number to the nearest hundred.
+     * @param num The number to round
+     * @return The rounded number
+     */
     public static int roundToNearest100(double num) {
         int roundedNum = (int) Math.round(num / 100.0) * 100;
         return roundedNum;
     }
 
+/**
+ * Save
+ * * Save the user data to SharedPreferences when the app is paused, stopped or destroyed.
+ * */
     private void saveUserData() {
         UserData userData = UserDataSingleton.getInstance().getUserData();
         sharedPrefs = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE);
@@ -258,22 +293,32 @@ public class Trend extends AppCompatActivity {
         Log.d("Process Destroyed","Data saved");
     }
 
+    /**
+     * Override the onPause method to save user data.
+     */
     @Override
     protected void onPause() {
         super.onPause();
         saveUserData();
     }
+
+    /**
+     * Override the onDestroy method to save user data.
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();
         saveUserData();
     }
+
+    /**
+     * Override the onStop method to save user data.
+     */
     @Override
     protected void onStop() {
         super.onStop();
         saveUserData();
     }
-
 }
 
 

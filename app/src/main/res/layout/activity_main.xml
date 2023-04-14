@@ -206,7 +206,7 @@
 
         android:layout_width="409dp"
         android:id="@+id/Mealrecyclerview"
-        android:layout_height="460dp"
+        android:layout_height="500dp"
         android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/bottomCard"
         app:layout_constraintEnd_toEndOf="parent"
