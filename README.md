@@ -48,22 +48,21 @@ These instructions will help you set up the project on your local machine for de
 >>> - A Physical Android device or an emulator for testing 
 
 >> Installation
-- Clone the repository to your local machine.
-- git clone https://github.com/your_username/HealthMate.git
-- Open the project in Android Studio.
-- Sync the project with Gradle files by clicking on File -> Sync Project with Gradle Files.
-- Build the project by selecting “Build” > “Make Project” in the Android Studio toolbar. 
-- Run the project on an Android device or emulator.
+>>> - Clone the repository to your local machine.
+>>> - git clone https://github.com/your_username/HealthMate.git
+>>> - Open the project in Android Studio.
+>>> - Sync the project with Gradle files by clicking on File -> Sync Project with Gradle Files.
+>>> - Build the project by selecting “Build” > “Make Project” in the Android Studio toolbar. 
+>>> - Run the project on an Android device or emulator.
 
 > Usage
-- Upon launching the app, sign in with your Google account to sync your fitness data with Google Fit.
-- Calorie Tracker: Navigate to the “Calorie” tab to view and manage your daily meals. Tap the “+” button to add a new meal, input the meal details, and save your entry. 
-- Exercise Tracker: Switch to the “Track a run” tab under the '+' icon to track your exercises. Click on the map a location you want to run to. Press the “Track a run” button to open up Google Maps which will display the most feasible running route. 
-- Trends: Go to the “Trends” tab to view a summary of your fitness progress over time. The app displays various metrics, such as Steps Count, Distance clocked, and calories burnt. 
-- Explore the For You section to discover posts from other users in the HealthMate community. Follow other users to stay updated with their fitness activities in the Following section.
-- Create and share your own fitness posts with details like activity name, distance, and time. 
-- Update your user profile with information such as name, weight, sex and height, which the app uses to recommend calorie intake and workout goal. 
-
+>> - Upon launching the app, sign in with your Google account to sync your fitness data with Google Fit.
+>> - Calorie Tracker: Navigate to the “Calorie” tab to view and manage your daily meals. Tap the “+” button to add a new meal, input the meal details, and save your entry. 
+>> - Exercise Tracker: Switch to the “Track a run” tab under the '+' icon to track your exercises. Click on the map a location you want to run to. Press the “Track a run” button to open up Google Maps which will display the most feasible running route. 
+>> - Trends: Go to the “Trends” tab to view a summary of your fitness progress over time. The app displays various metrics, such as Steps Count, Distance clocked, and calories burnt. 
+>> - Explore the For You section to discover posts from other users in the HealthMate community. Follow other users to stay updated with their fitness activities in the Following section.
+>> - Create and share your own fitness posts with details like activity name, distance, and time. 
+>> - Update your user profile with information such as name, weight, sex and height, which the app uses to recommend calorie intake and workout goal. 
 
 Acknowledgements
 We would like to express our gratitude to the following individuals and organizations for their support and contributions to the development of the Fitness Tracker App:
