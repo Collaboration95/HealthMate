@@ -1,6 +1,7 @@
 package com.example.healthmate;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +51,17 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.myViewHolder> 
         holder.proteinProgress.setProgress((tempProtein * 100) / totalCalories, true);
         holder.fatProgress.setProgress((tempFat * 100) / totalCalories, true);
         holder.carbProgress.setProgress((tempCarbs * 100) / totalCalories, true);
-
+        holder.materialCardView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Intent fillMeal = new Intent(context, NewMeal.class);
+                fillMeal.putExtra("pos", holder.getAdapterPosition() + " ");
+                fillMeal.putExtra("activity", "meal");
+                context.startActivity(fillMeal);
+                Log.d("Material Card View", NewMealHolder.getInstance().getMeal(holder.getAdapterPosition()) + " ");
+                return true; // indicate that the long click event was consumed
+            }
+        });
     }
 
     @Override
@@ -67,6 +78,7 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.myViewHolder> 
      * ViewHolder class to store and manage the views for each data item.
      */
     public static class myViewHolder extends RecyclerView.ViewHolder {
+        public View materialCardView;
         LinearProgressIndicator proteinProgress;
         LinearProgressIndicator fatProgress;
         LinearProgressIndicator carbProgress;
@@ -80,6 +92,7 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.myViewHolder> 
             proteinProgress = itemView.findViewById(R.id.proteinProgress);
             fatProgress = itemView.findViewById(R.id.fatProgress);
             carbProgress = itemView.findViewById(R.id.carbProgress);
+            materialCardView= itemView.findViewById(R.id.MealLayout);
         }
     }
 }

@@ -37,7 +37,13 @@ public class NewMeal extends AppCompatActivity {
         sharedPrefs = getSharedPreferences(SHARED_PREFS_NAME, MODE_PRIVATE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newmeal);
+        Intent intent = getIntent();
+        String value = intent.getStringExtra("activity");
 
+        if (value != null && value.equals("meal")) {
+            String val = intent.getStringExtra("pos");
+            LoadData(Integer.parseInt(val.trim()));
+        }
         Button cancel = findViewById(R.id.cancel_button);
 
 
@@ -92,6 +98,22 @@ public class NewMeal extends AppCompatActivity {
         editor.apply();
         Log.d("Data saved","NewMeal");
         tempLoadData();
+    }
+
+    public void LoadData(int pos){
+        Plus_AddMeal temp_data = NewMealHolder.getInstance().getMeal(pos);
+        Log.d("temp Data",temp_data.toString());
+        EditText editMealName = findViewById(R.id.editUserName);
+        EditText protein = findViewById(R.id.editSex);
+        EditText fat = findViewById(R.id.editWeight);
+        EditText carbs = findViewById(R.id.editHeight);
+        EditText totalcalories = findViewById(R.id.editIntakeGoal);
+
+        editMealName.setText(temp_data.getMealName());
+        protein.setText(temp_data.getProtein());
+        fat.setText(temp_data.getFat());
+        carbs.setText(temp_data.getCarbs());
+        totalcalories.setText(temp_data.getTotalCalories());
     }
     private void tempLoadData(){
         Gson gson = new Gson();
