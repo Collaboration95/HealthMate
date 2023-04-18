@@ -28,10 +28,6 @@ public class FitnessData {
         return steps;
     }
 
-    public void setSteps(int steps) {
-        this.steps = steps;
-    }
-
     public float getDistance() {
         return distance;
     }
@@ -50,9 +46,5 @@ public class FitnessData {
 
     public long getTimestamp() {
         return timestamp;
-    }
-
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
     }
 }

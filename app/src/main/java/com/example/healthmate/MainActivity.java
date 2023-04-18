@@ -335,12 +335,6 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
                 NewMealHolder.getInstance().storeMeal(var);
             }
         }
-
-//        NewMealHolder.getInstance().deleteData();
-//        for (Plus_AddMeal var: central_data){
-//            NewMealHolder.getInstance().storeMeal(var);
-//        }
-
     }
     @Override
     protected void onDestroy() {
@@ -348,13 +342,4 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
         // Save user data to shared preferences when the activity is destroyed
         saveUserData();
     }
-
 }
-
-/**
- In this updated version of MainActivity.java, the code documentation is enhanced to better explain the purpose and functionality
-
- of the activity within the context of the Fitness Tracker app.
- The code is organized into distinct sections for initializing the activity, setting up event listeners, updating the UI, and handling Google Fit data.
- **/
-
