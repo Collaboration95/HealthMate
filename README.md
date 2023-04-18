@@ -49,7 +49,7 @@ These instructions will help you set up the project on your local machine for de
 
 >> Installation
 >>> - Clone the repository to your local machine.
->>> - git clone https://github.com/your_username/HealthMate.git
+>>> - git clone https://github.com/Collaboration95/HealthMate
 >>> - Open the project in Android Studio.
 >>> - Sync the project with Gradle files by clicking on File -> Sync Project with Gradle Files.
 >>> - Build the project by selecting “Build” > “Make Project” in the Android Studio toolbar. 
