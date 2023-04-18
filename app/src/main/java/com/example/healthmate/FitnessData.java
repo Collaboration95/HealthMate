@@ -1,6 +1,6 @@
 package com.example.healthmate;
 
-public class FitnessData {
+public class FitnessData implements FitnessDataInterface {
     private long id;
     private int steps;
     private float distance;
@@ -48,3 +48,12 @@ public class FitnessData {
         return timestamp;
     }
 }
+
+/**
+ * To extend the functionality of FitnessData, you can create a new class that implements the FitnessDataInterface
+ * without modifying the existing FitnessData class.
+ * The new class can have additional functionality specific to the new requirements.
+ *
+ * By using the Open/Closed Principle, you can extend the functionality of the FitnessData class without modifying the original class,
+ * keeping it closed for modification while allowing new features to be added through extension.
+ */
