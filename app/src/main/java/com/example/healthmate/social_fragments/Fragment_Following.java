@@ -1,8 +1,3 @@
-/**
-
- This class represents the "Following" fragment in the social section of the app.
- It displays posts from the accounts that the user is following.
- */
 package com.example.healthmate.social_fragments;
 import android.os.Bundle;
 
@@ -21,6 +16,10 @@ import com.example.healthmate.Social_PostModelHolder2;
 
 import java.util.ArrayList;
 
+/**
+ This class represents the "Following" fragment in the social section of the app.
+ It displays posts from the accounts that the user is following.
+ */
 public class Fragment_Following extends Fragment {
     // List of following post data
     ArrayList<Social_PostModel> following = new ArrayList<>();

@@ -30,6 +30,7 @@ import com.google.android.gms.tasks.Task;
 /**
  * MapsActivity is an activity for displaying the user's location and setting a destination on a map.
  * It uses Google Maps API to display the map and handle user interactions.
+ * The user can track their run by pressing the "Track Run" button, which opens Google Maps for navigation with the chosen destination.
  */
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -177,11 +178,3 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
     }
 }
-
-
-/**
-This is an updated version of the MapsActivity.java file with added documentation.
-The purpose of this code is to display the user's location and allow them to set a destination on a map.
-It uses the Google Maps API to display the map and handle user interactions.
-The user can track their run by pressing the "Track Run" button, which opens Google Maps for navigation with the chosen destination.
- **/

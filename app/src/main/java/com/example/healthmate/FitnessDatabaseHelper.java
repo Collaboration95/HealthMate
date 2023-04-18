@@ -5,9 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -52,7 +50,10 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // Save the given FitnessData object to the database, if it is not a duplicate
+    /**
+     * Save the given FitnessData object to the database
+     * @param data The FitnessData object to be saved.
+     */
     public void saveFitnessData(FitnessData data) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -64,7 +65,11 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         data.setId(id);
         db.close();
     }
-    // Get a list of all FitnessData objects
+
+    /**
+     * Get a list of all FitnessData objects stored in the database.
+     * @return A list of FitnessData objects.
+     */
     public List<FitnessData> getAllFitnessData() {
         List<FitnessData> fitnessDataList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -91,37 +96,6 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         }
         cursor.close();
         db.close();
-
-        return fitnessDataList;
-    }// Get fitness data for the specified date range.
-    public List<FitnessData> getFitnessDataByDateRange(long startDate, long endDate) {
-        List<FitnessData> fitnessDataList = new ArrayList<>();
-        SQLiteDatabase db = this.getReadableDatabase();
-        String selectQuery = "SELECT * FROM " + TABLE_FITNESS_DATA + " WHERE " +
-                COLUMN_TIMESTAMP + " >= ? AND " + COLUMN_TIMESTAMP + " <= ?";
-        Cursor cursor = db.rawQuery(selectQuery, new String[]{String.valueOf(startDate), String.valueOf(endDate)});
-
-        if (cursor.moveToFirst()) {
-            do {
-                int stepsIndex = cursor.getColumnIndex(COLUMN_STEPS);
-                int distanceIndex = cursor.getColumnIndex(COLUMN_DISTANCE);
-                int caloriesIndex = cursor.getColumnIndex(COLUMN_CALORIES);
-                int timestampIndex = cursor.getColumnIndex(COLUMN_TIMESTAMP);
-
-                if (stepsIndex >= 0 && distanceIndex >= 0 && caloriesIndex >= 0 && timestampIndex >= 0) {
-                    int steps = cursor.getInt(stepsIndex);
-                    float distance = cursor.getFloat(distanceIndex);
-                    float calories = cursor.getFloat(caloriesIndex);
-                    long timestamp = cursor.getLong(timestampIndex);
-
-                    FitnessData data = new FitnessData(steps, distance, calories, timestamp);
-                    fitnessDataList.add(data);
-                }
-            } while (cursor.moveToNext());
-        }
-        cursor.close();
-        db.close();
-
         return fitnessDataList;
     }
 
@@ -130,4 +104,5 @@ public class FitnessDatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_FITNESS_DATA, null, null);
         db.close();
-    }}
+    }
+}

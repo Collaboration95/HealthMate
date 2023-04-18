@@ -1,7 +1,3 @@
-/**
- * This class represents the FitnessHistory Activity, which displays the historical
- * fitness data stored in the HealthMate application.
- */
 package com.example.healthmate;
 
 import android.os.Bundle;
@@ -12,6 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
+/**
+ * This class represents the FitnessHistory Activity, which displays the historical
+ * fitness data stored in the HealthMate application.
+ */
 public class FitnessHistory extends AppCompatActivity {
 
     // Instance variables for UI components and the database helper

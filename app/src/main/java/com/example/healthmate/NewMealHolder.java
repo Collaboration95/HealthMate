@@ -145,11 +145,8 @@ public class NewMealHolder extends Observable {
         return totalFat;
     }
 
-
     /**
      * Returns the total carbohydrates of all meals in the meal
-     * * data.
-     * *
      * * @return the total carbohydrates
      */
 

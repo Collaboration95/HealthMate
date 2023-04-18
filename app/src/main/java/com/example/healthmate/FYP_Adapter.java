@@ -5,32 +5,21 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * FYP_Adapter is the adapter for the RecyclerView in the social section of the app.
@@ -92,9 +81,7 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
 //                        Log.d("Something is not working","why ");
                         shareToSocialMedia(holder.getAdapterPosition());
                     }
-
                 });
-
             }
 
         // Get the image resource ID and calculate its aspect ratio
@@ -120,7 +107,6 @@ public class FYP_Adapter extends RecyclerView.Adapter<FYP_Adapter.myViewHolder> 
 
     // Set the image Bitmap for the ImageView
         holder.Image.setImageBitmap(imageBitmap);
-
     }
 
     // Return the number of social posts in the data list

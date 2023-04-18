@@ -58,7 +58,6 @@ public class NewMeal extends AppCompatActivity {
                 EditText fat = findViewById(R.id.editWeight);
                 EditText carbs = findViewById(R.id.editHeight);
                 EditText totalcalories = findViewById(R.id.editIntakeGoal);
-                EditText time = findViewById(R.id.editWorkoutGoal);
                 String mealName = editMealName.getText().toString();
                 String proteinText = protein.getText().toString();
                 String fatText = fat.getText().toString();
@@ -126,15 +125,11 @@ public class NewMeal extends AppCompatActivity {
             Log.d("tempLoadData",central_data.size()+" ");
         }
     }
-
-
     @Override
     protected void onPause() {
         super.onPause();
         saveUserData();
-
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();

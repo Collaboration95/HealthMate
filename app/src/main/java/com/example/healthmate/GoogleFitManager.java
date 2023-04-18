@@ -9,10 +9,12 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.fitness.Fitness;
 import com.google.android.gms.fitness.FitnessOptions;
+import com.google.android.gms.fitness.HistoryClient;
 import com.google.android.gms.fitness.data.DataPoint;
 import com.google.android.gms.fitness.data.DataSet;
 import com.google.android.gms.fitness.data.DataType;
@@ -20,6 +22,7 @@ import com.google.android.gms.fitness.data.Field;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+
 
 /**
  * This class is used to manage Google Fit API integration and related tasks.
@@ -33,7 +36,6 @@ public class GoogleFitManager {
 
     public interface GoogleSignInResultCallBack {
         void onSignOutSuccess();
-
         void onSignOutFailure(Exception e);
     }
 
@@ -137,19 +139,29 @@ public class GoogleFitManager {
      */
     private void readFitnessData(DataType dataType, Field field, OnDataPointListener listener) {
         if (getSignInStatus()) {
-            Fitness.getHistoryClient(context, GoogleSignIn.getLastSignedInAccount(context))
-                    .readDailyTotal(dataType)
-                    .addOnSuccessListener(new OnSuccessListener<DataSet>() {
-                        @Override
-                        public void onSuccess(DataSet dataSet) {
-                            if (!dataSet.isEmpty()) {
-                                listener.onDataPoint(dataSet.getDataPoints().get(0));
-                            } else {
-                                // Show a message when no data is available
-                                Toast.makeText(context, "No data available", Toast.LENGTH_SHORT).show();
+            try {
+                FitnessOptions fitnessOptions = FitnessOptions.builder()
+                        .addDataType(dataType, FitnessOptions.ACCESS_READ)
+                        .build();
+                GoogleSignInAccount googleSignInAccount =
+                        GoogleSignIn.getAccountForExtension(context, fitnessOptions);
+                HistoryClient historyClient = Fitness.getHistoryClient(context, googleSignInAccount);
+                historyClient.readDailyTotal(dataType)
+                        .addOnSuccessListener(new OnSuccessListener<DataSet>() {
+                            @Override
+                            public void onSuccess(DataSet dataSet) {
+                                if (!dataSet.isEmpty()) {
+                                    listener.onDataPoint(dataSet.getDataPoints().get(0));
+                                } else {
+                                    // Show a message when no data is available
+                                    Toast.makeText(context, "No data available", Toast.LENGTH_SHORT).show();
+                                }
                             }
-                        }
-                    });
+                        });
+            } catch (Exception e) {
+                // Prompt the user to sign in
+                requestGoogleFitPermissions();
+            }
         } else {
             // Prompt the user to sign in
             requestGoogleFitPermissions();

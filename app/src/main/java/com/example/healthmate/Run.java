@@ -29,7 +29,6 @@ public class Run extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Context context = Run.this;
     private GoogleFitManager googleFitManager;
-
     // Declare variables for UI elements
     private TextView stepCountTextView;
     private TextView distanceTextView;
@@ -82,7 +81,6 @@ public class Run extends AppCompatActivity {
                     public void onSignOutSuccess() {
                         Toast.makeText(context, "Signed out successfully.", Toast.LENGTH_SHORT).show();
                     }
-
                     @Override
                     public void onSignOutFailure(Exception e) {
                         Toast.makeText(context, "Sign out failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();

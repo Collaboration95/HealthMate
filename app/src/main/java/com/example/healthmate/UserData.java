@@ -1,13 +1,5 @@
 package com.example.healthmate;
 
-import static java.security.AccessController.getContext;
-
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.widget.Spinner;
-
-import com.google.gson.Gson;
 
 public class UserData {
     private String userName;

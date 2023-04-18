@@ -1,14 +1,11 @@
+
+package com.example.healthmate;
+
 /**
- * HealthMate
- *
- * MyObserver Interface
- *
  * This interface defines the OnChange() method for observer classes in the HealthMate application.
  * Classes that implement this interface are able to react to changes in observable objects,
  * allowing for efficient and flexible communication between different components of the app.
  */
-package com.example.healthmate;
-
 public interface MyObserver {
 
     /**

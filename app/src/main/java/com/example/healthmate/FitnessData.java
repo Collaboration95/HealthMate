@@ -1,12 +1,25 @@
 package com.example.healthmate;
 
+/**
+ * The FitnessData class represents a single fitness data entry.
+ * It implements the FitnessDataInterface to ensure compatibility with other classes
+ * and to facilitate extension following the Open/Closed Principle.
+ */
 public class FitnessData implements FitnessDataInterface {
+    // Private attributes
     private long id;
     private int steps;
     private float distance;
     private float calories;
     private long timestamp;
 
+    /**
+     * Constructor for the FitnessData class.
+     * @param steps     The number of steps for this data entry.
+     * @param distance  The distance covered in this data entry.
+     * @param calories  The calories burned in this data entry.
+     * @param timestamp The timestamp of the data entry.
+     */
     public FitnessData(int steps, float distance, float calories, long timestamp) {
         this.steps = steps;
         this.distance = distance;
@@ -49,11 +62,3 @@ public class FitnessData implements FitnessDataInterface {
     }
 }
 
-/**
- * To extend the functionality of FitnessData, you can create a new class that implements the FitnessDataInterface
- * without modifying the existing FitnessData class.
- * The new class can have additional functionality specific to the new requirements.
- *
- * By using the Open/Closed Principle, you can extend the functionality of the FitnessData class without modifying the original class,
- * keeping it closed for modification while allowing new features to be added through extension.
- */

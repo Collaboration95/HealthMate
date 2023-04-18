@@ -10,37 +10,28 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
+
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Random;
+
 
 /**
  * NewPost activity allows users to create and add new posts to the Social activity.
  */
 public class NewPost extends AppCompatActivity {
-    Button SelectImage;
     int defaultimage = R.drawable.stock1;
-    int image=0;
     private static final int REQUEST_GALLERY = 1001;
     private final int REQUEST_IMAGE_CAPTURE = 1;
     private Bitmap imageBitmap;
-    int[] images = {R.drawable.stock1, R.drawable.stock2, R.drawable.stock3, R.drawable.stock4, R.drawable.stock5, R.drawable.stock6, R.drawable.stock7};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addpost);
-//        imageView = findViewById(R.id.imageView);
-
-        // Call openCamera() when the user clicks on a button to open the camera
-//        findViewById(R.id.button).setOnClickListener(view -> openCamera());
-        // Initialize buttons
         Button cancel = findViewById(R.id.cancel_button);
         Button add = findViewById(R.id.add_meal);
         Button select = findViewById(R.id.select_image);

@@ -1,8 +1,3 @@
-/**
-
- This class represents the "For You" fragment in the social section of the app.
- It displays posts recommended for the user based on their interests and activity.
- */
 package com.example.healthmate.social_fragments;
 import android.os.Bundle;
 
@@ -22,6 +17,10 @@ import com.example.healthmate.Social_PostModelHolder;
 
 import java.util.ArrayList;
 
+/**
+ This class represents the "For You" fragment in the social section of the app.
+ It displays posts recommended for the user based on their interests and activity.
+ */
 public class Fragment_ForYou extends Fragment {
     // List of social post data
     ArrayList<Social_PostModel> fyp_data = new ArrayList<>();

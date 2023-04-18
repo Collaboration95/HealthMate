@@ -1,11 +1,3 @@
-/**
- * MainActivity.java
- * This activity serves as the main hub of the Fitness Tracker App, providing a
- * central access point to the Calorie Counter, Google Maps API, and Socials Page.
- * The user interface displays the total calorie count, macro breakdown, and
- * fitness statistics. The bottom navigation allows users to switch between
- * different modules within the app.
- */
 
 package com.example.healthmate;
 
@@ -16,7 +8,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,7 +16,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.PopupMenu;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -38,10 +30,17 @@ import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.lang.reflect.Array;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+/**
+ * This activity serves as the main hub of the Fitness Tracker App, providing a
+ * central access point to the Calorie Counter, Google Maps API, and Socials Page.
+ * The user interface displays the total calorie count, macro breakdown, and
+ * fitness statistics. The bottom navigation allows users to switch between
+ * different pages within the app.
+ */
 public class MainActivity extends AppCompatActivity implements MyObserver {
     // UI components
     private final Context context = MainActivity.this;
@@ -67,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
         sharedPrefsMeal= getSharedPreferences(SHARED_PREFS_NAME_MEAL,MODE_PRIVATE);
         // Load user data from shared preferences
         loadUserData();
-
 
         // Standard activity initialization
         super.onCreate(savedInstanceState);
@@ -99,15 +97,13 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
         // Set up event listeners for UI components
         setupListeners();
 
-        //     Code to update UI elements
+        // Code to update UI elements
         Intent intent2 = getIntent();
         if (intent2 != null && intent2.getAction() != null && intent2.getAction().equals("com.example.myapp.ACTION_CALL_FUNCTION")) {
             updateUI();
         }
     }
 
-
-//    }
     /**
      * setupListeners sets up event listeners for UI components like
      * the bottom navigation and popup menu.
@@ -172,11 +168,9 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
     }
 
     /**
-     * OnChange method is called when meal data updates. Update the UI accordingly.
+     * OnChange method is called when meal data updates
      */
     @Override
-
-
     public void OnChange() {
         updateUI();
     }
@@ -218,23 +212,11 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
                     circularProgressIndicator.setProgress(progress, true);
                 }
 
-
                 totalCal.setText(String.format("of %d kcal",UserDataSingleton.getInstance().getUserData().getCalorieIntakeGoal()));
                 // Update the total calorie text with data from newMealHolder
                 if (calorieConsumed != null) {
                     calorieConsumed.setText(NewMealHolder.getInstance().TotalCalories() + " ");
                 }
-//                ArrayList<Data> newData = getData(); // replace with your own logic to get new data
-//                mDataSource.clear();
-//                mDataSource.addAll(newData);
-//
-//                // Notify the adapter that the data has changed
-
-
-                // Register MainActivity as an observer for meal data updates
-//                NewMealHolder.getInstance().addObserver(MainActivity.this);
-
-
             }
         });
     }
@@ -250,7 +232,7 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
             // Permissions granted, you can access Google Fit API data here.
             fetchDataAndUpdateUI();
         } else {
-//            When user is not signed
+      // When user is not signed
         Toast.makeText(context,"Please Sign in ",Toast.LENGTH_SHORT).show();
         }
     }
@@ -320,7 +302,6 @@ public class MainActivity extends AppCompatActivity implements MyObserver {
         temp.updateData(userName, sex, weight, height, calorie_intake_goal, workoutGoal);
         Log.d("This is getting called","LoadUserData");
         UserDataSingleton.getInstance().setUserData(temp);
-
 
         Gson gson = new Gson();
 

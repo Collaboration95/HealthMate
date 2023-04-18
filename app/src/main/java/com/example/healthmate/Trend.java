@@ -1,10 +1,5 @@
-/**
-
- This class represents the Trends page in the HealthMate app.
- It displays a list of trends for various activities and allows the user
- to navigate to other pages in the app using a bottom navigation view.
- */
 package com.example.healthmate;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,14 +18,12 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
 
-import java.util.ArrayList;
 
 /**
 The Trend class represents the Goals page in the HealthMate app.
@@ -274,7 +267,6 @@ public class Trend extends AppCompatActivity {
     }
 
 /**
- * Save
  * * Save the user data to SharedPreferences when the app is paused, stopped or destroyed.
  * */
     private void saveUserData() {
