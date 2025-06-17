@@ -2,6 +2,7 @@
 ![HealthMate App Screenshot](assets/PosterFront.jpg)
 # HealthMate | **Your Reliable Fitness Partner**
 **Course:** 50.001 - Introduction to Information Systems & Programming | SUTD
+
 **Technologies:** Android Studio, Java/Kotlin, Google Fitness API, Google Maps API, SQLite
 
 ## Overview
